@@ -1,0 +1,58 @@
+@media screen and (max-width:1400px) and (min-width:1281px) {
+  .footer_faq span,
+  .footer_hotline span {
+    font-size: 14px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+}
+
+@media screen and (max-width:1270px) and (min-width:0px) {
+  .header_balance_money>span:first-child,
+  .header_balance_days>span:first-child {
+    display: none;
+  }
+  .header_balance_days_numb,
+  .header_balance_money_numb {
+    margin-right: 10px;
+  }
+  .header_balance_money_numb {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width:0px) and (max-width:767px) {
+  .show_hide,
+  .header_balance_money button,
+  .header_balance_days_numb,
+  .header_balance_money>span:first-child,
+  .header_balance_days>span:first-child,
+  .location_header {
+    display: none;
+  }
+  .header_balance_money_numb {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  .header_balance_money {
+    padding: 0;
+    padding-right: 10px;
+    border: none;
+  }
+}
+
+@media screen and (min-width:0px) and (max-width:479px) {
+  .header_balance_money_numb {
+    margin-right: 5px;
+    margin-left: -5px;
+    font-size: 14px;
+  }
+  .header_balance_days,
+  .header_logout {
+    float: right;
+    border-left: 1px solid rgb(0, 171, 78);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

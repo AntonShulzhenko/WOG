@@ -1,0 +1,15 @@
+@font-face {
+  font-family: ubuntu;
+  src: url(../fonts/ubuntu.ttf);
+}
+@font-face {
+  font-family: ubuntu;
+  src: url(../fonts/ubuntu.eot);
+}
+@font-face {
+  font-family: ubuntu;
+  src: url(../fonts/ubuntu.otf);
+}
+body {
+    font-family: ubuntu;
+}
