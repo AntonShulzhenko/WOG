@@ -25,8 +25,17 @@ $(document).ready(function () {
         $('nav.mobile-size').removeClass('open-panel');
       });
     });
+    setInterval(function () {
+      if ($('nav').hasClass('minimize')) {
+        $('main').on('click', function () {
+          $('nav.mobile-size').removeClass('open-panel');
+        });
+        $('header').on('click', function () {
+          $('nav.mobile-size').removeClass('open-panel');
+        });
+      }
+    });
   }
-
 
   setInterval(function () {
     if ($('nav').hasClass('minimize')) {

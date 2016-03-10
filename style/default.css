@@ -110,7 +110,7 @@ header div {
 }
 
 nav {
-  z-index: 2;
+  z-index: 100;
   width: 210px;
   height: 100%;
   position: absolute;
@@ -159,7 +159,6 @@ a:active {
 
 .nav_list li a {
   padding-left: 60px;
-  padding-right: 30px;
   background-position: 30px center;
 }
 
@@ -253,6 +252,8 @@ p.location_header {
   line-height: 14px;
   font-size: 14px;
   vertical-align: middle;
+  transition: 0.4s;
+  padding-right: 20px;
 }
 
 .nav_list li i {
@@ -329,7 +330,7 @@ nav.minimize {
 }
 
 .minimize .nav_list li a {
-  padding-left: 0;
+  padding-right: 10px;
   background-position: 30px center;
 }
 
@@ -393,15 +394,16 @@ nav.mobile-size {
   background-color: #007e45;
 }
 
-
 header.mobile-size {
   left: 80px;
   width: calc( 100% - 80px);
 }
+
 footer.mobile-size {
   left: 0;
   width: 100%;
 }
+
 main.mobile-size {
   margin-left: 0px;
   padding-left: 0;
@@ -412,7 +414,7 @@ main.mobile-size {
 nav.mobile-size {
   height: 70px;
   overflow: hidden;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .open-panel {
@@ -427,6 +429,64 @@ nav.mobile-size {
 .open-panel.mobile-size .min-logo {
   opacity: 0;
 }
+
 .sustem_opp {
-  margin-top: 60px;
+  padding-top: 60px;
+}
+
+.sustem_opp h1 {
+  font-size: 48px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.slider_sustem_opp {
+  width: 95%;
+  margin: 20px auto;
+  min-height: 500px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.slider_sustem_opp ul {
+  width: 500%;
+  padding-left: 0;
+  list-style: none;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.21);
+  position: relative;
+  z-index: 1;
+  min-height: 80px;
+}
+
+.slider_sustem_opp li {
+  width: 5%;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 14px;
+  float: left;
+  position: relative;
+}
+
+.slider_sustem_opp li span {
+  display: inline-block !Important;
+  line-height: 14px;
+  vertical-align: middle;
+}
+
+.slider_sustem_opp li.active_inset {
+  background-color: #ebf8f1;
+  color: #00ab4e;
+}
+.slider_sustem_opp li.active_inset:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #00ab4e;
 }

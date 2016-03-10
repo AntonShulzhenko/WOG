@@ -1,4 +1,12 @@
 <div class="sustem_opp" >
   <h1 class="text-center">    Коротко  про можлівості системи  </h1>
-
+  <div class="slider_sustem_opp">
+   <span class="slider_arrow_left"></span>
+   <span class="slider_arrow_right"></span>
+    <ul>
+      <li ng-click="myVar='active_inset = !active_inset'" ng-repeat="item in slider_header" ng-class="myVar" class="inset{{$index + 1}} "><!-- class = active_inset -->
+        <span>{{item.name}} </span>
+      </li>
+    </ul>
+  </div>
 </div>
