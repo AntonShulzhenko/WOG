@@ -83,4 +83,11 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     }
   })
 
+  .state('opportunities', {
+    url: "/opportunities",
+    templateUrl: "pages/opportunities.html",
+    controller: sustemOppCtrl
+  })
+
+
 })
