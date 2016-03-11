@@ -53,6 +53,9 @@
 }
 
 @media screen and (max-width:991px) and (min-width:0px) {
+  footer p {
+    font-size: 10px;
+  }
   .slide_footer a.btn {
     width: 200px;
     float: right;
@@ -87,6 +90,25 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .active_slide {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .slider_arrow_left, .slider_arrow_right {
+    display: none;
+  }
+  footer.mobile-size {
+    margin-left: 0;
+  }
+  .slide_footer>div {
+    text-align: center;
+  }
+  .slide_footer a.btn {
+    float: none;
+  }
+  a.faq {
+    display: none;
+  }
   main {
     padding-right: 0;
   }
