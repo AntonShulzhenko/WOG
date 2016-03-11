@@ -69,6 +69,9 @@
   .slider_sustem_opp li {
     padding: 0;
   }
+  .sustem_opp h1 {
+    font-size: 35px;
+  }
   .slider_sustem_opp li span {
     visibility: hidden;
   }
@@ -76,6 +79,9 @@
     visibility: visible;
     left: 50%;
     margin-left: -10px;
+  }
+  .sustem_opp {
+    padding-top: 30px;
   }
 }
 
@@ -90,11 +96,19 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .sustem_opp {
+    padding-top: 25px;
+  }
+  .sustem_opp h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
   .active_slide {
     padding-left: 25px;
     padding-right: 25px;
   }
-  .slider_arrow_left, .slider_arrow_right {
+  .slider_arrow_left,
+  .slider_arrow_right {
     display: none;
   }
   footer.mobile-size {
