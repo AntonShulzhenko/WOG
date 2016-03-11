@@ -1,12 +1,24 @@
-<div class="sustem_opp" >
+<div class="sustem_opp">
   <h1 class="text-center">    Коротко  про можлівості системи  </h1>
   <div class="slider_sustem_opp">
-   <span class="slider_arrow_left"></span>
-   <span class="slider_arrow_right"></span>
+
     <ul>
-      <li ng-click="myVar='active_inset = !active_inset'" ng-repeat="item in slider_header" ng-class="myVar" class="inset{{$index + 1}} "><!-- class = active_inset -->
-        <span>{{item.name}} </span>
+      <li ng-click="pickInset($event)" ng-repeat="item in slider_header" class="inset{{$index + 1}}" data-index="{{$index+1}}">
+        <!-- class = active_inset -->
+        <span><i class="ion-record"></i>{{item.name}} </span>
       </li>
     </ul>
+    <div class="active_slide">
+      <i ng-click="slide($event)" class="slider_arrow_left ion-chevron-left"></i>
+      <i ng-click="slide($event)" class="slider_arrow_right ion-chevron-right"></i>
+      <div class="slide_content block-inset{{$index + 1}}" ng-repeat="item in slider_header" data-block-index="{{$index+1}}">
+        {{item.content.header}} {{item.content.main}}
+      </div>
+      <div class="clearfix"></div>
+
+    </div>
+    <div class="slide_footer">
+
+    </div>
   </div>
 </div>

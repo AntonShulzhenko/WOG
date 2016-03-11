@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  if ($('body').width() <= 1400 && $('body').width()>=768) {
+  if ($('body').width()>=768) {
     console.log(window.screen.width);
     $('.menu_tooltip').tooltipsy({
       offset: [5, 0],
@@ -16,10 +16,10 @@ $(document).ready(function () {
       },
       className: 'menu_hover',
       show: function (e, $el) {
-        $el.fadeIn(400);
+        $el.fadeIn(500);
       },
       hide: function (e, $el) {
-        $el.fadeOut(400);
+        $el.fadeOut(300);
       }
     })
   }

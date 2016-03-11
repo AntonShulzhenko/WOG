@@ -36,7 +36,7 @@ $(document).ready(function () {
       }
     });
   }
-
+  
   setInterval(function () {
     if ($('nav').hasClass('minimize')) {
       $("[id^='toolt']").removeClass('invisible');
