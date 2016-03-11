@@ -51,6 +51,9 @@ function sustemOppCtrl($rootScope, $scope) {
     if (el.is('span')) {
       el = el.parent()
     }
+    if (el.is('i')) {
+      el = el.closest('li')
+    }
     el.addClass('active_inset');
     el.siblings().removeClass('active_inset');
     var insetNumb = (el.attr('data-index'));
@@ -64,15 +67,15 @@ function sustemOppCtrl($rootScope, $scope) {
   }
 
   $scope.slide = function ($event) {
-    
+
     var firstEl = $('.slider_sustem_opp').find('ul li:first-child');
     var lastEl = $('.slider_sustem_opp').find('ul li:last-child');
     var blockLength = $('.slide_content').length
     var activeInset = $('li.active_inset');
     var arrow = angular.element($event.target);
-    
+
     if (arrow.is('.slider_arrow_left')) {
-      if (firstEl.hasClass('active_inset')){
+      if (firstEl.hasClass('active_inset')) {
         return false;
       }
       activeInset.removeClass('active_inset').prev().addClass('active_inset');
@@ -85,7 +88,7 @@ function sustemOppCtrl($rootScope, $scope) {
       });
     }
     if (arrow.is('.slider_arrow_right')) {
-      if (lastEl.hasClass('active_inset')){
+      if (lastEl.hasClass('active_inset')) {
         return false;
       }
       activeInset.removeClass('active_inset').next().addClass('active_inset');
