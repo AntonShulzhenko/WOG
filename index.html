@@ -14,53 +14,53 @@
 </head>
 
 <body ng-controller="userDataCtrl">
+  <div class="wrap">
+    <header>
 
-  <header>
+      <p class="location_header" ng-class="{{page_img}}">
+        <a href="">
+          <span class="icon_header_active"> {{title}}</span></a>
+      </p>
+      <div class="header_logout">
+        <i class="ion ion-log-out"></i>
+      </div>
 
-    <p class="location_header" ng-class="{{page_img}}">
-      <a href="">
-        <span class="icon_header_active"> {{title}}</span></a>
-    </p>
-    <div class="header_logout">
-      <i class="ion ion-log-out"></i>
-    </div>
-
-    <div class="header_balance_days">
-      <span>Запас ресурсів: </span>
-      <span class="header_balance_days_numb"><span class="days_numb__strong">{{user.days}} </span>днів</span>
-      <span class="blob">
+      <div class="header_balance_days">
+        <span>Запас ресурсів: </span>
+        <span class="header_balance_days_numb"><span class="days_numb__strong">{{user.days}} </span>днів</span>
+        <span class="blob">
         <img src="img/blob-1.png" alt="">
       </span>
-    </div>
-    <div class="header_balance_money">
-      <span>Баланс транзитного рахунку:   </span>
-      <span class="header_balance_money_numb">{{user.money}}</span>
-      <a ui-sref="{{transit}}">
-        <button><i class="ion ion-ios-arrow-thin-right"></i></button>
-      </a>
-    </div>
-  </header>
-  <nav>
-    <div class="nav_header">
-      <img class="full-logo" src="img/header-logo.png" alt="">
-      <img class="min-logo" src="img/header-logo-min.png" alt="">
-    </div>
-    <ul class="nav_list">
-      <li ng-repeat="item in menu_items" class="{{item.class}} menu_tooltip" data-title="{{item.name}}">
-        <a ui-sref="{{item.href}}">
-          <span>{{item.name}}</span>
+      </div>
+      <div class="header_balance_money">
+        <span>Баланс транзитного рахунку:   </span>
+        <span class="header_balance_money_numb">{{user.money}}</span>
+        <a ui-sref="{{transit}}">
+          <button><i class="ion ion-ios-arrow-thin-right"></i></button>
         </a>
-      </li>
-      <li class="show_hide">
-        <a href=""></a>
-      </li>
-    </ul>
-  </nav>
+      </div>
+    </header>
+    <nav>
+      <div class="nav_header">
+        <img class="full-logo" src="img/header-logo.png" alt="">
+        <img class="min-logo" src="img/header-logo-min.png" alt="">
+      </div>
+      <ul class="nav_list">
+        <li ng-repeat="item in menu_items" class="{{item.class}} menu_tooltip" data-title="{{item.name}}">
+          <a ui-sref="{{item.href}}">
+            <span>{{item.name}}</span>
+          </a>
+        </li>
+        <li class="show_hide">
+          <a href=""></a>
+        </li>
+      </ul>
+    </nav>
 
-  <main>
-    <div ui-view></div>
-  </main>
-
+    <main>
+      <div ui-view></div>
+    </main>
+  </div>
   <footer>
     <p>COPYRIGHT © 2015 WOG. ALL RIGHTS RESERVED</p>
     <div class="footer_hotline">
@@ -84,7 +84,7 @@
   <script src="scripts/controllers/sustemOppCtrl.js"></script>
   <script src="scripts/controllers/userMainCtrl.js"></script>
 
-
+  </div>
 </body>
 
 </html>
