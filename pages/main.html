@@ -1,5 +1,32 @@
 <h2>Кабинет клієнта</h2>
-<table class="table">
+<!--
+<table class="table table-striped">
+  <th>
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>
+      Карта /Рахунок
+    </td>
+    <td>
+      Держатель
+    </td>
+    <td>
+      Інформація
+    </td>
+    <td>
+      Телефони
+    </td>
+    <td>
+      Ліміти
+    </td>
+    <td>
+      Періоди  
+    </td>
+    <td>
+      Статус
+    </td>
+  </th>
   <tr>
     <td data-title="ID" data-breakpoints="xs">1</td>
     <td>Dennise</td>
@@ -8,60 +35,38 @@
     <td data-title="Started On" data-breakpoints="xs sm">November 8th 2011</td>
     <td data-title="Date of Birth" data-breakpoints="xs sm md">July 25th 1960</td>
   </tr>
-  <tr>
-    <td>2</td>
-    <td>Elodia</td>
-    <td>Weisz</td>
-    <td>Wallpaperer Helper</td>
-    <td>October 15th 2010</td>
-    <td>March 30th 1982</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Raeann</td>
-    <td>Haner</td>
-    <td>Internal Medicine Nurse Practitioner</td>
-    <td>November 28th 2013</td>
-    <td>February 26th 1966</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Junie</td>
-    <td>Landa</td>
-    <td>Offbearer</td>
-    <td>October 31st 2010</td>
-    <td>March 29th 1966</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Solomon</td>
-    <td>Bittinger</td>
-    <td>Roller Skater</td>
-    <td>December 29th 2011</td>
-    <td>September 22nd 1964</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Bar</td>
-    <td>Lewis</td>
-    <td>Clown</td>
-    <td>November 12th 2012</td>
-    <td>August 4th 1991</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>Usha</td>
-    <td>Leak</td>
-    <td>Ships Electronic Warfare Officer</td>
-    <td>August 14th 2012</td>
-    <td>November 20th 1979</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Lorriane</td>
-    <td>Cooke</td>
-    <td>Technical Services Librarian</td>
-    <td>September 21st 2010</td>
-    <td>April 7th 1969</td>
-  </tr>
 </table>
+-->
+<div ng-controller="tableCardsCtrl">
+<table ng-table="usersTable" class="table table-striped">
+   <tr ng-repeat="user in data">
+       <td data-title="'Id'" >
+           {{user.id}}
+       </td>
+       <td data-title="'First Name'" >
+           {{user.first_name}}
+       </td>
+       <td data-title="'Last Name'" >
+           {{user.last_name}}
+       </td>    
+       <td data-title="'e-mail'" >
+           {{user.email}}
+       </td>    
+       <td data-title="'Country'">
+           {{user.country}}
+       </td>    
+       <td data-title="'IP'" >
+           {{user.ip_address}}
+       </td>    
+   </tr>
+</table>
+</div>
+
+
+<!--
+
+    <ul>
+      <li ng-repeat="user in dataset">
+        {{user.name}}
+      </li>
+    </ul>-->

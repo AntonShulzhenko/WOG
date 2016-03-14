@@ -1,4 +1,4 @@
-var wogApp = angular.module('wogApp', ["ui.router"])
+var wogApp = angular.module('wogApp', [ "ui.router", "ngTable"])
 
 wogApp.config(function ($stateProvider, $urlRouterProvider) {
 
