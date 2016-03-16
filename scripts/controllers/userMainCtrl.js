@@ -15,25 +15,25 @@ function userMainCtrl($rootScope, $scope) {
   angular.element($('.main')).addClass('active');
 
 
-  //  $.ajax({
-  //    url: 'scripts/lib/footable.js',
-  //    cashe: 'true',
-  //    success: addResp
-  //  });
-  //
-  //  function addResp() {
-  //    $('.table').footable();
-  //    console.log('footabled');
-  //  }
-  //  $('.min_card_operation ').on('click', function () {
-  //    $('.table').footable();
-  //    console.log('footabled');
-  //  })
-  //  $('.min_card_operation').keyup(function () {
-  //    setTimeout(function () {
-  //      $('.min_card_operation ').trigger('click');
-  //    }, 200)
-  //  })
+//    $.ajax({
+//      url: 'scripts/lib/footable.js',
+//      cashe: 'true',
+//      success: addResp
+//    });
+//  
+//    function addResp() {
+//      $('.table').footable();
+//      console.log('footabled');
+//    }
+//    $('.min_card_operation ').on('click', function () {
+//      $('.table').footable();
+//      console.log('footabled');
+//    })
+//    $('.min_card_operation').keyup(function () {
+//      setTimeout(function () {
+//        $('.min_card_operation ').trigger('click');
+//      }, 200)
+//    })
 
   //get script for diagram
 
@@ -90,7 +90,7 @@ function userMainCtrl($rootScope, $scope) {
     data: [7.9, 5.2, 8.7, 1.5, 15.9, 14.2, 14.0, ]
         }]
 
-  var dayArrCategories = ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'];
+  var dayArrCategories = ['00:00','01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
 
   var dayArrLines = [{
     name: 'ДП мустанг',
@@ -312,8 +312,4 @@ function userMainCtrl($rootScope, $scope) {
       series: linesArr
     });
   }
-
-
-
-
 }
