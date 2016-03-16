@@ -1,157 +1,710 @@
 wogApp.controller('tableCardsCtrl', function ($scope, $filter, ngTableParams) {
 
   $scope.users = [{
-      "id": 1,
-      "first_name": "Philip",
-      "last_name": "Kim",
-      "email": "pkim0@mediafire.com",
-      "country": "Indonesia",
-      "ip_address": "29.107.35.8"
-    },
-    {
-      "id": 2,
-      "first_name": "Judith",
-      "last_name": "Austin",
-      "email": "jaustin1@mapquest.com",
-      "country": "China",
-      "ip_address": "173.65.94.30"
-    },
-    {
-      "id": 3,
-      "first_name": "Julie",
-      "last_name": "Wells",
-      "email": "jwells2@illinois.edu",
-      "country": "Finland",
-      "ip_address": "9.100.80.145"
-    },
-    {
-      "id": 4,
-      "first_name": "Gloria",
-      "last_name": "Greene",
-      "email": "ggreene3@blogs.com",
-      "country": "Indonesia",
-      "ip_address": "69.115.85.157"
-    },
-    {
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },{
-      "id": 50,
-      "first_name": "Andrea",
-      "last_name": "Greene",
-      "email": "agreene4@fda.gov",
-      "country": "Russia",
-      "ip_address": "128.72.13.52"
-    },];
-
-  $scope.usersTable = new ngTableParams({
+    'card': '11111111111111111 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '222222222222222 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }, {
+    'card': '333333333333333 ',
+    'type': 'Основний',
+    'master': 'Константинопольський К.К.',
+    'info': 'АС 69-69 АВ ',
+    'phone': '+380 (67) 555-16-24 ',
+    'limits': '+',
+    'period': '+',
+    'status': '*'
+  }];
+  
+  $scope.cardTable = new ngTableParams({
     page: 1,
     count: 10
   }, {
     total: $scope.users.length,
     getData: function ($defer, params) {
-      $scope.data = $scope.users.slice((params.page() - 1) * params.count(), params.page() * params.count());
-      $defer.resolve($scope.data);
       $scope.data = params.sorting() ? $filter('orderBy')($scope.users, params.orderBy()) : $scope.users;
+      $scope.data = params.filter() ? $filter('filter')($scope.data, params.filter()) : $scope.data;
       $scope.data = $scope.data.slice((params.page() - 1) * params.count(), params.page() * params.count());
       $defer.resolve($scope.data);
     }
   });
 
+});
 
+wogApp.controller('tableLastTransactions', function ($scope, $filter, ngTableParams) {
+  $scope.user_last_trans = [
+    {
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },{
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '11111111111111111 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    }, {
+      'transactionData': '10/11/2015',
+      'transactionTime': '12:00',
+      'pay_type': 'Оплата  пального',
+      'card': '22222222222222222 ',
+      'master': 'Константинопольський К.К.',
+      'check_number': '125449879322',
+      'azk': 'Волинська філія «Київський Майдан»',
+      'resourse': '',
+      'fuel_vol': '50 л.',
+      'money': '1 000 000'
+    },
+  ]
+  $scope.transTable = new ngTableParams({
+    page: 1,
+    count: 10
+  }, {
+    total: $scope.user_last_trans.length,
+    getData: function ($defer, params) {
+      $scope.data = params.sorting() ? $filter('orderBy')($scope.user_last_trans, params.orderBy()) : $scope.user_last_trans;
+      $scope.data = params.filter() ? $filter('filter')($scope.data, params.filter()) : $scope.data;
+      $scope.data = $scope.data.slice((params.page() - 1) * params.count(), params.page() * params.count());
+      $defer.resolve($scope.data);
+    }
+  });
 });
