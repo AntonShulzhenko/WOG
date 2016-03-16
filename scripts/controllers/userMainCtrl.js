@@ -2,12 +2,13 @@ wogApp.controller('userMainCtrl', userMainCtrl)
 
 function userMainCtrl($rootScope, $scope) {
 
-
-
-
   setTimeout(function () {
-    $('#year').trigger('click');
-  }, 1500)
+    $('#week_fuel').trigger('click');
+    $('#week_money').trigger('click');
+  }, 1000)
+
+  //create left-menu
+
   $rootScope.title = '/ Кабінет користувача';
   $rootScope.page_img = 'main';
   angular.element($('.nav_list li')).removeClass('active');
@@ -34,26 +35,29 @@ function userMainCtrl($rootScope, $scope) {
   //    }, 200)
   //  })
 
+  //get script for diagram
 
   $.ajax({
     url: 'scripts/lib/highcharts.js',
     cashe: 'true',
     success: function () {
-      $('#year').trigger('click');
+      $('#week_fuel').trigger('click');
+      $('#week_money').trigger('click');
     }
   })
 
+  //create values for diagrams
 
-  var yearArrCategories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var yearArrCategories = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
   var yearArrLines = [{
     name: 'ДП мустанг',
     data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 7.0, 6.9, 9.5, 14.5, 0]
         }, {
     name: 'ДП мустанг +',
-    data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, -0.2, 0.8, 5.7, 11.3]
+    data: [0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, -0.2, 0.8, 5.7, 11.3]
         }, {
     name: '95',
-    data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, -0.9, 0.6, 3.5, 8.4, 13.5]
+    data: [0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, -0.9, 0.6, 3.5, 8.4, 13.5]
         }, {
     name: '92',
     data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 3.9, 4.2, 5.7, 8.5, 11.9]
@@ -65,7 +69,7 @@ function userMainCtrl($rootScope, $scope) {
     data: [7.9, 5.2, 8.7, 1.5, 15.9, 14.2, 14.0, 7.9, 5.2, 8.7, 1.5, 15.9]
         }]
 
-  var weekArrCategories = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+  var weekArrCategories = ['Понеділок', 'Вівторок', 'Середа', 'Четверг', "П'ятниця", 'Субота', 'Неділя']
   var weekArrLines = [{
     name: 'ДП мустанг',
     data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, ]
@@ -131,24 +135,62 @@ function userMainCtrl($rootScope, $scope) {
     data: [7.9, 5.2, 8.7, 1.5, 15.9, 14.2, 14.0, 6.6, 14.2, 7.3, 6.3, 2.8]
         }]
 
+  //only for money_lines
 
-  $('#day').click(function () {
-    createDiagram(dayArrCategories, dayArrLines, 'За добу')
+  var monthArrMoneyLine = [{
+    name: 'Витрачено грошей',
+    data: [4.9, 4.2, 6.7, 8.5, 11.9, 18.2, 17.0, 14.6, 14.2, 17.3, 6.6, 4.8, 6.7, 8.5, 11.9, 18.2, 17.0, 14.6, 14.2, 17.3, 6.6, 4.8, 0, 6.7, 8.5, 11.9, 18.2, 0, 0, 17.0, 14.6]
+  }]
+
+  var dayArrMoneyLine = [{
+    name: 'Витрачено грошей',
+    data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0, -0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+  }]
+
+  var yearArrMoneyLine = [{
+    name: 'Витрачено грошей',
+    data: [0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, -0.9, 0.6, 3.5, 8.4, 13.5]
+  }]
+
+  var weekArrMoneyLine = [{
+    name: 'Витрачено грошей',
+    data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, ]
+  }]
+
+  //event listeners for buttons
+
+  $('#day_fuel').click(function () {
+    createDiagram(dayArrCategories, dayArrLines, 'За минулу добу')
   });
 
-  $('#week').click(function () {
-    createDiagram(weekArrCategories, weekArrLines, 'За тиждень');
+  $('#week_fuel').click(function () {
+    createDiagram(weekArrCategories, weekArrLines, 'За минулий тиждень');
   })
-  $('#year').on('click', function () {
-    createDiagram(yearArrCategories, yearArrLines, 'За рік');
+  $('#year_fuel').on('click', function () {
+    createDiagram(yearArrCategories, yearArrLines, 'За минулий рік');
   });
 
-  $('#month').on('click', function () {
-    createDiagram(monthArrCategories, monthArrLines, 'За місяць');
+  $('#month_fuel').on('click', function () {
+    createDiagram(monthArrCategories, monthArrLines, 'За минулий місяць');
   });
 
 
+  $('#day_money').click(function () {
+    createDiagramMoney(dayArrCategories, dayArrMoneyLine, 'За минулу добу')
+  });
 
+  $('#week_money').click(function () {
+    createDiagramMoney(weekArrCategories, weekArrMoneyLine, 'За минулий тиждень');
+  })
+  $('#year_money').on('click', function () {
+    createDiagramMoney(yearArrCategories, yearArrMoneyLine, 'За минулий рік');
+  });
+
+  $('#month_money').on('click', function () {
+    createDiagramMoney(monthArrCategories, monthArrMoneyLine, 'За минулий місяць');
+  });
+
+  //create diagram for FUEL
 
   function createDiagram(categoriesArr, linesArr, textTitle) {
     if ($('body').width() < 767) {
@@ -164,6 +206,14 @@ function userMainCtrl($rootScope, $scope) {
     }
 
     $('#container_diagram').highcharts({
+      plotOptions: {
+        series: {
+          marker: {
+            symbol: 'circle',
+            enabled: false,
+          }
+        }
+      },
       title: {
         text: textTitle
       },
@@ -203,4 +253,67 @@ function userMainCtrl($rootScope, $scope) {
       series: linesArr
     });
   }
+
+  //create diagram for MONEY
+
+  function createDiagramMoney(categoriesArr, linesArr, textTitle) {
+    // plugin options 
+
+    Highcharts.setOptions({
+      colors: ['green', 'blue', 'red', 'aqua', 'black', 'gray']
+    })
+
+    $('#container_diagram_money').highcharts({
+      plotOptions: {
+        series: {
+          lineWidth: 3,
+          marker: {
+            symbol: 'circle',
+            enabled: false,
+          }
+        }
+      },
+      title: {
+        text: textTitle
+      },
+      chart: {
+        type: 'line',
+        zoomType: 'xy'
+      },
+      subtitle: {
+
+      },
+      xAxis: {
+        categories: categoriesArr,
+        gridLineDashStyle: 'ShortDot',
+        gridLineWidth: 1
+      },
+      yAxis: {
+        gridLineDashStyle: 'ShortDot',
+        title: {
+          text: ''
+        }
+      },
+      tooltip: {
+        valueSuffix: ' грн.'
+      },
+      legend: {
+        layout: 'horizontal',
+        align: 'center',
+        verticalAlign: 'bottom',
+        y: 50,
+        padding: 3,
+        itemMarginTop: 5,
+        itemMarginBottom: 5,
+        itemStyle: {
+          lineHeight: '14px'
+        }
+      },
+      series: linesArr
+    });
+  }
+
+
+
+
 }
