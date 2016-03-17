@@ -96,6 +96,10 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .ng-table-filters {
+    top: 20px !Important;
+    left: 20px !Important;
+  }
   .sustem_opp {
     padding-top: 25px;
   }

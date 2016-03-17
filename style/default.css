@@ -696,7 +696,6 @@ a.faq button {
   padding-bottom: 20px;
   padding-top: 20px;
   border-radius: 8px;
-    transition: 0.5s;
 }
 
 .vidget .diagramm {
@@ -725,7 +724,9 @@ a.faq button {
 }
 
 .vidget.hide_to_head {
-
   height: 90px;
   overflow: hidden;
+}
+.table {
+
 }

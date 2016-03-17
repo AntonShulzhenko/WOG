@@ -5,35 +5,35 @@
 
 <!-- table "card operations"-->
  
-  <div class="vidget ">
+  <div class="vidget" ng-app="wt.responsive">
     <div ng-controller="tableCardsCtrl" class="min_card_operation">
       <h3>Операцїі з картками</h3>
       <vidget-control-panel></vidget-control-panel>
-      <table ng-table="cardTable" class="table table-striped">
+      <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
         <tr ng-repeat="item in data | filter:search:card" show-filter="true">
           <td data-title="'ch'">
             <input type="checkbox">
           </td>
-          <td data-title="'Карта /Рахунок'" sortable="'card'" filter="{'card':'text'}">
+          <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
             {{item.card}}
             <br> {{item.type}}
           </td>
-          <td data-title="'Держатель'" sortable="'master'">
+          <td data-title="'Держатель'" data-title-mobile="Держатель" sortable="'master'">
             {{item.master}}
           </td>
-          <td data-title="'Інформація'" sortable="'info'">
+          <td data-title="'Інформація'" data-title-mobile="Інформація" sortable="'info'">
             {{item.info}}
           </td>
-          <td data-title="'Телефони'">
+          <td data-title="'Телефони'" data-title-mobile="Телефони">
             {{item.phone}}
           </td>
-          <td data-title="'Ліміти'">
+          <td data-title="'Ліміти'" data-title-mobile="Ліміти">
             {{item.limits}}
           </td>
-          <td data-title="'Періоди'">
+          <td data-title="'Періоди'" data-title-mobile="Періоди">
             {{item.period}}
           </td>
-          <td data-title="'Статус'" >
+          <td data-title="'Статус'" data-title-mobile="Статус">
             {{item.status}}
           </td>
         </tr>
@@ -47,31 +47,31 @@
     <div ng-controller="tableLastTransactions" class="min_last_trns">
      <h3>Останні транзакціїї</h3>
       <vidget-control-panel></vidget-control-panel>
-      <table ng-table="transTable" class="table table-striped">
+      <table wt-responsive-table ng-table="transTable" class="table table-striped">
         <tr ng-repeat="trns in data | filter:search:card" show-filter="true">
-          <td data-title="'Дата транзакції'">
+          <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції">
             {{trns.transactionData}} {{item.transactionTime}}
           </td>
-          <td data-title="'Карта / Держатель'" sortable="'card'" filter="{'card':'text'}">
+          <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
             {{trns.card}}
             <br> {{trns.master}}
           </td>
-          <td data-title="'Тип транзакції'" data-breakpoints="xs">
+          <td data-title="'Тип транзакції'" data-title-mobile="Карта / Держатель">
             {{trns.pay_type}}
           </td>
-          <td data-title="'Чек'">
+          <td data-title="'Чек'" data-title-mobile="Чек">
             {{trns.check_number}}
           </td>
-          <td data-title="'АЗК'" data-breakpoints="xs">
+          <td data-title="'АЗК'" data-title-mobile="АЗК">
             {{trns.azk}}
           </td>
-          <td data-title="'Ресурс/послуга'" data-breakpoints="xs">
+          <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга">
             {{}}
           </td>
-          <td data-title="'Обєм'" data-breakpoints="xs">
+          <td data-title="'Обєм'"  data-title-mobile="Обєм">
             {{trns.fuel_vol}}
           </td>
-          <td data-title="'Сума'">
+          <td data-title="'Сума'" data-title-mobile="Сума">
             {{trns.money}}
           </td>
         </tr>

@@ -13,29 +13,41 @@ function userMainCtrl($rootScope, $scope) {
   $rootScope.page_img = 'main';
   angular.element($('.nav_list li')).removeClass('active');
   angular.element($('.main')).addClass('active');
-
-
-//    $.ajax({
-//      url: 'scripts/lib/footable.js',
-//      cashe: 'true',
-//      success: addResp
-//    });
-//  
-//    function addResp() {
-//      $('.table').footable();
-//      console.log('footabled');
-//    }
-//    $('.min_card_operation ').on('click', function () {
-//      $('.table').footable();
-//      console.log('footabled');
-//    })
-//    $('.min_card_operation').keyup(function () {
-//      setTimeout(function () {
-//        $('.min_card_operation ').trigger('click');
-//      }, 200)
-//    })
-
+  
   //get script for diagram
+  
+  $.ajax({
+    url: 'scripts/lib/highcharts.js',
+    cashe: 'true',
+    success: function () {
+      $('#week_fuel').trigger('click');
+      $('#week_money').trigger('click');
+    }
+  });
+
+
+//      $.ajax({
+//        url: 'scripts/lib/footable.js',
+//        cashe: 'true',
+//        success: addResp
+//      });
+//    
+//      function addResp() {
+//        $('.table').footable();
+//        console.log('footabled');
+//      }
+//  
+//      $('.table').on('click', function () {
+//        $('.table').footable();
+//        console.log('footabled');
+//      })
+//      $('.table').keyup(function () {
+//        setTimeout(function () {
+//          $('.min_card_operation ').trigger('click');
+//        }, 200)
+//      })
+
+
 
 
   //create values for diagrams
@@ -82,7 +94,7 @@ function userMainCtrl($rootScope, $scope) {
     data: [7.9, 5.2, 8.7, 1.5, 15.9, 14.2, 14.0, ]
         }]
 
-  var dayArrCategories = ['00:00','01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
+  var dayArrCategories = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
 
   var dayArrLines = [{
     name: 'ДП мустанг',
