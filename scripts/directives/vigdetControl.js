@@ -1,11 +1,11 @@
-angular.module('myApp.say', [])
-    .directive('sayPidar', function () {
+angular.module('wogApp.vidget', [])
+    .directive('addVidget', function () {
         return {
             restrict: 'E',
             scope:{
                 content:'@'
             },
-            template: '<span>...</span><span>|_|</span><span></span>'
+            template: '<div class="vidget_control_panel">' + '<span>_</span><span>...</span><span>×</span>' + '</div>'
 
         }
     })
