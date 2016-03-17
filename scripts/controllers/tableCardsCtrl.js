@@ -532,7 +532,7 @@ wogApp.controller('tableCardsCtrl', function ($scope, $filter, ngTableParams) {
     'period': '+',
     'status': '*'
   }];
-  
+
   $scope.cardTable = new ngTableParams({
     page: 1,
     count: 10

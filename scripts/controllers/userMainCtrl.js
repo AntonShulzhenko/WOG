@@ -37,14 +37,6 @@ function userMainCtrl($rootScope, $scope) {
 
   //get script for diagram
 
-  $.ajax({
-    url: 'scripts/lib/highcharts.js',
-    cashe: 'true',
-    success: function () {
-      $('#week_fuel').trigger('click');
-      $('#week_money').trigger('click');
-    }
-  })
 
   //create values for diagrams
 

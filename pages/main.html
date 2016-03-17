@@ -1,84 +1,105 @@
 <h2>Кабинет клієнта</h2>
 
 
-<div ng-app="wogApp.vidget">
+<div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme">
 
-  <div ng-controller="tableCardsCtrl" class="min_card_operation">
-   <h2>Операцїі з картками</h2>
-    <add-vidget content=""></add-vidget>
-    <table ng-table="cardTable" class="table table-striped">
-      <tr ng-repeat="item in data | filter:search:card" show-filter="true">
-        <td data-title="'ch'">
-          <input type="checkbox">
-        </td>
-        <td data-title="'Карта /Рахунок'" sortable="'card'" filter="{'card':'text'}">
-          {{item.card}}
-          <br> {{item.type}}
-        </td>
-        <td data-title="'Держатель'" sortable="'master'">
-          {{item.master}}
-        </td>
-        <td data-title="'Інформація'" sortable="'info'">
-          {{item.info}}
-        </td>
-        <td data-title="'Телефони'" data-breakpoints="xs">
-          {{item.phone}}
-        </td>
-        <td data-title="'Ліміти'" data-breakpoints="xs">
-          {{item.limits}}
-        </td>
-        <td data-title="'Періоди'" data-breakpoints="xs">
-          {{item.period}}
-        </td>
-        <td data-title="'Статус'" data-breakpoints="xs">
-          {{item.status}}
-        </td>
-      </tr>
-    </table>
+<!-- table "card operations"-->
+ 
+  <div class="vidget ">
+    <div ng-controller="tableCardsCtrl" class="min_card_operation">
+      <h3>Операцїі з картками</h3>
+      <vidget-control-panel></vidget-control-panel>
+      <table ng-table="cardTable" class="table table-striped">
+        <tr ng-repeat="item in data | filter:search:card" show-filter="true">
+          <td data-title="'ch'">
+            <input type="checkbox">
+          </td>
+          <td data-title="'Карта /Рахунок'" sortable="'card'" filter="{'card':'text'}">
+            {{item.card}}
+            <br> {{item.type}}
+          </td>
+          <td data-title="'Держатель'" sortable="'master'">
+            {{item.master}}
+          </td>
+          <td data-title="'Інформація'" sortable="'info'">
+            {{item.info}}
+          </td>
+          <td data-title="'Телефони'">
+            {{item.phone}}
+          </td>
+          <td data-title="'Ліміти'">
+            {{item.limits}}
+          </td>
+          <td data-title="'Періоди'">
+            {{item.period}}
+          </td>
+          <td data-title="'Статус'" >
+            {{item.status}}
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
-
-  <div ng-controller="tableLastTransactions" class="min_last_trns">
-    <add-vidget content=""></add-vidget>
-    <table ng-table="transTable" class="table table-striped">
-      <tr ng-repeat="trns in data | filter:search:card" show-filter="true">
-        <td data-title="'Дата транзакції'">
-          {{trns.transactionData}} {{item.transactionTime}}
-        </td>
-        <td data-title="'Карта / Держатель'" sortable="'card'" filter="{'card':'text'}">
-          {{trns.card}}
-          <br> {{trns.master}}
-        </td>
-        <td data-title="'Тип транзакції'" data-breakpoints="xs">
-          {{trns.pay_type}}
-        </td>
-        <td data-title="'Чек'">
-          {{trns.check_number}}
-        </td>
-        <td data-title="'АЗК'" data-breakpoints="xs">
-          {{trns.azk}}
-        </td>
-        <td data-title="'Ресурс/послуга'" data-breakpoints="xs">
-          {{}}
-        </td>
-        <td data-title="'Обєм'" data-breakpoints="xs">
-          {{trns.fuel_vol}}
-        </td>
-        <td data-title="'Сума'">
-          {{trns.money}}
-        </td>
-      </tr>
-    </table>
+  
+<!--  table "last transactions"-->
+  
+  <div class="vidget" >
+    <div ng-controller="tableLastTransactions" class="min_last_trns">
+     <h3>Останні транзакціїї</h3>
+      <vidget-control-panel></vidget-control-panel>
+      <table ng-table="transTable" class="table table-striped">
+        <tr ng-repeat="trns in data | filter:search:card" show-filter="true">
+          <td data-title="'Дата транзакції'">
+            {{trns.transactionData}} {{item.transactionTime}}
+          </td>
+          <td data-title="'Карта / Держатель'" sortable="'card'" filter="{'card':'text'}">
+            {{trns.card}}
+            <br> {{trns.master}}
+          </td>
+          <td data-title="'Тип транзакції'" data-breakpoints="xs">
+            {{trns.pay_type}}
+          </td>
+          <td data-title="'Чек'">
+            {{trns.check_number}}
+          </td>
+          <td data-title="'АЗК'" data-breakpoints="xs">
+            {{trns.azk}}
+          </td>
+          <td data-title="'Ресурс/послуга'" data-breakpoints="xs">
+            {{}}
+          </td>
+          <td data-title="'Обєм'" data-breakpoints="xs">
+            {{trns.fuel_vol}}
+          </td>
+          <td data-title="'Сума'">
+            {{trns.money}}
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
-  <add-vidget content=""></add-vidget>
-  <button id="day_fuel" class="autocompare">DAY</button>
-  <button id="week_fuel" class="autocompare">WEEK</button>
-  <button id="month_fuel" class="autocompare">MONTH</button>
-  <button id="year_fuel" class="autocompare">YEAR</button>
-  <div id="container_diagram" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  <add-vidget content=""></add-vidget>
-  <button id="day_money" class="autocompare">DAY</button>
-  <button id="week_money" class="autocompare">WEEK</button>
-  <button id="month_money" class="autocompare">MONTH</button>
-  <button id="year_money" class="autocompare">YEAR</button>
-  <div id="container_diagram_money" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  
+<!--  Fuel diagram-->
+  
+  <div class="vidget"  >
+   <h3>Статистика використаних ресурсів</h3>
+    <vidget-control-panel></vidget-control-panel>
+    <button id="day_fuel" class="autocompare">DAY</button>
+    <button id="week_fuel" class="autocompare">WEEK</button>
+    <button id="month_fuel" class="autocompare">MONTH</button>
+    <button id="year_fuel" class="autocompare">YEAR</button>
+    <div id="container_diagram" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  </div>
+  
+<!--  Money diagram-->
+  
+  <div class="vidget" >
+   <h3>Грошові витрати</h3>
+    <vidget-control-panel></vidget-control-panel>
+    <button id="day_money" class="autocompare">DAY</button>
+    <button id="week_money" class="autocompare">WEEK</button>
+    <button id="month_money" class="autocompare">MONTH</button>
+    <button id="year_money" class="autocompare">YEAR</button>
+    <div id="container_diagram_money" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  </div>
 </div>
