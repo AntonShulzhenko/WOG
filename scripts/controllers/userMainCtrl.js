@@ -10,7 +10,9 @@ function userMainCtrl($rootScope, $scope) {
       $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
     });
   }, 2000);
-  
+
+   
+    
   //create left-menu
   $rootScope.openClose = function (e) {
     var btn = $(e.target);
@@ -196,7 +198,7 @@ function userMainCtrl($rootScope, $scope) {
         series: {
           marker: {
             symbol: 'circle',
-            enabled: false,
+
           }
         }
       },
@@ -205,7 +207,7 @@ function userMainCtrl($rootScope, $scope) {
       },
       chart: {
         type: 'line',
-        zoomType: 'xy'
+
       },
       subtitle: {
 
@@ -255,7 +257,7 @@ function userMainCtrl($rootScope, $scope) {
           lineWidth: 3,
           marker: {
             symbol: 'circle',
-            enabled: false,
+
           }
         }
       },
@@ -264,7 +266,7 @@ function userMainCtrl($rootScope, $scope) {
       },
       chart: {
         type: 'line',
-        zoomType: 'xy'
+
       },
       subtitle: {
 
@@ -298,4 +300,7 @@ function userMainCtrl($rootScope, $scope) {
       series: linesArr
     });
   }
+
+
+
 }

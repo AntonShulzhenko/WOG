@@ -72,7 +72,7 @@
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 35%;
+    padding-left: 40%;
     white-space: normal;
     text-align: left;
     display: block;
@@ -87,7 +87,7 @@
     position: absolute;
     /* Top/left values mimic padding */
     left: 6px;
-    width: 50%;
+    width: 49%;
     padding-right: 10px;
     -ms-word-wrap: break-word;
     word-wrap: break-word;

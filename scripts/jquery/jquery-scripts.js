@@ -39,11 +39,11 @@ $(document).ready(function () {
   
   setInterval(function () {
     if ($('nav').hasClass('minimize')) {
-      $("[id^='toolt']").removeClass('invisible');
+      $(".menu_hover").parent().removeClass('invisible');
     } else
-      $("[id^='toolt']").addClass('invisible');
+      $(".menu_hover").parent().addClass('invisible');
     $(".show_hide").on('click', function () {
-      $("[id^='toolt']").addClass('invisible');
+      $(".menu_hover").parent().addClass('invisible');
     })
   }, 100);
 });

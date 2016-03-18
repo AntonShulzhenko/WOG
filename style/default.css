@@ -14,13 +14,16 @@ body {
 .wrap {
   height: 100%;
 }
+
 a {
   text-decoration: none !Important;
 }
+
 body > .wrap {
   height: auto;
   min-height: 100%;
 }
+
 header {
   z-index: 99;
   height: 70px;
@@ -675,6 +678,10 @@ a.faq button {
   cursor: pointer;
 }
 
+table {
+  font-size: 14px;
+}
+
 .vidget {
   position: relative;
   background-color: #fff;
@@ -704,6 +711,7 @@ a.faq button {
   margin-bottom: 70px;
   font-weight: 600;
 }
+
 .vidget.over {
   border: 2px dashed #000;
 }
@@ -712,10 +720,12 @@ a.faq button {
   height: 90px;
   overflow: hidden;
 }
+
 .card_control_panel ul {
   margin: 0;
   padding-left: 0;
 }
+
 .card_control_panel li {
   text-align: center;
   list-style-type: none;
@@ -725,34 +735,76 @@ a.faq button {
   line-height: 50px;
   font-size: 14px;
 }
+
 .card_control_panel li a {
   color: black;
 }
+
 .card_control_panel {
   width: 100%;
   background-color: #0a8f49;
   display: inline-block;
 }
+
 .card_control_panel li a {
   color: white;
 }
+
 .control-each-el {
   display: none;
 }
 
-.table ::-webkit-input-placeholder {color:black; font-size: 12px}
-.table ::-moz-placeholder          {color:black; font-size: 12px}/* Firefox 19+ */
-.table :-moz-placeholder           {color:black; font-size: 12px}/* Firefox 18- */
-.table :-ms-input-placeholder      {color:black; font-size: 12px}
+.table::-webkit-input-placeholder {
+  color: black;
+  font-size: 12px
+}
+
+.table::-moz-placeholder {
+  color: black;
+  font-size: 12px
+}
+
+
+/* Firefox 19+ */
+
+.table:-moz-placeholder {
+  color: black;
+  font-size: 12px
+}
+
+
+/* Firefox 18- */
+
+.table:-ms-input-placeholder {
+  color: black;
+  font-size: 12px
+}
+
 .open-close_table_item {
   font-size: 32px;
   position: relative;
   top: -7px;
   color: green;
 }
+
 .check_table_item {
   transform: scale(1.8);
   position: relative;
   top: -13px;
   margin-left: -2px;
+}
+
+.drag_tooltip:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: 30%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid rgba(0,0,0,0.5);
+}
+h2 {
+  color: white;
 }

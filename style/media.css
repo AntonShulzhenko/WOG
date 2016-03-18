@@ -125,6 +125,9 @@
 }
 
 @media screen and (min-width:992px) and (max-width:1199px) {
+  table {
+    font-size: 12px;
+  }
   .slide_footer a.btn {
     margin-left: 0;
     float: right;

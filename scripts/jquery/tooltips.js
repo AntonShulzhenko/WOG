@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  if ($('body').width()>=768) {
+  if ($('body').width() >= 993) {
     console.log(window.screen.width);
     $('.menu_tooltip').tooltipsy({
       offset: [5, 0],
@@ -22,5 +22,7 @@ $(document).ready(function () {
         $el.fadeOut(300);
       }
     })
+
+    
   }
 });
