@@ -5,20 +5,24 @@ function userMainCtrl($rootScope, $scope) {
   setTimeout(function () {
     $('#week_fuel').trigger('click');
     $('#week_money').trigger('click');
-  }, 1000)
-
+    $('.table input').attr('placeholder', 'Пошук за номером карти');
+    $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
+      $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
+    });
+  }, 2000);
+  
   //create left-menu
 
   $rootScope.title = '/ Кабінет користувача';
   $rootScope.page_img = 'main';
   angular.element($('.nav_list li')).removeClass('active');
   angular.element($('.main')).addClass('active');
-  
+
   //get script for diagram
-  
+
   $.ajax({
     url: 'scripts/lib/highcharts.js',
-    cashe: 'true',
+    cashe: true,
     success: function () {
       $('#week_fuel').trigger('click');
       $('#week_money').trigger('click');

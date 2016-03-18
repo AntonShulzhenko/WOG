@@ -1,5 +1,8 @@
 wogApp.controller('tableCardsCtrl', function ($scope, $filter, ngTableParams) {
-
+  $scope.openClose = function (e) {
+    var btn = e.target;
+    $(btn).closest('tr').toggleClass('mobile-table-el');
+  }
   $scope.users = [{
     'card': '11111111111111111 ',
     'type': 'Основний',

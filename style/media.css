@@ -53,6 +53,35 @@
 }
 
 @media screen and (max-width:991px) and (min-width:0px) {
+  .ng-table-pagination {
+    margin-left: 20px;
+  }
+  .control-each-el {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .vidget h3 {
+    margin-bottom: 30px;
+  }
+  .open-panel {
+    overflow-y: scroll !Important;
+  }
+  .table {
+    font-size: 12px;
+  }
+  .min_card_operation tbody tr td:first-child {
+    display: none;
+  }
+  tbody tr.mobile-table-el {
+    height: 85px;
+    overflow: hidden;
+  }
+  .card_control_panel li {
+  width: 90px;
+  font-size: 12px;
+}
   footer p {
     font-size: 10px;
   }
@@ -96,6 +125,28 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .card_control_panel ul {
+    height: 50px;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+  .card_control_panel li {
+    width: 20%;
+  }
+  .card_control_panel ul.open_table_panel {
+    height: 100%;
+    overflow: auto;
+  }
+  .card_control_panel ul li:first-child {
+    display: block;
+    width: 100%;
+  }
+  .card_control_panel ul li:first-child:after {
+    content: '▼';
+    position: relative;
+    left: 10px;
+    color: #fff;
+  }
   .ng-table-filters {
     top: 20px !Important;
     left: 20px !Important;
