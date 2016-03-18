@@ -715,10 +715,9 @@ a.faq button {
 
 .vidget h3 {
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   font-weight: 600;
 }
-
 .vidget.over {
   border: 2px dashed #000;
 }

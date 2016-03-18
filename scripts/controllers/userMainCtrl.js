@@ -25,31 +25,6 @@ function userMainCtrl($rootScope, $scope) {
     }
   });
 
-
-//      $.ajax({
-//        url: 'scripts/lib/footable.js',
-//        cashe: 'true',
-//        success: addResp
-//      });
-//    
-//      function addResp() {
-//        $('.table').footable();
-//        console.log('footabled');
-//      }
-//  
-//      $('.table').on('click', function () {
-//        $('.table').footable();
-//        console.log('footabled');
-//      })
-//      $('.table').keyup(function () {
-//        setTimeout(function () {
-//          $('.min_card_operation ').trigger('click');
-//        }, 200)
-//      })
-
-
-
-
   //create values for diagrams
 
   var yearArrCategories = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];

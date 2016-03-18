@@ -9,6 +9,7 @@
     <div ng-controller="tableCardsCtrl" class="min_card_operation">
       <h3>Операцїі з картками</h3>
       <vidget-control-panel></vidget-control-panel>
+      <card-control-panel> </card-control-panel>
       <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
         <tr ng-repeat="item in data | filter:search:card" show-filter="true">
           <td data-title="'ch'">

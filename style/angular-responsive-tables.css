@@ -1,26 +1,54 @@
 /* original: http://css-tricks.com/responsive-data-tables/ */
 
-.responsive {
+@media only screen and (min-width: 992px) {
+  .responsive {
     width: 100%;
     border-collapse: collapse;
+  }
+  .table thead {
+    position: relative;
+  }
+  .table .ng-table-filters {
+    position: absolute;
+    top: 75px;
+    background-color: #f6f6f6;
+  }
+  .table .ng-table-filters th {
+    display: none;
+    border: none;
+  }
+  .ng-table-filters th:nth-child(2) {
+    float: right;
+    display: inline-block;
+    width: 79%;
+    margin-right: 20px;
+  }
+  .min_card_operation .ng-table-filters th:nth-child(2):before {
+    content: 'Поиск по номеру карты';
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    width: 20%
+  }
+  .min_card_operation .ng-table-filters {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 767px) {
-
-    /* Force table to not be like tables anymore */
-    /* table.responsive,*/
-    .responsive thead,
-    .responsive tbody,
-    .responsive tr,
-    .responsive th {
-        display: block;
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    .responsive thead {
-        position: relative;
-      visibility: hidden;
-    }
+@media only screen and (max-width: 991px) {
+  /* Force table to not be like tables anymore */
+  /* table.responsive,*/
+  .responsive thead,
+  .responsive tbody,
+  .responsive tr,
+  .responsive th {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .responsive thead {
+    position: relative;
+    visibility: hidden;
+  }
   .ng-table-sort-header {
     display: none !Important;
   }
@@ -31,57 +59,52 @@
   .ng-table-filters th {
     display: none;
   }
-  .ng-table-filters th:nth-child(2){
+  .ng-table-filters th:nth-child(2) {
     display: block;
   }
-  
-
-    .responsive tr {
-        border: 1px solid #ccc;
-    }
-
-    .responsive td:nth-child(odd), .responsive td:nth-child(even) {
-        /* Behave  like a "row" */
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-        white-space: normal;
-        text-align: left;
-
-        display: block;
-        -webkit-box-sizing: content-box;
-           -moz-box-sizing: content-box;
-                box-sizing: content-box;
-        min-height: 1em;
-    }
-
-    .responsive td:nth-child(odd)::before, .responsive td:nth-child(even)::before {
-        /* Now like a table header */
-        position: absolute;
-        /* Top/left values mimic padding */
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        -ms-word-wrap: break-word;
-            word-wrap: break-word;
-        text-align: left;
-        font-weight: bold;
-        /*
+  .responsive tr {
+    border: 1px solid #ccc;
+  }
+  .responsive td:nth-child(odd),
+  .responsive td:nth-child(even) {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+    display: block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    min-height: 1em;
+  }
+  .responsive td:nth-child(odd)::before,
+  .responsive td:nth-child(even)::before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    left: 6px;
+    width: 32%;
+    padding-right: 10px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-align: left;
+    font-weight: bold;
+    /*
         Label the data
         */
-        content: attr(data-title-mobile);
-    }
-    
-    .responsive td.responsive-omit-title:nth-child(odd), .responsive td.responsive-omit-title:nth-child(even) {
-        padding-left: 6px;
-    }
-
-    .responsive td.responsive-omit-title::before {
-        display: none;
-    }
-
-    .responsive td.responsive-omit-if-empty:empty {
-        display: none;
-    }
+    content: attr(data-title-mobile);
+  }
+  .responsive td.responsive-omit-title:nth-child(odd),
+  .responsive td.responsive-omit-title:nth-child(even) {
+    padding-left: 6px;
+  }
+  .responsive td.responsive-omit-title::before {
+    display: none;
+  }
+  .responsive td.responsive-omit-if-empty:empty {
+    display: none;
+  }
 }
