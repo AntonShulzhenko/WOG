@@ -20,7 +20,7 @@
             <br> {{item.type}}
 
             <div class="control-each-el">
-              <input  class="check_table_item" type="checkbox">
+              <input class="check_table_item" type="checkbox">
               <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
             </div>
           </td>
@@ -55,9 +55,13 @@
       <h3>Останні транзакціїї</h3>
       <vidget-control-panel></vidget-control-panel>
       <table wt-responsive-table ng-table="transTable" class="table table-striped">
-        <tr ng-repeat="trns in data | filter:search:card" show-filter="true">
+        <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
           <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
             {{trns.transactionData}} {{item.transactionTime}}
+            <div class="control-each-el">
+              <input class="check_table_item" type="checkbox">
+              <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
+            </div>
           </td>
           <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
             {{trns.card}}

@@ -53,8 +53,18 @@
 }
 
 @media screen and (max-width:991px) and (min-width:0px) {
+  .ng-table-counts {
+    display: none !Important;
+  }
+  div.ng-table-pager {
+    text-align: center;
+  }
+  div.ng-table-counts {
+    float: none !Important;
+    text-align: center !Important;
+  }
   .ng-table-pagination {
-    margin-left: 20px;
+    margin-top: 20px;
   }
   .control-each-el {
     display: block;
@@ -128,7 +138,6 @@
   .card_control_panel ul {
     height: 50px;
     overflow: hidden;
-    transition: 0.4s;
   }
   .card_control_panel li {
     width: 20%;

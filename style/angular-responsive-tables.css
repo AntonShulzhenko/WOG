@@ -62,13 +62,17 @@
   .responsive tr {
     border: 1px solid #ccc;
   }
+  .min_last_trns .responsive td:nth-child(odd),
+  .min_last_trns  .responsive td:nth-child(even) {
+    padding-left: 48%;
+  }
   .responsive td:nth-child(odd),
   .responsive td:nth-child(even) {
     /* Behave  like a "row" */
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 32%;
+    padding-left: 35%;
     white-space: normal;
     text-align: left;
     display: block;
@@ -83,7 +87,7 @@
     position: absolute;
     /* Top/left values mimic padding */
     left: 6px;
-    width: 32%;
+    width: 50%;
     padding-right: 10px;
     -ms-word-wrap: break-word;
     word-wrap: break-word;

@@ -12,7 +12,10 @@ function userMainCtrl($rootScope, $scope) {
   }, 2000);
   
   //create left-menu
-
+  $rootScope.openClose = function (e) {
+    var btn = $(e.target);
+    btn.closest('tr').toggleClass('mobile-table-el');
+  }
   $rootScope.title = '/ Кабінет користувача';
   $rootScope.page_img = 'main';
   angular.element($('.nav_list li')).removeClass('active');
