@@ -829,3 +829,9 @@ h2 {
   line-height: 50px !Important;
   margin-top: 20px;
 }
+.darg_on_me {
+  cursor: move;
+}
+.darg_on_me:hover {
+  cursor: move !Important;
+}
