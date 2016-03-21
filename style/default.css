@@ -943,6 +943,7 @@ td i {
 }
 
 .check_type_subsection div {
+  vertical-align: top;
   display: inline-block;
   margin-left: 25px;
   margin-right: 45px;
@@ -954,6 +955,8 @@ td i {
 }
 
 .buttons_control_panel {
+  background-color: #f9f9f9;
+  z-index: 5;
   float: right;
   position: relative;
   top: -107px;
@@ -976,4 +979,16 @@ td i {
 #container_diagram_money,
 #container_diagram {
   top: -80px;
+}
+div.opened ul{
+  position: relative;
+}
+div.opened ul li {
+  display: block;
+}
+div.opened ul+span {
+  margin-left: 60px;
+}
+.check_type_subsection div.opened li:hover {
+  color: green;
 }

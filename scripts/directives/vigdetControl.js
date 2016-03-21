@@ -60,6 +60,15 @@ angular.module('wogApp.vidget', [])
       $(this).addClass('active_btn');
       $(this).siblings().removeClass('active_btn');
     });
+  
+    $('.check_type_subsection .ion-ios-arrow-down').on('click', function(){
+      $(this).parent().toggleClass('opened');
+      $('.check_type_subsection li').on('click', function(){
+        $(this).addClass('active_template_item');
+        $(this).siblings().removeClass('active_template_item');
+        $(this).closest('div').removeClass('opened');
+      });
+    });
   })
 
 .directive('vidgetControlPanel', function ($compile) {
@@ -97,14 +106,14 @@ angular.module('wogApp.vidget', [])
     },
     template: '<div class="check_type_subsection">' + '<div>' + '<i class="ion-ios-arrow-down"></i>' + '<ul>' +
       '<li class="active_template_item">Автомобільний транспорт</li>' +
-      '<li>Автомобільний транспорт</li>' +
-      '<li>Автомобільний транспорт</li>' +
-      '<li>Автомобільний транспорт</li>' +
+      '<li>Трактор транспорт</li>' +
+      '<li>Вантажный транспорт</li>' +
+      '<li>Поезд транспорт</li>' +
       '</ul>' + '<span>Підрозділ</span>' + '</div>' + '<div>' + '<i class="ion-ios-arrow-down"></i>' + '<ul>' +
-      '<li class="active_template_item">Автомобільний транспорт</li>' +
-      '<li>Автомобільний транспорт</li>' +
-      '<li>Автомобільний транспорт</li>' +
-      '<li>Автомобільний транспорт</li>' +
+      '<li class="active_template_item">Всі рахунки</li>' +
+      '<li>Виплаты выплаты</li>' +
+      '<li>Нема виплат</li>' +
+      '<li>Еще что-то</li>' +
       '</ul>' + '<span>Ресурс</span>' + '</div>' + 
       '<div class="calendar_vidget">'+ '<i class="ion-calendar"></i>' + '<span> 01.01.2015  — 31.01.2015</span>' + '</div>'  +
     '</div>'

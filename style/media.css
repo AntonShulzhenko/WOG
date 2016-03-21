@@ -28,6 +28,13 @@
 }
 
 @media screen and (max-width:1280px) and (min-width:0px) {
+  .check_type_subsection i {
+    width: 48px;
+  }
+  .check_type_subsection div {
+    margin-left: 8px;
+    margin-right: 15px;
+  }
   .dp_mustang_plus,
   .dp_mustang,
   .mustang_92,
@@ -69,6 +76,17 @@
 }
 
 @media screen and (max-width:991px) and (min-width:0px) {
+  .vidget .diagramm:after {
+    bottom: 0;
+  }
+  .buttons_control_panel {
+    position: static;
+    margin-top: -55px;
+  }
+  #container_diagram_money,
+  #container_diagram {
+    top: -10px;
+  }
   .green_fonts {
     color: green;
     font-size: 12px;
@@ -142,6 +160,13 @@
 }
 
 @media screen and (min-width:992px) and (max-width:1199px) {
+  .check_type_subsection i {
+    width: 40px;
+  }
+  .check_type_subsection div {
+    margin-left: 5px;
+    margin-right: 8px;
+  }
   .dp_mustang_plus,
   .dp_mustang,
   .mustang_92,
@@ -164,6 +189,10 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .check_type_subsection div {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
   .dp_mustang_plus,
   .dp_mustang,
   .mustang_92,
