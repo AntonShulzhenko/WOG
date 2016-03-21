@@ -722,7 +722,19 @@ table {
   height: 90px;
   overflow: hidden;
 }
-
+.vidget.hide_to_head h3 {
+  visibility: visible;
+}
+.vidget.hide_to_head .vidget_control_panel {
+  visibility: visible;
+}
+.vidget.hide_to_head .vidget_control_panel *{
+  visibility: visible;
+}
+.vidget.hide_to_head * {
+  visibility: hidden;
+}
+.vidget.hide_to_head 
 .card_control_panel ul {
   margin: 0;
   padding-left: 0;
@@ -970,6 +982,7 @@ td i {
   border: 1px solid #cce3d9;
   outline: none;
 }
+
 .buttons_control_panel button.active_btn {
   color: white;
   background-color: #00ab4e;
@@ -980,15 +993,75 @@ td i {
 #container_diagram {
   top: -80px;
 }
-div.opened ul{
+
+div.opened ul {
   position: relative;
 }
+
 div.opened ul li {
   display: block;
 }
+
 div.opened ul+span {
   margin-left: 60px;
 }
+
 .check_type_subsection div.opened li:hover {
   color: green;
+}
+
+.balance_list ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.balance_list hr {
+  margin: 10px auto;
+  width: 40%;
+  
+}
+
+.balance_list p {
+  font-size: 18px;
+  color: #5d5d5d;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: 1px dashed #dedede;
+}
+
+.balance_list {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.balance_list li {
+  padding-bottom: 40px;
+  padding-top: 15px;
+  display: inline-block;
+  width: 23%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(224, 221, 221);
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+}
+.balance_list span {
+  font-size: 14px;
+  
+}
+.balance_list span:last-child {
+  font-size: 14px;
+  color: #008c44;
+}
+.balance_list span {
+  font-size: 24px;
+}
+.balance_list h5 {
+  font-size: 12px;
 }

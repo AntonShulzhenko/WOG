@@ -35,12 +35,12 @@
     margin-left: 8px;
     margin-right: 15px;
   }
-  .dp_mustang_plus,
-  .dp_mustang,
-  .mustang_92,
-  .mustang_95,
-  .mustang_100,
-  .lgp_mustang {
+  .min_last_trns .dp_mustang_plus,
+  .min_last_trns .dp_mustang,
+  .min_last_trns .mustang_92,
+  .min_last_trns .mustang_95,
+  .min_last_trns .mustang_100,
+  .min_last_trns .lgp_mustang {
     background-size: 70px 22px;
     background-position: 55% center;
   }
@@ -167,12 +167,12 @@
     margin-left: 5px;
     margin-right: 8px;
   }
-  .dp_mustang_plus,
-  .dp_mustang,
-  .mustang_92,
-  .mustang_95,
-  .mustang_100,
-  .lgp_mustang {
+  .min_last_trns .dp_mustang_plus,
+  .min_last_trns .dp_mustang,
+  .min_last_trns .mustang_92,
+  .min_last_trns .mustang_95,
+  .min_last_trns .mustang_100,
+  .min_last_trns .lgp_mustang {
     background-size: 60px 18px;
     background-position: center 60%;
   }
@@ -189,16 +189,19 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .balance_list li {
+    width: 45%;
+  }
   .check_type_subsection div {
     margin-bottom: 5px;
     margin-top: 5px;
   }
-  .dp_mustang_plus,
-  .dp_mustang,
-  .mustang_92,
-  .mustang_95,
-  .mustang_100,
-  .lgp_mustang {
+  .min_last_trns .dp_mustang_plus,
+  .min_last_trns .dp_mustang,
+  .min_last_trns .mustang_92,
+  .min_last_trns .mustang_95,
+  .min_last_trns .mustang_100,
+  .min_last_trns .lgp_mustang {
     background-size: 60px 18px;
     background-position: 60% center;
   }
@@ -302,5 +305,12 @@
     border-left: 1px solid rgb(0, 171, 78);
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .balance_list {
+    padding: 10px;
+  }
+    .balance_list li {
+    width: 95%;
+      margin: 10px auto;
   }
 }

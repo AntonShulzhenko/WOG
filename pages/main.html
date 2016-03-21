@@ -126,6 +126,26 @@
   </div>
 
   <div class="vidget">
+    <h3>Залишок ресурсів </h3>
+    <check-type></check-type>
+    <vidget-control-panel></vidget-control-panel>
+    <div class="balance_list" ng-controller="resoursesBalance">
+      <ul>
+        <li ng-repeat="item in fuel_types">
+          <p class="{{item.name}}">{{item.text}}</p>
+          <div class="">
+            <h5>Баланс</h5>
+            <span>{{item.balance}}</span>
+            <hr>
+            <span>до {{item.date}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="vidget">
+    <h3>Нові сповіщення</h3>
     <vidget-control-panel></vidget-control-panel>
   </div>
 </div>
