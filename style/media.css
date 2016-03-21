@@ -123,7 +123,7 @@
     display: none;
   }
   tbody tr.mobile-table-el {
-    height: 85px;
+    height: 100px;
     overflow: hidden;
   }
     .open-close_table_item {

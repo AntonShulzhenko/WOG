@@ -1034,15 +1034,21 @@ div.opened ul+span {
 }
 
 .balance_list {
+  background: #f9f9f9;
+  margin-top: -63px;
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
+.reset_padding_btm {
+  padding-bottom: 0 !Important;
+}
 .balance_list li {
   padding-bottom: 40px;
   padding-top: 15px;
-  display: inline-block;
+  float: left;
   width: 23%;
   margin-left: 10px;
   margin-bottom: 10px;
