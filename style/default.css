@@ -835,3 +835,34 @@ h2 {
 .darg_on_me:hover {
   cursor: move !Important;
 }
+.dp_mustang_plus {
+  background: url(../img/fuel-types/DPmustang+.png) no-repeat center center;
+}
+.dp_mustang {
+  background: url(../img/fuel-types/DPmustang.png) no-repeat center center;
+}
+.mustang_92 {
+  background: url(../img/fuel-types/92mustang.png) no-repeat center center;
+}
+.mustang_95 {
+  background: url(../img/fuel-types/95mustang.png) no-repeat center center;
+}
+.mustang_100 {
+  background: url(../img/fuel-types/100mustang.png) no-repeat center center;
+}
+.lgp_mustang {
+  background: url(../img/fuel-types/LGPmustang.png) no-repeat center center;
+}
+.min_last_trns th div {
+  line-height: 35px;
+}
+.min_last_trns th div span {
+  display: inline-block;
+  line-height: 14px;
+  vertical-align: top;
+}
+td i {
+  font-size: 22px;
+  display: inline-block;
+  margin-left: 5px;
+}

@@ -41,7 +41,7 @@
               {{item.period}}
             </td>
             <td data-title="'Статус'" data-title-mobile="Статус">
-              {{item.status}}
+              <i class="ion-ios-circle-filled {{item.status}}"></i>
               <i class="ion-document"></i>
               <i class="ion-android-options"></i>
             </td>
@@ -62,7 +62,7 @@
         <table wt-responsive-table ng-table="transTable" class="table table-striped">
           <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
             <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
-              {{trns.transactionData}} {{item.transactionTime}}
+              {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
               <div class="control-each-el">
                 <input class="check_table_item" type="checkbox">
                 <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
@@ -81,8 +81,8 @@
             <td data-title="'АЗК'" data-title-mobile="АЗК">
               {{trns.azk}}
             </td>
-            <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга">
-              {{}}
+            <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга" class="{{trns.fuel_type}}">
+
             </td>
             <td data-title="'Обєм'" data-title-mobile="Обєм" sortable="'fuel_vol'">
               {{trns.fuel_vol}}

@@ -300,7 +300,4 @@ function userMainCtrl($rootScope, $scope) {
       series: linesArr
     });
   }
-
-
-
 }
