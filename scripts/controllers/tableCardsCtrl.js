@@ -1,7 +1,7 @@
 wogApp.controller('tableCardsCtrl', function ($scope, $filter, ngTableParams) {
 
   $scope.users = [{
-    'card': '11111111111111111 ',
+    'card': '1111 2222 3333 4444',
     'type': 'Основний',
     'master': 'Константинопольський К.К.',
     'info': 'АС 69-69 АВ ',
@@ -10,7 +10,7 @@ wogApp.controller('tableCardsCtrl', function ($scope, $filter, ngTableParams) {
     'period': '+',
     'status': 'on_card'
   }, {
-    'card': '222222222222222 ',
+    'card': '2222 3333 5555 7777',
     'type': 'Основний',
     'master': 'Константинопольський К.К.',
     'info': 'АС 69-69 АВ ',
@@ -19,7 +19,7 @@ wogApp.controller('tableCardsCtrl', function ($scope, $filter, ngTableParams) {
     'period': '+',
     'status': 'off_card'
   }, {
-    'card': '333333333333333 ',
+    'card': '9999 8888 4444 2222',
     'type': 'Основний',
     'master': 'Константинопольський К.К.',
     'info': 'АС 69-69 АВ ',

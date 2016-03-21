@@ -719,27 +719,34 @@ table {
 }
 
 .vidget.hide_to_head {
-  height: 90px;
+  height: 100px;
   overflow: hidden;
 }
+
 .vidget.hide_to_head h3 {
   visibility: visible;
 }
+
 .vidget.hide_to_head .vidget_control_panel {
   visibility: visible;
 }
-.vidget.hide_to_head .vidget_control_panel *{
+
+.vidget.hide_to_head .vidget_control_panel * {
   visibility: visible;
 }
+
 .vidget.hide_to_head * {
   visibility: hidden;
 }
-.vidget.hide_to_head 
-.card_control_panel ul {
+
+.vidget.hide_to_head .card_control_panel ul {
   margin: 0;
   padding-left: 0;
 }
-
+.card_control_panel {
+  margin: 0;
+  padding-left: 0;
+}
 .card_control_panel li {
   text-align: center;
   list-style-type: none;
@@ -1019,7 +1026,6 @@ div.opened ul+span {
 .balance_list hr {
   margin: 10px auto;
   width: 40%;
-  
 }
 
 .balance_list p {
@@ -1051,17 +1057,58 @@ div.opened ul+span {
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
 }
+
 .balance_list span {
   font-size: 14px;
-  
 }
+
 .balance_list span:last-child {
   font-size: 14px;
   color: #008c44;
 }
+
 .balance_list span {
   font-size: 24px;
 }
+
 .balance_list h5 {
   font-size: 12px;
+}
+
+.client-message {
+  background: #f9f9f9;
+  padding: 25px;
+  margin-top: -65px;
+}
+.client-message-text {
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(224, 221, 221);
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+}
+.client-message-text p {
+    padding: 45px;
+}
+.message-control {
+  padding: 10px 45px;
+  border-top: 1px dashed #d6d6d6;
+}
+.client-message-text {
+  margin-bottom: 20px;
+}
+.message-control span {
+  color: #a3a0a0;
+}
+.message-control span i {
+  color: black;
+}
+.message-control span:last-child {
+  float: right;
+  
+}
+.client-message h4 {
+  margin-bottom: 25px;
+  color: #00553c;
 }

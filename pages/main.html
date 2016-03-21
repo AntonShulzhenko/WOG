@@ -147,5 +147,16 @@
   <div class="vidget">
     <h3>Нові сповіщення</h3>
     <vidget-control-panel></vidget-control-panel>
+    <div class="client-message" ng-controller="clientMessager">
+      <h4 class="text-center"><i class="ion-email"></i>  {{massages_to_user.length}} {{word_num}} сповіщення</h4>
+      <div class="client-message-text" ng-repeat="mess in massages_to_user">
+       <p>{{mess.text}}</p>
+        <div class="message-control">
+          <span>{{mess.date}}</span>
+          <span>{{mess.time}}</span>
+          <span><i class="ion-eye"></i> відмітити прочитаним</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

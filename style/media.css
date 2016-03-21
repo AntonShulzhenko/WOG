@@ -28,6 +28,9 @@
 }
 
 @media screen and (max-width:1280px) and (min-width:0px) {
+  .client-message {
+    margin-top: -40px;
+  }
   .check_type_subsection i {
     width: 48px;
   }
@@ -190,7 +193,7 @@
 
 @media screen and (min-width:0px) and (max-width:767px) {
   .balance_list li {
-    width: 45%;
+    width: 47%;
   }
   .check_type_subsection div {
     margin-bottom: 5px;
@@ -218,6 +221,7 @@
   .card_control_panel ul {
     height: 50px;
     overflow: hidden;
+    padding-left: 0;
   }
   .card_control_panel li {
     width: 20%;
@@ -288,6 +292,17 @@
     padding-right: 10px;
     border: none;
   }
+  .client-message-text p {
+    padding: 20px;
+    font-size: 12px;
+  }
+  .client-message-text span {
+    float: none;
+  }
+  .message-control {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media screen and (min-width:0px) and (max-width:480px) {
@@ -309,8 +324,16 @@
   .balance_list {
     padding: 10px;
   }
-    .balance_list li {
+  .balance_list li {
     width: 95%;
-      margin: 10px auto;
+    margin: 10px auto;
+  }
+  .message-control span {
+    font-size: 12px !Important;
+  }
+  .message-control span:last-child {}
+  .message-control {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
