@@ -679,7 +679,7 @@ a.faq button {
 }
 
 table {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .vidget {
@@ -743,10 +743,12 @@ table {
   margin: 0;
   padding-left: 0;
 }
+
 .card_control_panel {
   margin: 0;
   padding-left: 0;
 }
+
 .card_control_panel li {
   text-align: center;
   list-style-type: none;
@@ -805,18 +807,11 @@ table {
   font-weight: 100;
 }
 
-.open-close_table_item {
-  font-size: 32px;
-  position: relative;
-  top: -7px;
-  color: green;
-}
-
-.check_table_item {
+div .check_table_item {
   transform: scale(1.8);
   position: relative;
-  top: -13px;
-  margin-left: -2px;
+  top: 10px;
+  margin-right: 10px;
 }
 
 .drag_tooltip:after {
@@ -837,7 +832,7 @@ h2 {
 
 .green_fonts {
   color: #00ab4e;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -897,10 +892,10 @@ h2 {
 }
 
 td i {
-  font-size: 25px;
+  font-size: 16px;
   font-weight: 100;
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 .on_card {
@@ -1080,35 +1075,59 @@ div.opened ul+span {
   padding: 25px;
   margin-top: -65px;
 }
-.client-message-text {
 
+.client-message-text {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(224, 221, 221);
   border-radius: 6px;
   background-color: rgb(255, 255, 255);
 }
+
 .client-message-text p {
-    padding: 45px;
+  padding: 45px;
 }
+
 .message-control {
   padding: 10px 45px;
   border-top: 1px dashed #d6d6d6;
 }
+
 .client-message-text {
   margin-bottom: 20px;
 }
+
 .message-control span {
   color: #a3a0a0;
 }
+
 .message-control span i {
   color: black;
 }
+
 .message-control span:last-child {
   float: right;
-  
 }
+
 .client-message h4 {
   margin-bottom: 25px;
   color: #00553c;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  padding: 10px;
+  line-height: 1.6;
+}
+.dp_mustang_plus,
+.dp_mustang,
+.mustang_92,
+.mustang_95,
+.mustang_100,
+.lgp_mustang {
+  background-size: 80px 22px;
 }

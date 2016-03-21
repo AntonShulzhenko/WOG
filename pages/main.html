@@ -19,11 +19,11 @@
           </td>
           <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Рахунок" sortable="'card'" filter="{'card':'text'}">
             {{item.card}}
-            <br> {{item.type}}
+            <br> <span class="small">{{item.type}}</span> 
 
             <div class="control-each-el">
               <input class="check_table_item" type="checkbox">
-              <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
+              <span ng-click="openClose($event)" class="open-close_table_item"></span>
             </div>
           </td>
           <td data-title="'Держатель'" data-title-mobile="Держатель" sortable="'master'">
@@ -64,12 +64,12 @@
             {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
             <div class="control-each-el">
               <input class="check_table_item" type="checkbox">
-              <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
+              <span ng-click="openClose($event)" class="open-close_table_item"></span>
             </div>
           </td>
           <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
             {{trns.card}}
-            <br> {{trns.master}}
+            <br> <span class="small">{{trns.master}}</span>
           </td>
           <td data-title="'Тип транзакції'" data-title-mobile="Тип транзакції" sortable="'pay_type'">
             {{trns.pay_type}}

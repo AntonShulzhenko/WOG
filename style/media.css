@@ -126,6 +126,19 @@
     height: 85px;
     overflow: hidden;
   }
+    .open-close_table_item {
+    display:inline-block;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 12px;
+    background: url('../img/minimize.png') no-repeat center center;
+    margin-right: 5px;
+  }
+  tbody tr.mobile-table-el .open-close_table_item {
+    background: url('../img/resize-i.png') no-repeat center center;
+  }
   .card_control_panel li {
     width: 90px;
     font-size: 12px;
