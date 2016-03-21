@@ -10,7 +10,7 @@
   }
   .table .ng-table-filters {
     position: absolute;
-    top: 75px;
+    top: 95px;
     background-color: #f6f6f6;
   }
   .table .ng-table-filters th {
@@ -28,6 +28,10 @@
     width: 95%;
     margin: 0 auto;
     transition: 0.4s;
+  }
+  .min_last_trns .table .ng-table-filters {
+    right: 0;
+    width: 30%;
   }
 }
 
@@ -62,7 +66,7 @@
     border: 1px solid #ccc;
   }
   .min_last_trns .responsive td:nth-child(odd),
-  .min_last_trns  .responsive td:nth-child(even) {
+  .min_last_trns .responsive td:nth-child(even) {
     padding-left: 48%;
   }
   .responsive td:nth-child(odd),

@@ -1,8 +1,6 @@
 angular.module('wogApp.vidget', [])
   .controller('vidgetCtrl', function ($scope, $compile) {
 
-
-
     $.ajax({
       url: 'scripts/lib/dragula.js',
       cashe: true,
@@ -57,7 +55,11 @@ angular.module('wogApp.vidget', [])
     $('.card_control_panel ul li:first-child').on('click', function () {
       $(this).parent().toggleClass('open_table_panel');
     })
-
+    
+    $('.buttons_control_panel button').on('click', function(){
+      $(this).addClass('active_btn');
+      $(this).siblings().removeClass('active_btn');
+    });
   })
 
 .directive('vidgetControlPanel', function ($compile) {
@@ -84,5 +86,27 @@ angular.module('wogApp.vidget', [])
       '<li><a href="#"> Послуги </a></li>' +
       '<li><a href="#"> Термінали  </a></li>' +
       '<li><a href="#"> Інше  </a></li>' + '</ul>' + '</div>'
+  }
+})
+
+.directive('checkType', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      content: '@'
+    },
+    template: '<div class="check_type_subsection">' + '<div>' + '<i class="ion-ios-arrow-down"></i>' + '<ul>' +
+      '<li class="active_template_item">Автомобільний транспорт</li>' +
+      '<li>Автомобільний транспорт</li>' +
+      '<li>Автомобільний транспорт</li>' +
+      '<li>Автомобільний транспорт</li>' +
+      '</ul>' + '<span>Підрозділ</span>' + '</div>' + '<div>' + '<i class="ion-ios-arrow-down"></i>' + '<ul>' +
+      '<li class="active_template_item">Автомобільний транспорт</li>' +
+      '<li>Автомобільний транспорт</li>' +
+      '<li>Автомобільний транспорт</li>' +
+      '<li>Автомобільний транспорт</li>' +
+      '</ul>' + '<span>Ресурс</span>' + '</div>' + 
+      '<div class="calendar_vidget">'+ '<i class="ion-calendar"></i>' + '<span> 01.01.2015  — 31.01.2015</span>' + '</div>'  +
+    '</div>'
   }
 });

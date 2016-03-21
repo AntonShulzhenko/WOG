@@ -5,50 +5,49 @@
 
   <!-- table "card operations"-->
 
-  <div class="vidget" ng-app="wt.responsive">
+  <div class="vidget">
+    <!--   ng-app="wt.responsive"-->
     <div ng-controller="tableCardsCtrl" class="min_card_operation">
       <h3>Операцїі з картками</h3>
       <vidget-control-panel></vidget-control-panel>
       <card-control-panel> </card-control-panel>
-  
-        <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
-          <tr ng-repeat="item in data | filter:search:card" show-filter="true" class="mobile-table-el">
-            <td data-title="'✔'" data-title-mobile="✔">
-              <input type="checkbox">
-            </td>
-            <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Рахунок" sortable="'card'" filter="{'card':'text'}">
-              {{item.card}}
-              <br> {{item.type}}
 
-              <div class="control-each-el">
-                <input class="check_table_item" type="checkbox">
-                <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
-              </div>
-            </td>
-            <td data-title="'Держатель'" data-title-mobile="Держатель" sortable="'master'">
-              {{item.master}}
-            </td>
-            <td data-title="'Інформація'" data-title-mobile="Інформація" sortable="'info'">
-              {{item.info}}
-            </td>
-            <td data-title="'Телефони'" data-title-mobile="Телефони">
-              {{item.phone}}
-            </td>
-            <td data-title="'Ліміти'" data-title-mobile="Ліміти" sortable="'limits'" class="green_fonts">
-              {{item.limits}}
-            </td>
-            <td data-title="'Періоди'" data-title-mobile="Періоди" class="green_fonts">
-              {{item.period}}
-            </td>
-            <td data-title="'Статус'" data-title-mobile="Статус">
-              <i class="ion-ios-circle-filled {{item.status}}"></i>
-              <i class="ion-document"></i>
-              <i class="ion-android-options"></i>
-            </td>
+      <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
+        <tr ng-repeat="item in data | filter:search:card" show-filter="true" class="mobile-table-el">
+          <td data-title="'✔'" data-title-mobile="✔">
+            <input type="checkbox">
+          </td>
+          <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Рахунок" sortable="'card'" filter="{'card':'text'}">
+            {{item.card}}
+            <br> {{item.type}}
 
-          </tr>
-        </table>
-    
+            <div class="control-each-el">
+              <input class="check_table_item" type="checkbox">
+              <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
+            </div>
+          </td>
+          <td data-title="'Держатель'" data-title-mobile="Держатель" sortable="'master'">
+            {{item.master}}
+          </td>
+          <td data-title="'Інформація'" data-title-mobile="Інформація" sortable="'info'">
+            {{item.info}}
+          </td>
+          <td data-title="'Телефони'" data-title-mobile="Телефони">
+            {{item.phone}}
+          </td>
+          <td data-title="'Ліміти'" data-title-mobile="Ліміти" sortable="'limits'" class="green_fonts">
+            {{item.limits}}
+          </td>
+          <td data-title="'Періоди'" data-title-mobile="Періоди" class="green_fonts">
+            {{item.period}}
+          </td>
+          <td data-title="'Статус'" data-title-mobile="Статус">
+            <i class="ion-ios-circle-filled {{item.status}}"></i>
+            <i class="ion-document"></i>
+            <i class="ion-android-options"></i>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 
@@ -58,40 +57,40 @@
     <div ng-controller="tableLastTransactions" class="min_last_trns">
       <h3>Останні транзакціїї</h3>
       <vidget-control-panel></vidget-control-panel>
- 
-        <table wt-responsive-table ng-table="transTable" class="table table-striped">
-          <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
-            <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
-              {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
-              <div class="control-each-el">
-                <input class="check_table_item" type="checkbox">
-                <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
-              </div>
-            </td>
-            <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
-              {{trns.card}}
-              <br> {{trns.master}}
-            </td>
-            <td data-title="'Тип транзакції'" data-title-mobile="Тип транзакції" sortable="'pay_type'">
-              {{trns.pay_type}}
-            </td>
-            <td data-title="'Чек'" data-title-mobile="Чек">
-              {{trns.check_number}}
-            </td>
-            <td data-title="'АЗК'" data-title-mobile="АЗК">
-              {{trns.azk}}
-            </td>
-            <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга" class="{{trns.fuel_type}}">
+      <check-type></check-type>
+      <table wt-responsive-table ng-table="transTable" class="table table-striped">
+        <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
+          <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
+            {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
+            <div class="control-each-el">
+              <input class="check_table_item" type="checkbox">
+              <span ng-click="openClose($event)" class="open-close_table_item">▼</span>
+            </div>
+          </td>
+          <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
+            {{trns.card}}
+            <br> {{trns.master}}
+          </td>
+          <td data-title="'Тип транзакції'" data-title-mobile="Тип транзакції" sortable="'pay_type'">
+            {{trns.pay_type}}
+          </td>
+          <td data-title="'Чек'" data-title-mobile="Чек">
+            {{trns.check_number}}
+          </td>
+          <td data-title="'АЗК'" data-title-mobile="АЗК">
+            {{trns.azk}}
+          </td>
+          <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга" class="{{trns.fuel_type}}">
 
-            </td>
-            <td data-title="'Обєм'" data-title-mobile="Обєм" sortable="'fuel_vol'">
-              {{trns.fuel_vol}}
-            </td>
-            <td data-title="'Сума'" data-title-mobile="Сума" sortable="'money'">
-              {{trns.money}}
-            </td>
-          </tr>
-        </table>
+          </td>
+          <td data-title="'Обєм'" data-title-mobile="Обєм" sortable="'fuel_vol'">
+            {{trns.fuel_vol}}
+          </td>
+          <td data-title="'Сума'" data-title-mobile="Сума" sortable="'money'">
+            {{trns.money}}
+          </td>
+        </tr>
+      </table>
 
     </div>
   </div>
@@ -100,11 +99,14 @@
 
   <div class="vidget">
     <h3>Статистика використаних ресурсів</h3>
+    <check-type></check-type>
     <vidget-control-panel></vidget-control-panel>
-    <button id="day_fuel" class="autocompare">DAY</button>
-    <button id="week_fuel" class="autocompare">WEEK</button>
-    <button id="month_fuel" class="autocompare">MONTH</button>
-    <button id="year_fuel" class="autocompare">YEAR</button>
+    <div class="buttons_control_panel">
+      <button id="day_fuel" class="autocompare">День</button>
+      <button id="week_fuel" class="autocompare">Тиждень</button>
+      <button id="month_fuel" class="autocompare">Місяць</button>
+      <button id="year_fuel" class="autocompare">Рік</button>
+    </div>
     <div id="container_diagram" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
   </div>
 
@@ -112,11 +114,18 @@
 
   <div class="vidget">
     <h3>Грошові витрати</h3>
+    <check-type></check-type>
     <vidget-control-panel></vidget-control-panel>
-    <button id="day_money" class="autocompare">DAY</button>
-    <button id="week_money" class="autocompare">WEEK</button>
-    <button id="month_money" class="autocompare">MONTH</button>
-    <button id="year_money" class="autocompare">YEAR</button>
+    <div class="buttons_control_panel">
+      <button id="day_money" class="autocompare">День</button>
+      <button id="week_money" class="autocompare">Тиждень</button>
+      <button id="month_money" class="autocompare">Місяць</button>
+      <button id="year_money" class="autocompare">Рік</button>
+    </div>
     <div id="container_diagram_money" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  </div>
+
+  <div class="vidget">
+    <vidget-control-panel></vidget-control-panel>
   </div>
 </div>

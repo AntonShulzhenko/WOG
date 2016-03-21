@@ -11,8 +11,8 @@ function userMainCtrl($rootScope, $scope) {
     });
   }, 2000);
 
-   
-    
+
+
   //create left-menu
   $rootScope.openClose = function (e) {
     var btn = $(e.target);

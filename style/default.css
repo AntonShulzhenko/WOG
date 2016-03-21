@@ -704,13 +704,14 @@ table {
   background: #fff;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -40px;
 }
 
 .vidget h3 {
   margin-left: 30px;
   margin-bottom: 70px;
   font-weight: 600;
+  padding-bottom: 20px;
 }
 
 .vidget.over {
@@ -829,40 +830,150 @@ h2 {
   line-height: 50px !Important;
   margin-top: 20px;
 }
+
 .darg_on_me {
   cursor: move;
 }
+
 .darg_on_me:hover {
   cursor: move !Important;
 }
+
 .dp_mustang_plus {
   background: url(../img/fuel-types/DPmustang+.png) no-repeat center center;
 }
+
 .dp_mustang {
   background: url(../img/fuel-types/DPmustang.png) no-repeat center center;
 }
+
 .mustang_92 {
   background: url(../img/fuel-types/92mustang.png) no-repeat center center;
 }
+
 .mustang_95 {
   background: url(../img/fuel-types/95mustang.png) no-repeat center center;
 }
+
 .mustang_100 {
   background: url(../img/fuel-types/100mustang.png) no-repeat center center;
 }
+
 .lgp_mustang {
   background: url(../img/fuel-types/LGPmustang.png) no-repeat center center;
 }
+
+.min_last_trns .table {
+  margin-top: -50px;
+}
+
 .min_last_trns th div {
   line-height: 35px;
 }
+
 .min_last_trns th div span {
   display: inline-block;
   line-height: 14px;
-  vertical-align: top;
+  vertical-align: middle;
 }
+
 td i {
-  font-size: 22px;
+  font-size: 25px;
+  font-weight: 100;
   display: inline-block;
   margin-left: 5px;
+}
+
+.on_card {
+  color: #00ab4e
+}
+
+.off_card {
+  color: #fb0303
+}
+
+.off_timeout_card {
+  color: #7a7a7a;
+}
+
+.min_last_trns .ng-table th.filter .input-filter,
+.min_card_operation .ng-table th.filter .input-filter {
+  background: url('../img/search-i.png') white no-repeat center right;
+}
+
+.check_type_subsection ul {
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.check_type_subsection {
+  font-size: 12px;
+  position: relative;
+  top: -61px;
+  background-color: #f9f9f9;
+  padding: 7px;
+}
+
+.check_type_subsection ul li {
+  display: none;
+  list-style: none;
+}
+
+.check_type_subsection ul .active_template_item {
+  display: block;
+}
+
+.check_type_subsection i {
+  margin-right: 10px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cce3d9;
+  border-radius: 4px;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.18);
+  text-align: center;
+  width: 50px;
+}
+
+.check_type_subsection span {
+  display: block;
+  color: #a6a6a6;
+}
+
+.check_type_subsection div {
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 45px;
+}
+
+.calendar_vidget span {
+  font-size: 12px;
+  color: black;
+}
+
+.buttons_control_panel {
+  float: right;
+  position: relative;
+  top: -107px;
+  margin-right: 10px;
+}
+
+.buttons_control_panel button {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #cce3d9;
+  outline: none;
+}
+.buttons_control_panel button.active_btn {
+  color: white;
+  background-color: #00ab4e;
+  border: 1px solid #00ab4e;
+}
+
+#container_diagram_money,
+#container_diagram {
+  top: -80px;
 }
