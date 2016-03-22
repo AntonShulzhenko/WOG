@@ -1,6 +1,14 @@
-var wogApp = angular.module('wogApp', [ "ui.router", "ngTable", "wogApp.vidget", "wt.responsive"])
+var wogApp = angular.module('wogApp', ["ui.router", "ngTable", "wogApp.vidget", "wt.responsive"])
 
-wogApp.config(function ($stateProvider, $urlRouterProvider) {
+wogApp.config(function ($stateProvider, $urlRouterProvider, $routeSegmentProvider) {
+
+  $routeSegmentProvider
+    .segment('score_settings', {
+      url: "/transit/score_settings",
+      templateUrl: 'pages/hyi.html',
+      controller: sustemOppCtrl,
+      dependencies: ['id']
+    })
 
   $urlRouterProvider.otherwise("/main")
 
@@ -25,12 +33,7 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
   .state('transit', {
     url: "/transit",
     templateUrl: "pages/transit.html",
-    controller: function ($rootScope) {
-      $rootScope.title = '/ Транзитний рахунок';
-      $rootScope.page_img = 'transit';
-      angular.element($('.nav_list li')).removeClass('active');
-      angular.element($('.transit')).addClass('active');
-    }
+    controller: transitScoreCtrl
   })
 
   .state('reports', {
@@ -82,6 +85,4 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: "pages/opportunities.html",
     controller: sustemOppCtrl
   })
-
-
 })

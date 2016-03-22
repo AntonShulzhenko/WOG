@@ -9,6 +9,7 @@ function userMainCtrl($rootScope, $scope) {
   }
   
   $rootScope.title = '/ Кабінет користувача';
+  $rootScope.title_second = '';
   $rootScope.page_img = 'main';
   angular.element($('.nav_list li')).removeClass('active');
   angular.element($('.main')).addClass('active');

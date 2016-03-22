@@ -1,1 +1,36 @@
-<h1>TRANSIT SCORE</h1>
+<h2>Транзитний рахунок</h2>
+
+
+<ul class="transit_nav ">
+  <li class="active_transit_list"><a href="#" ui-sref="score_settings">Налаштування рахунку</a></li>
+  <li><a href="#">Карти</a></li>
+  <li><a href="#">Транзакції</a></li>
+</ul>
+
+<!--<div ng-model>-->
+  <div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme viget_full">
+
+    <div class="vidget">
+      <h3><span>Ресурси доступні на транзитному рахунку</span></h3>
+      <div class="show_vidget_min">
+        <i class="ion-ios-plus-outline"></i>
+      </div>
+      <vidget-control-panel></vidget-control-panel>
+      <div class="balance_list" ng-controller="resoursesBalance">
+        <ul>
+          <li ng-repeat="item in fuel_types" class="add_resourse">
+            <p class="{{item.name}}">{{item.text}}</p>
+            <div class="">
+              <h5>Баланс</h5>
+              <i class="ion-minus-circled"></i>
+              <span>{{item.balance}} л.</span>
+              <i class="ion-plus-circled"></i>
+            </div>
+          </li>
+          <div class="clearfix"></div>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+<!--</div>-->

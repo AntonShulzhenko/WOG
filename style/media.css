@@ -11,6 +11,10 @@
 }
 
 @media screen and (max-width:1270px) and (min-width:0px) {
+  .balance_list li {
+  width: 48%;
+    margin-left: 12px;
+}
   .vidget_min .vidget h3 {
     width: 100px;
   }
@@ -35,6 +39,9 @@
 }
 
 @media screen and (max-width:1280px) and (min-width:0px) {
+  .balance_list li {
+    margin-left: 8px;
+  }
   .client-message {
     margin-top: -40px;
   }
@@ -125,7 +132,7 @@
     right: 0;
   }
   .vidget h3 {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   .table {
     font-size: 12px;
@@ -338,6 +345,9 @@
   .vidget_min {
     padding-left: 10px;
   }
+  .vidget {
+    
+  }
 }
 
 @media screen and (min-width:0px) and (max-width:480px) {
@@ -361,7 +371,6 @@
   }
   .balance_list li {
     width: 95%;
-    margin: 10px auto;
   }
   .message-control span {
     font-size: 12px !Important;
