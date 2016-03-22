@@ -1174,6 +1174,7 @@ div.opened ul+span {
   z-index: 8;
   padding-top: 30px;
   background: transparent;
+  padding-bottom: 50px;
 }
 
 .vidget_min .vidget h3 {
@@ -1272,5 +1273,6 @@ div.opened ul+span {
   visibility: hidden;
 }
 .viget_full {
-  min-height: 100px;
+  min-height: 10px;
+  padding-bottom: 80px;
 }
