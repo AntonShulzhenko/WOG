@@ -146,7 +146,7 @@ nav {
 
 nav a {
   width: 100%;
-  height: 70px;
+  height: 68px;
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -181,8 +181,8 @@ a {
 }
 
 .nav_list li {
-  height: 70px;
-  line-height: 70px;
+  height: 68px;
+  line-height: 68px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -727,6 +727,10 @@ table {
   visibility: visible;
 }
 
+.vidget.hide_to_head h3 span {
+  visibility: visible;
+}
+
 .vidget.hide_to_head .vidget_control_panel {
   visibility: visible;
 }
@@ -1042,9 +1046,7 @@ div.opened ul+span {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.reset_padding_btm {
-  padding-bottom: 0 !Important;
-}
+
 .balance_list li {
   padding-bottom: 40px;
   padding-top: 15px;
@@ -1129,6 +1131,7 @@ div.opened ul+span {
   padding: 10px;
   line-height: 1.6;
 }
+
 .dp_mustang_plus,
 .dp_mustang,
 .mustang_92,
@@ -1136,4 +1139,138 @@ div.opened ul+span {
 .mustang_100,
 .lgp_mustang {
   background-size: 80px 22px;
+}
+
+.ion-navicon.green_fonts {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.vidget_min {
+  width: 100%;
+  border-top: 1px dashed #fff;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+.vidget_min .vidget {
+  padding: 0;
+  padding-left: 30px;
+  float: left;
+  width: 30%;
+  height: 95px;
+  margin: 1%;
+  line-height: 95px;
+}
+
+.vidget_min {
+  position: relative;
+  z-index: 8;
+  padding-top: 30px;
+  background: transparent;
+}
+
+.vidget_min .vidget h3 {
+  margin: 0;
+  padding: 0;
+  width: 170px;
+  height: 95px;
+  line-height: 95px;
+}
+
+.vidget_min .vidget h3 span {
+  z-index: 10;
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.vidget_min .vidget * {
+  visibility: hidden;
+}
+
+.vidget_min .vidget h3 {
+  visibility: visible;
+  display: inline-block;
+}
+
+.vidget_min .vidget h3 span {
+  visibility: visible;
+}
+
+.vidget_min .vidget_control_panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 129px;
+  overflow: hidden !Important;
+}
+
+.vidget_min .vidget .darg_on_me {
+  line-height: 20px;
+  visibility: visible;
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -76px;
+  background: #00ab4e;
+  color: #fff;
+  height: 28px;
+  width: 170px;
+  text-align: center;
+  top: 35px;
+}
+
+.vidget_min .vidget .close_vidget {
+  visibility: hidden;
+}
+
+.vidget_min .show_vidget_min {
+  cursor: pointer;
+  visibility: visible;
+  display: inline-block;
+  visibility: visible;
+  float: right;
+  font-size: 25px;
+  width: 75px;
+  text-align: center;
+  border-left: 1px dashed #d6d6d6;
+  line-height: 100px;
+  transition: 0.5s;
+}
+.vidget_min .show_vidget_min i {
+  visibility: visible;
+}
+.vidget_min .show_vidget_min:hover {
+  width: 120px;
+  background: #00ab4e;
+}
+.vidget_min .show_vidget_min:hover i {
+  color: #fff;
+}
+.vidget_min .show_vidget_min:hover i:after {
+  content: 'Додати віджет';
+  font-size: 12px;
+  font-style: normal;
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 30px;  
+  top: 0;
+  line-height: 12px;
+  margin-left: 5px;
+}
+.show_vidget_min {
+  display: none;
+  visibility: hidden;
+}
+.viget_full {
+  min-height: 100px;
 }

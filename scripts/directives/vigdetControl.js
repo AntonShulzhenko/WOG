@@ -11,45 +11,45 @@ angular.module('wogApp.vidget', [])
     })
 
     function addDrag() {
-      dragula([document.querySelector('.dragme')], {
+      dragula([document.querySelector('.dragme'),document.querySelector('.vidget_min')], {
         moves: function (el, container, handle) {
           return handle.className === 'darg_on_me';
         }
       })
     }
 
-    if ($('body').width() > 767) {
-      $('.darg_on_me').tooltipsy({
-        offset: [0, -16],
-        css: {
-          'position': 'relative',
-          'font-size': '12px',
-          'left': '-38px',
-          'padding': '10px 20px',
-          'width': '230px',
-          'color': '#fff',
-          'background-color': 'rgba(0,0,0,0.5)',
-          'text-shadow': 'none',
-          'border-radius': '5px',
-          'z-index': '8',
-          'text-align': 'center'
-        },
-        className: 'drag_tooltip',
-        show: function (e, $el) {
-          $el.fadeIn(500);
-        },
-        hide: function (e, $el) {
-          $el.fadeOut(300);
-        }
-      })
-    }
+//    if ($('body').width() > 767) {
+//      $('.darg_on_me').tooltipsy({
+//        offset: [0, -16],
+//        css: {
+//          'position': 'relative',
+//          'font-size': '12px',
+//          'left': '-38px',
+//          'padding': '10px 20px',
+//          'width': '230px',
+//          'color': '#fff',
+//          'background-color': 'rgba(0,0,0,0.5)',
+//          'text-shadow': 'none',
+//          'border-radius': '5px',
+//          'z-index': '8',
+//          'text-align': 'center'
+//        },
+//        className: 'drag_tooltip',
+//        show: function (e, $el) {
+//          $el.fadeIn(500);
+//        },
+//        hide: function (e, $el) {
+//          $el.fadeOut(300);
+//        }
+//      })
+//    }
 
     $('.hide_vidget').on('click', function () {
       $(this).closest('.vidget').toggleClass('hide_to_head');
     });
 
     $('.close_vidget').on('click', function () {
-      $(this).closest('.vidget').fadeOut();
+      $(this).closest('.vidget').prependTo('.vidget_min');
     });
 
     $('.card_control_panel ul li:first-child').on('click', function () {
@@ -59,6 +59,10 @@ angular.module('wogApp.vidget', [])
     $('.buttons_control_panel button').on('click', function(){
       $(this).addClass('active_btn');
       $(this).siblings().removeClass('active_btn');
+    });
+    
+    $('.show_vidget_min').on('click', function(){
+      $(this).closest('.vidget').appendTo('.viget_full');
     });
   
     $('.check_type_subsection .ion-ios-arrow-down').on('click', function(){

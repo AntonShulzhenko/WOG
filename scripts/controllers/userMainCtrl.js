@@ -2,22 +2,12 @@ wogApp.controller('userMainCtrl', userMainCtrl)
 
 function userMainCtrl($rootScope, $scope) {
 
-  setTimeout(function () {
-    $('#week_fuel').trigger('click');
-    $('#week_money').trigger('click');
-    $('.table input').attr('placeholder', 'Пошук за номером карти');
-    $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
-      $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
-    });
-  }, 2000);
-
-
-
   //create left-menu
   $rootScope.openClose = function (e) {
     var btn = $(e.target);
     btn.closest('tr').toggleClass('mobile-table-el');
   }
+  
   $rootScope.title = '/ Кабінет користувача';
   $rootScope.page_img = 'main';
   angular.element($('.nav_list li')).removeClass('active');
@@ -33,6 +23,15 @@ function userMainCtrl($rootScope, $scope) {
       $('#week_money').trigger('click');
     }
   });
+
+  setTimeout(function () {
+    $('#week_fuel').trigger('click');
+    $('#week_money').trigger('click');
+    $('.table input').attr('placeholder', 'Пошук за номером карти');
+    $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
+      $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
+    });
+  }, 2000);
 
   //create values for diagrams
 

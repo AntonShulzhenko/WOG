@@ -1,17 +1,19 @@
 <h2>Кабинет клієнта</h2>
 
 
-<div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme">
+<div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme viget_full">
 
   <!-- table "card operations"-->
 
   <div class="vidget">
     <!--   ng-app="wt.responsive"-->
     <div ng-controller="tableCardsCtrl" class="min_card_operation">
-      <h3>Операцїі з картками</h3>
+      <h3><span>Операцїі з картками</span></h3>
+      <div class="show_vidget_min">
+        <i class="ion-ios-plus-outline"></i>
+      </div>
       <vidget-control-panel></vidget-control-panel>
       <card-control-panel> </card-control-panel>
-
       <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
         <tr ng-repeat="item in data | filter:search:card" show-filter="true" class="mobile-table-el">
           <td data-title="'✔'" data-title-mobile="✔">
@@ -19,7 +21,7 @@
           </td>
           <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Рахунок" sortable="'card'" filter="{'card':'text'}">
             {{item.card}}
-            <br> <span class="small">{{item.type}}</span> 
+            <br> <span class="small">{{item.type}}</span>
 
             <div class="control-each-el">
               <input class="check_table_item" type="checkbox">
@@ -55,7 +57,10 @@
 
   <div class="vidget">
     <div ng-controller="tableLastTransactions" class="min_last_trns">
-      <h3>Останні транзакціїї</h3>
+      <h3><span>Останні транзакціїї</span></h3>
+      <div class="show_vidget_min">
+        <i class="ion-ios-plus-outline"></i>
+      </div>
       <vidget-control-panel></vidget-control-panel>
       <check-type></check-type>
       <table wt-responsive-table ng-table="transTable" class="table table-striped">
@@ -75,7 +80,7 @@
             {{trns.pay_type}}
           </td>
           <td data-title="'Чек'" data-title-mobile="Чек">
-            {{trns.check_number}}
+            {{trns.check_number}} <i class="ion-navicon green_fonts"></i>
           </td>
           <td data-title="'АЗК'" data-title-mobile="АЗК">
             {{trns.azk}}
@@ -98,7 +103,10 @@
   <!--  Fuel diagram-->
 
   <div class="vidget">
-    <h3>Статистика використаних ресурсів</h3>
+    <h3><span>Статистика використаних ресурсів</span></h3>
+    <div class="show_vidget_min">
+      <i class="ion-ios-plus-outline"></i>
+    </div>
     <check-type></check-type>
     <vidget-control-panel></vidget-control-panel>
     <div class="buttons_control_panel">
@@ -113,7 +121,10 @@
   <!--  Money diagram-->
 
   <div class="vidget">
-    <h3>Грошові витрати</h3>
+    <h3><span>Грошові витрати</span></h3>
+    <div class="show_vidget_min">
+      <i class="ion-ios-plus-outline"></i>
+    </div>
     <check-type></check-type>
     <vidget-control-panel></vidget-control-panel>
     <div class="buttons_control_panel">
@@ -125,8 +136,11 @@
     <div id="container_diagram_money" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
   </div>
 
-  <div class="vidget reset_padding_btm">
-    <h3>Залишок ресурсів </h3>
+  <div class="vidget">
+    <h3><span>Залишок ресурсів</span></h3>
+    <div class="show_vidget_min">
+      <i class="ion-ios-plus-outline"></i>
+    </div>
     <check-type></check-type>
     <vidget-control-panel></vidget-control-panel>
     <div class="balance_list" ng-controller="resoursesBalance">
@@ -140,17 +154,22 @@
             <span>до {{item.date}}</span>
           </div>
         </li>
+        <div class="clearfix"></div>
       </ul>
     </div>
   </div>
 
+
   <div class="vidget">
-    <h3>Нові сповіщення</h3>
+    <h3><span>Нові сповіщення</span></h3>
+    <div class="show_vidget_min">
+      <i class="ion-ios-plus-outline"></i>
+    </div>
     <vidget-control-panel></vidget-control-panel>
     <div class="client-message" ng-controller="clientMessager">
       <h4 class="text-center"><i class="ion-email"></i>  {{massages_to_user.length}} {{word_num}} сповіщення</h4>
       <div class="client-message-text" ng-repeat="mess in massages_to_user">
-       <p>{{mess.text}}</p>
+        <p>{{mess.text}}</p>
         <div class="message-control">
           <span>{{mess.date}}</span>
           <span>{{mess.time}}</span>
@@ -160,3 +179,8 @@
     </div>
   </div>
 </div>
+
+<h2 class="text-center">Додати віджети</h3>
+  <div class="vidget_min">
+    <div class="clearfix"></div>
+  </div>
