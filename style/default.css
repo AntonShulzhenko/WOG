@@ -1229,6 +1229,9 @@ div.opened ul+span {
   top: 35px;
 }
 
+.vidget_min .check_type_subsection {
+  background: #fff;
+}
 .vidget_min .vidget .close_vidget {
   visibility: hidden;
 }
