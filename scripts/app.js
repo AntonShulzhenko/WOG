@@ -1,14 +1,6 @@
 var wogApp = angular.module('wogApp', ["ui.router", "ngTable", "wogApp.vidget", "wt.responsive"])
 
-wogApp.config(function ($stateProvider, $urlRouterProvider, $routeSegmentProvider) {
-
-  $routeSegmentProvider
-    .segment('score_settings', {
-      url: "/transit/score_settings",
-      templateUrl: 'pages/hyi.html',
-      controller: sustemOppCtrl,
-      dependencies: ['id']
-    })
+wogApp.config(function ($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/main")
 
@@ -33,7 +25,16 @@ wogApp.config(function ($stateProvider, $urlRouterProvider, $routeSegmentProvide
   .state('transit', {
     url: "/transit",
     templateUrl: "pages/transit.html",
-    controller: transitScoreCtrl
+    controller: 'transitScoreCtrl',
+  })
+  
+  .state('transit.score_settings',{
+    views : {
+      'score_settings@transit' : {
+        templateUrl: "pages/scores.html",
+        'url': '/score_settings'
+      },
+    }
   })
 
   .state('reports', {
