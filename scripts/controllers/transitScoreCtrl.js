@@ -6,4 +6,5 @@ function transitScoreCtrl($rootScope, $scope) {
   $rootScope.page_img = 'transit';
   angular.element($('.nav_list li')).removeClass('active');
   angular.element($('.transit')).addClass('active');
+//  angular.element
 };
