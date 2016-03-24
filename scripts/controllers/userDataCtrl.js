@@ -12,7 +12,7 @@ function userDataCtrl($scope) {
       class: 'company-departments'
     }, {
       name: 'Транзитний рахунок',
-      href: 'transit',
+      href: 'transit.score_settings',
       class: 'transit'
     }, {
       name: 'Звіти',
@@ -33,7 +33,7 @@ function userDataCtrl($scope) {
     }
   ]
   
-  $scope.transit = 'transit'
+  $scope.transit = 'transit.score_settings'
   
   $scope.user = {
     money: '120000000 грн.',

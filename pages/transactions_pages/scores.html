@@ -1,6 +1,44 @@
 <div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme viget_full">
 
+
+
+
+
   <div class="vidget">
+     <!-- Modal -->
+     
+     
+  <div class="modal fade" id="modal_send_money" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="clearfix"></div>
+        <div class="modal-body">
+          <h4 class="text-center">Переведення ресурсу</h4>
+          <p class="{{modal_img}}"></p>
+          <span>(основний рахунок)</span>
+          <div class="modal-body-form">
+            <!--            <form action="">-->
+            <span>Вкажіть рахунок</span>
+            <select name="" id="">
+              <option value="">Gaz</option>
+              <option value="">Myas</option>
+              <option value="">Gaz</option>
+              <option value="">Myas</option>
+            </select>
+            <span>Объем</span>
+            <input type="text">
+            <button data-dismiss="modal">Перевести <i class="ion-ios-plus-outline"></i></button>
+            <!--            </form>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+   
+   
     <h3><span>Ресурси доступні на транзитному рахунку</span></h3>
     <div class="show_vidget_min">
       <i class="ion-ios-plus-outline"></i>
@@ -12,9 +50,9 @@
           <p class="{{item.name}}">{{item.text}}</p>
           <div class="">
             <h5>Баланс</h5>
-            <i class="ion-minus-circled"></i>
+            <i class="ion-minus-circled" data-toggle="modal" data-target="#modal_send_money" ng-click="getModalSourse(item.name)"></i>
             <span>{{item.balance}} л.</span>
-            <i class="ion-plus-circled"></i>
+            <i class="ion-plus-circled" data-toggle="modal" data-target="#modal_send_money" ng-click="getModalSourse(item.name)"></i>
           </div>
         </li>
         <div class="clearfix"></div>
@@ -23,5 +61,3 @@
   </div>
 
 </div>
-
-

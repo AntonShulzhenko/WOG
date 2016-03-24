@@ -12,9 +12,9 @@
 
 @media screen and (max-width:1270px) and (min-width:0px) {
   .balance_list li {
-  width: 48%;
+    width: 48%;
     margin-left: 12px;
-}
+  }
   .vidget_min .vidget h3 {
     width: 100px;
   }
@@ -227,6 +227,30 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  #modal_send_money .modal-body-form select {
+    padding: 8px;
+    font-size: 12px;
+  }
+  #modal_send_money .modal-content {
+    height: 350px;
+  }
+  #modal_send_money .modal-body {
+    height: 320px;
+  }
+  #modal_send_money .modal-dialog {
+    margin-top: -160px;
+    margin-left: -155px;
+  }
+  #modal_send_money .modal-content {
+    width: 310px;
+    height: 400px;
+  }
+  #modal_send_money .modal-body-form button {
+    height: 30px;
+  }
+  #modal_send_money .modal-body-form input {
+    height: 30px;
+  }
   .vidget_min .vidget {
     width: 95%;
     margin: 20px auto;
@@ -345,9 +369,7 @@
   .vidget_min {
     padding-left: 10px;
   }
-  .vidget {
-    
-  }
+  .vidget {}
 }
 
 @media screen and (min-width:0px) and (max-width:480px) {

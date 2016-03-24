@@ -1,0 +1,47 @@
+<div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme viget_full">
+
+  <div class="vidget">
+    <div ng-controller="tableLastTransactions" class="min_last_trns">
+      <h3><span>Останні транзакціїї</span></h3>
+      <div class="show_vidget_min">
+        <i class="ion-ios-plus-outline"></i>
+      </div>
+      <vidget-control-panel></vidget-control-panel>
+      <check-type></check-type>
+      <table wt-responsive-table ng-table="transTable" class="table table-striped">
+        <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
+          <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
+            {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
+            <div class="control-each-el">
+              <input class="check_table_item" type="checkbox">
+              <span ng-click="openClose($event)" class="open-close_table_item"></span>
+            </div>
+          </td>
+          <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
+            {{trns.card}}
+            <br> <span class="small">{{trns.master}}</span>
+          </td>
+          <td data-title="'Тип транзакції'" data-title-mobile="Тип транзакції" sortable="'pay_type'">
+            {{trns.pay_type}}
+          </td>
+          <td data-title="'Чек'" data-title-mobile="Чек">
+            {{trns.check_number}} <i class="ion-navicon green_fonts"></i>
+          </td>
+          <td data-title="'АЗК'" data-title-mobile="АЗК">
+            {{trns.azk}}
+          </td>
+          <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга" class="{{trns.fuel_type}}">
+
+          </td>
+          <td data-title="'Обєм'" data-title-mobile="Обєм" sortable="'fuel_vol'">
+            {{trns.fuel_vol}}
+          </td>
+          <td data-title="'Сума'" data-title-mobile="Сума" sortable="'money'">
+            {{trns.money}}
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>

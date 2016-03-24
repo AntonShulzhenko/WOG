@@ -43,12 +43,18 @@ angular.module('wogApp.vidget', [])
     //        }
     //      })
     //    }
+  
     $rootScope.openClose = function (e) {
       console.log('mobile-check')
       var btn = $(e.target);
       btn.closest('tr').toggleClass('mobile-table-el');
     }
-
+//    $scope.modal_img = 'mustang_95';
+    $scope.getModalSourse = function(item_class){
+      $scope.modal_img = item_class;
+      console.log($scope.modal_img);
+    };
+    
     setTimeout(function () {
       try {
         $('#week_fuel').trigger('click');
