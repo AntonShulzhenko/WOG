@@ -2,9 +2,11 @@
 
 
 <ul class="transit_nav ">
-  <li class="active_transit_list"><a href="#" ui-sref="transit.det">Налаштування рахунку</a></li>
-  <li><a href="#">Карти</a></li>
-  <li><a href="#">Транзакції</a></li>
+  <li class="score_settings_btn"><a href="#" class="scores_settings" ui-sref="transit.score_settings">Налаштування рахунку</a></li>
+  <li class="card_transit_btn"><a href="#" ui-sref="transit.cards_transit">Карти</a></li>
+  <li class="transactions_transit_btn"><a href="#" ui-sref="transit.transactions_transit">Транзакції</a></li>
 </ul>
 
-<div ui-view="score_settings"></div>
+  <div ui-view="cards_transit" class="cards_transit"></div>
+  <div ui-view="score_settings" class="score_settings"></div>
+  <div ui-view="transactions_transit" class="transactions_transit"></div>

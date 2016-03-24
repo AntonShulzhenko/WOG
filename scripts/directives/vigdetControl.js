@@ -1,5 +1,5 @@
 angular.module('wogApp.vidget', [])
-  .controller('vidgetCtrl', function ($scope, $compile) {
+  .controller('vidgetCtrl', function ($scope, $compile, $rootScope) {
 
     $.ajax({
       url: 'scripts/lib/dragula.js',
@@ -11,38 +11,56 @@ angular.module('wogApp.vidget', [])
     })
 
     function addDrag() {
-      dragula([document.querySelector('.dragme'),document.querySelector('.vidget_min')], {
+      dragula([document.querySelector('.dragme'), document.querySelector('.vidget_min')], {
         moves: function (el, container, handle) {
           return handle.className === 'darg_on_me';
         }
       })
     }
 
-//    if ($('body').width() > 767) {
-//      $('.darg_on_me').tooltipsy({
-//        offset: [0, -16],
-//        css: {
-//          'position': 'relative',
-//          'font-size': '12px',
-//          'left': '-38px',
-//          'padding': '10px 20px',
-//          'width': '230px',
-//          'color': '#fff',
-//          'background-color': 'rgba(0,0,0,0.5)',
-//          'text-shadow': 'none',
-//          'border-radius': '5px',
-//          'z-index': '8',
-//          'text-align': 'center'
-//        },
-//        className: 'drag_tooltip',
-//        show: function (e, $el) {
-//          $el.fadeIn(500);
-//        },
-//        hide: function (e, $el) {
-//          $el.fadeOut(300);
-//        }
-//      })
-//    }
+    //    if ($('body').width() > 767) {
+    //      $('.darg_on_me').tooltipsy({
+    //        offset: [0, -16],
+    //        css: {
+    //          'position': 'relative',
+    //          'font-size': '12px',
+    //          'left': '-38px',
+    //          'padding': '10px 20px',
+    //          'width': '230px',
+    //          'color': '#fff',
+    //          'background-color': 'rgba(0,0,0,0.5)',
+    //          'text-shadow': 'none',
+    //          'border-radius': '5px',
+    //          'z-index': '8',
+    //          'text-align': 'center'
+    //        },
+    //        className: 'drag_tooltip',
+    //        show: function (e, $el) {
+    //          $el.fadeIn(500);
+    //        },
+    //        hide: function (e, $el) {
+    //          $el.fadeOut(300);
+    //        }
+    //      })
+    //    }
+    $rootScope.openClose = function (e) {
+      console.log('mobile-check')
+      var btn = $(e.target);
+      btn.closest('tr').toggleClass('mobile-table-el');
+    }
+
+    setTimeout(function () {
+      try {
+        $('#week_fuel').trigger('click');
+        $('#week_money').trigger('click');
+        $('.table input').attr('placeholder', 'Пошук за номером карти');
+        $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
+          $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
+        });
+      } catch (e) {
+        //        do nothing
+      }
+    }, 1000);
 
     $('.hide_vidget').on('click', function () {
       $(this).closest('.vidget').toggleClass('hide_to_head');
@@ -55,19 +73,19 @@ angular.module('wogApp.vidget', [])
     $('.card_control_panel ul li:first-child').on('click', function () {
       $(this).parent().toggleClass('open_table_panel');
     })
-    
-    $('.buttons_control_panel button').on('click', function(){
+
+    $('.buttons_control_panel button').on('click', function () {
       $(this).addClass('active_btn');
       $(this).siblings().removeClass('active_btn');
     });
-    
-    $('.show_vidget_min').on('click', function(){
+
+    $('.show_vidget_min').on('click', function () {
       $(this).closest('.vidget').appendTo('.viget_full');
     });
-  
-    $('.check_type_subsection .ion-ios-arrow-down').on('click', function(){
+
+    $('.check_type_subsection .ion-ios-arrow-down').on('click', function () {
       $(this).parent().toggleClass('opened');
-      $('.check_type_subsection li').on('click', function(){
+      $('.check_type_subsection li').on('click', function () {
         $(this).addClass('active_template_item');
         $(this).siblings().removeClass('active_template_item');
         $(this).closest('div').removeClass('opened');
@@ -118,8 +136,8 @@ angular.module('wogApp.vidget', [])
       '<li>Виплаты выплаты</li>' +
       '<li>Нема виплат</li>' +
       '<li>Еще что-то</li>' +
-      '</ul>' + '<span>Ресурс</span>' + '</div>' + 
-      '<div class="calendar_vidget">'+ '<i class="ion-calendar"></i>' + '<span> 01.01.2015  — 31.01.2015</span>' + '</div>'  +
-    '</div>'
+      '</ul>' + '<span>Ресурс</span>' + '</div>' +
+      '<div class="calendar_vidget">' + '<i class="ion-calendar"></i>' + '<span> 01.01.2015  — 31.01.2015</span>' + '</div>' +
+      '</div>'
   }
 });
