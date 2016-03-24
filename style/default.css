@@ -1420,3 +1420,7 @@ div.opened ul+span {
 .modal.fade.in {
   background: rgba(0, 0, 0, 0.6);
 }
+.transit_nav {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
