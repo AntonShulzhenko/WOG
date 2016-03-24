@@ -236,6 +236,12 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  #modal_send_money .modal-body-form input {
+    width: 54%
+  }
+  #modal_send_money .modal-body-form button {
+    width: 45%;
+  }
   #modal_send_money .modal-body-form select {
     padding: 8px;
     font-size: 12px;
