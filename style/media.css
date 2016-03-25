@@ -101,6 +101,18 @@
 }
 
 @media screen and (max-width:991px) and (min-width:0px) {
+  .department_item {
+    width: 48%;
+  }
+  .create_dept {
+    margin-top: 10px;
+  }
+  #modal_add_department h4 {
+    margin-bottom: 15px;
+  }
+  .add_department_form {
+    height: 180px;
+  }
   #modal_add_department .modal-dialog {
     width: 500px;
     margin-left: -250px;
@@ -248,6 +260,37 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .add_department_form {
+    height: 140px;
+  }
+  #modal_add_department .modal-content {
+    padding-top: 5px;
+  }
+  .set_dept_name {
+    height: 30px;
+    font-size: 12px;
+  }
+  #modal_add_department h4 {
+    margin-bottom: 7px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  .add_department_form select, .create_user_detp  {
+    font-size: 12px;
+    height: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .add_department_form {
+    padding: 5px;
+  }
+  .department_item {
+    width: 93%;
+    margin: 20px;
+  }
+  .add_department_form p {
+    font-size: 14px;
+  }
   #modal_add_department .modal-content {
     height: 360px;
   }
