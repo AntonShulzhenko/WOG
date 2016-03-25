@@ -1,1 +1,56 @@
-<h1>DEPARTMENTS</h1>
+<h2>Підрозділи компанії</h2>
+
+<!-- Trigger the modal with a button -->
+
+
+<!-- Modal -->
+<div id="modal_add_department" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <button type="button" class="close close_btn" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Створити підрозділ <i class="ion-ios-arrow-thin-right"></i> </h4>
+      <div class="create_dept col-md-3 col-lg-3 col-sm-12 col-xs-12 pull-right">
+        <button class="btn">Створити <i class="ion-ios-checkmark-outline"></i></button>
+      </div>
+      <div class="add_department_form col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <p>Назва підрозділу</p>
+        <span class="small"><i class="ion-ios-information-outline"></i> Для зручності в роботі використовуйте назви реальних підрозділів</span>
+        <input type="text" class="set_dept_name">
+        <label class="small">
+          <input type="checkbox"> Заборонити створення <span class="green_info">індивідуальних карток <i class="ion-information-circled"></i></span>
+        </label>
+      </div>
+      <div class="add_department_form col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <p>Відповідальні особи</p>
+        <span class="small"><i class="ion-ios-information-outline"></i> Додайте користувачів, які зможуть керувати картками та рахунками підрозділу</span>
+        <select name="" id="" class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+          <option value="" ng-repeat="item in user_departments">{{item.dept_name}}</option>
+        </select>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+          <button class="create_user_detp btn">створити користувача <i class="ion-person-add"></i> </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="departments_nav">
+  <div class="department_item add_new">
+    <i class="ion-ios-plus-outline pull-right" data-toggle="modal" data-target="#modal_add_department"></i>
+    <span>Додати новий підрозділ</span>
+
+  </div>
+
+  <div class="department_item all_scores">
+    <i class="ion-navicon-round pull-right"></i>
+    <span>Всі рахунки та карти</span>
+
+  </div>
+
+  <div class="get_user_data">
+    <div class="department_item"></div>
+  </div>
+</div>

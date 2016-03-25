@@ -17,32 +17,6 @@ angular.module('wogApp.vidget', [])
         }
       })
     }
-
-    //    if ($('body').width() > 767) {
-    //      $('.darg_on_me').tooltipsy({
-    //        offset: [0, -16],
-    //        css: {
-    //          'position': 'relative',
-    //          'font-size': '12px',
-    //          'left': '-38px',
-    //          'padding': '10px 20px',
-    //          'width': '230px',
-    //          'color': '#fff',
-    //          'background-color': 'rgba(0,0,0,0.5)',
-    //          'text-shadow': 'none',
-    //          'border-radius': '5px',
-    //          'z-index': '8',
-    //          'text-align': 'center'
-    //        },
-    //        className: 'drag_tooltip',
-    //        show: function (e, $el) {
-    //          $el.fadeIn(500);
-    //        },
-    //        hide: function (e, $el) {
-    //          $el.fadeOut(300);
-    //        }
-    //      })
-    //    }
   
     $rootScope.openClose = function (e) {
       console.log('mobile-check')

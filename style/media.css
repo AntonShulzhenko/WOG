@@ -1,4 +1,8 @@
 @media screen and (max-width:1400px) and (min-width:1271px) {
+  #modal_add_department .modal-dialog {
+    width: 800px;
+    margin-left: -400px;
+  }
   .slide_footer a.btn {
     width: 220px;
   }
@@ -11,6 +15,10 @@
 }
 
 @media screen and (max-width:1270px) and (min-width:0px) {
+  #modal_add_department .modal-dialog {
+    width: 650px;
+    margin-left: -325px;
+  }
   .balance_list li {
     width: 48%;
     margin-left: 12px;
@@ -93,6 +101,10 @@
 }
 
 @media screen and (max-width:991px) and (min-width:0px) {
+  #modal_add_department .modal-dialog {
+    width: 500px;
+    margin-left: -250px;
+  }
   .transit_nav li {
     width: 25%;
   }
@@ -236,6 +248,14 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  #modal_add_department .modal-content {
+    height: 360px;
+  }
+  #modal_add_department .modal-dialog {
+    width: 320px;
+    margin-left: -160px;
+    margin-top: -160px;
+  }
   #modal_send_money .modal-body-form input {
     width: 54%
   }

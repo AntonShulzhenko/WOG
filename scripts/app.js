@@ -14,13 +14,7 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
   .state('company-departments', {
     url: "/company-departments",
     templateUrl: "pages/company-departments.html",
-    controller: function ($rootScope) {
-      $rootScope.title = '/ Підрозділи компанії';
-      $rootScope.title_second ='';
-      $rootScope.page_img = 'company-departments';
-      angular.element($('.nav_list li')).removeClass('active');
-      angular.element($('.company-departments')).addClass('active');
-    }
+    controller: companyDepartments,
   })
 
   .state('transit', {
