@@ -11,6 +11,24 @@ body {
   position: relative;
 }
 
+* {
+  outline: none !important;
+}
+
+a,
+input,
+button,
+select {
+  outline: none !important;
+}
+a:focus, a:hover {
+  color: #fff;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: none !important;
+}
+
 .wrap {
   height: 100%;
 }
@@ -1431,13 +1449,15 @@ div.opened ul+span {
 }
 
 .department_item {
-  margin: 1%;
+  margin-left: 1%;
+  margin-bottom: 10px;
+  width: 32.3%;
   float: left;
-  width: 31%;
   border-radius: 6px;
   height: 180px;
   background: #fff;
   padding: 20px;
+  overflow: hidden;
 }
 
 div.add_new {
@@ -1583,17 +1603,19 @@ div.all_scores {
 .create_user_detp.btn:active {
   color: white;
 }
+
 .department_item.all_scores p {
   position: absolute;
   bottom: 0;
 }
+
 .departments_stats {
   position: relative;
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
-
 }
+
 .departments_stats:after {
   content: '';
   display: block;
@@ -1604,10 +1626,101 @@ div.all_scores {
   bottom: 0;
   left: 0;
 }
-.stats_table>div  {
-  border: 1px solid #dedede;
-  border-top: 1px dashed #dedede;
-}
+
 .stats_body div {
-/*last-child fix border*/
+  /*last-child fix border*/
+}
+
+.departments_stats .stats_table h3 {
+  border-top: 1px dashed #dedede;
+  border-bottom: 1px solid #f0efef;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.departments_stats .stats_table h3 {
+  padding-left: 35px;
+}
+
+.departments_stats .stats_table h3.text-center {
+  border-left: 1px solid #f0efef;
+  padding-left: 0;
+}
+
+.departments_stats .stats_table h3 i {
+  color: #009d4b;
+  margin-right: 10px;
+}
+
+.stats_body h6 {
+  font-size: 16px;
+  color: #009d4b;
+  font-weight: 600;
+}
+
+.stats_body div {
+  padding: 35px;
+  border-left: 1px solid #f0efef;
+}
+
+.stats_body p {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-top: 28px;
+}
+
+.stats_body p i {
+  font-size: 15px;
+}
+
+.stats_body p i.ion-arrow-graph-up-right {
+  color: #0ca443;
+}
+
+.stats_body p i.ion-arrow-graph-down-right {
+  color: #fd3905;
+}
+
+.stats_body span {
+  font-size: 12px;
+}
+
+.stats_body h1 {
+  font-size: 72px;
+}
+
+.date_res_finish {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+.department_item h4 {
+  text-align: right;
+  font-size: 65px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.department_item h4 span {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  font-weight: 100;
+}
+.department_item h4 img {
+  display: inline-block;
+  vertical-align: super;
+}
+.get_user_data .department_item p {
+  font-size: 20px;
+}
+.get_user_data hr {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.get_user_data div> span {
+  font-size: 12px;
+  color: #777777;
 }
