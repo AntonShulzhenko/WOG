@@ -1492,13 +1492,13 @@ div.all_scores {
 }
 
 #modal_add_department .modal-content {
-  overflow: hidden;
+  overflow-y: auto;
   height: 480px;
   padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 #modal_add_department .modal-dialog {
+  overflow-y: auto;
   width: 1000px;
   position: absolute !important;
   top: 50%;
@@ -1526,7 +1526,7 @@ div.all_scores {
 
 .add_department_form {
   padding: 20px;
-  height: 200px;
+  min-height: 200px;
   border: 1px solid #f4f4f4;
   border-top: 1px dashed #dedede;
   background: #fafafa;
@@ -1723,4 +1723,7 @@ div.all_scores {
 .get_user_data div> span {
   font-size: 12px;
   color: #777777;
+}
+.get_user_data .department_item {
+  cursor: pointer;
 }

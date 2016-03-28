@@ -64,6 +64,9 @@
 }
 
 @media screen and (max-width:1280px) and (min-width:0px) {
+  .add_department_form select, .create_user_detp {
+    font-size: 12px;
+  }
   .balance_list li {
     margin-left: 8px;
   }
@@ -134,7 +137,7 @@
     margin-bottom: 15px;
   }
   .add_department_form {
-    height: 180px;
+    min-height: 180px;
   }
   #modal_add_department .modal-dialog {
     width: 500px;
@@ -290,7 +293,7 @@
     font-size: 14px;
   }
   .add_department_form {
-    height: 140px;
+    min-height: 140px;
   }
   #modal_add_department .modal-content {
     padding-top: 5px;
