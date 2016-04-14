@@ -17,6 +17,18 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     controller: companyDepartments,
   })
 
+  .state('company-item', {
+    url: "/company-departments/item",
+    templateUrl: "pages/departments/item.html",
+    controller: function ($scope, $rootScope) {
+      $rootScope.title = '/ Підрозділи компанії';
+      $rootScope.title_second = '/Назва підрозділу';
+      $(".scroll-subheader").resizable({
+        ghost: true,
+      });
+    }
+  })
+
   .state('transit', {
     url: "/transit",
     templateUrl: "pages/transit.html",
@@ -61,13 +73,12 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
       }
     })
 
-
   .state('reports', {
     url: "/reports",
     templateUrl: "pages/reports.html",
     controller: function ($rootScope) {
       $rootScope.title = '/ Звіти';
-      $rootScope.title_second ='';
+      $rootScope.title_second = '';
       $rootScope.page_img = 'reports';
       angular.element($('.nav_list li')).removeClass('active');
       angular.element($('.reports')).addClass('active');
@@ -79,7 +90,7 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: "pages/terminal.html",
     controller: function ($rootScope) {
       $rootScope.title = '/ Термінальна мережа';
-      $rootScope.title_second ='';
+      $rootScope.title_second = '';
       $rootScope.page_img = 'terminal';
       angular.element($('.nav_list li')).removeClass('active');
       angular.element($('.terminal')).addClass('active');
@@ -91,7 +102,7 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: "pages/company-control.html",
     controller: function ($rootScope) {
       $rootScope.title = '/ Управління компаніями';
-      $rootScope.title_second ='';
+      $rootScope.title_second = '';
       $rootScope.page_img = 'company-control';
       angular.element($('.nav_list li')).removeClass('active');
       angular.element($('.company-control')).addClass('active');
@@ -103,7 +114,7 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: "pages/settings.html",
     controller: function ($rootScope) {
       $rootScope.title = '/ Налаштування';
-      $rootScope.title_second ='';
+      $rootScope.title_second = '';
       $rootScope.page_img = 'settings';
       angular.element($('.nav_list li')).removeClass('active');
       angular.element($('.settings')).addClass('active');

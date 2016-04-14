@@ -6,7 +6,6 @@ angular.module('wogApp.vidget', [])
       cashe: true,
       success: function () {
         addDrag();
-        console.log('DRAGULA')
       }
     })
 

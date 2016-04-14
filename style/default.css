@@ -21,9 +21,12 @@ button,
 select {
   outline: none !important;
 }
-a:focus, a:hover {
+
+a:focus,
+a:hover {
   color: #fff;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: none !important;
@@ -1697,33 +1700,80 @@ div.all_scores {
   font-size: 14px;
   padding-bottom: 40px;
 }
+
 .department_item h4 {
   text-align: right;
   font-size: 65px;
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .department_item h4 span {
   font-size: 12px;
   display: block;
   margin-top: 5px;
   font-weight: 100;
 }
+
 .department_item h4 img {
   display: inline-block;
   vertical-align: super;
 }
+
 .get_user_data .department_item p {
   font-size: 20px;
 }
+
 .get_user_data hr {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 .get_user_data div> span {
   font-size: 12px;
   color: #777777;
 }
+
 .get_user_data .department_item {
   cursor: pointer;
+}
+.back-btn {
+  margin-top: 15px;
+}
+.back-btn a {
+  font-size: 30px;
+}
+
+.green-border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0, 126, 69);
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 6px;
+}
+.scroll-subheader{
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 171, 78);
+  height: 6px;
+  max-height: 130px;
+}
+.button-open_scroll-subheader {
+  position: absolute;
+  bottom: -30px;
+  margin-left: -110px;
+  left: 50%;
+}
+.button-open_scroll-subheader span {
+  background-color: rgb(0, 171, 78);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: inline-block;
+  color: #fff;
+  padding: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
