@@ -1,6 +1,9 @@
 wogApp.controller('userDataCtrl', userDataCtrl);
 
-function userDataCtrl($scope) {
+function userDataCtrl($scope, widgetControlService) {
+  
+  widgetControlService.createStorage();
+  
   $scope.menu_items = [
     {
       name: 'Головна',

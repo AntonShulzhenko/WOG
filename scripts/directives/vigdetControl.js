@@ -1,5 +1,19 @@
 angular.module('wogApp.vidget', [])
-  .controller('vidgetCtrl', function ($scope, $compile, $rootScope) {
+  .controller('vidgetCtrl', function ($scope, $compile, $rootScope, widgetControlService) {
+
+    widgetControlService.checkReloadStorage();
+
+    function findWidget(btn) {
+      var widget_name = btn.closest('.w_min').parent().attr('data-w-min-id');
+      widgetControlService.checkStorage(widget_name, 'close');
+      widgetControlService.checkReloadStorage(widget_name);
+    }
+
+    $scope.fromStash = function (e) {
+      var btn = $(e.currentTarget);
+      findWidget(btn);
+    }
+
 
     $.ajax({
       url: 'scripts/lib/dragula.js',
@@ -10,44 +24,23 @@ angular.module('wogApp.vidget', [])
     })
 
     function addDrag() {
-      dragula([document.querySelector('.dragme'), document.querySelector('.vidget_min')], {
+      dragula([document.querySelector('.dragme')], {
         moves: function (el, container, handle) {
           return handle.className === 'darg_on_me';
         }
       })
     }
-  
+
     $rootScope.openClose = function (e) {
       console.log('mobile-check')
       var btn = $(e.target);
       btn.closest('tr').toggleClass('mobile-table-el');
     }
-//    $scope.modal_img = 'mustang_95';
-    $scope.getModalSourse = function(item_class){
+
+    $scope.getModalSourse = function (item_class) {
       $scope.modal_img = item_class;
       console.log($scope.modal_img);
     };
-    
-    setTimeout(function () {
-      try {
-        $('#week_fuel').trigger('click');
-        $('#week_money').trigger('click');
-        $('.table input').attr('placeholder', 'Пошук за номером карти');
-        $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
-          $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
-        });
-      } catch (e) {
-        //        do nothing
-      }
-    }, 1000);
-
-    $('.hide_vidget').on('click', function () {
-      $(this).closest('.vidget').toggleClass('hide_to_head');
-    });
-
-    $('.close_vidget').on('click', function () {
-      $(this).closest('.vidget').prependTo('.vidget_min');
-    });
 
     $('.card_control_panel ul li:first-child').on('click', function () {
       $(this).parent().toggleClass('open_table_panel');
@@ -56,10 +49,6 @@ angular.module('wogApp.vidget', [])
     $('.buttons_control_panel button').on('click', function () {
       $(this).addClass('active_btn');
       $(this).siblings().removeClass('active_btn');
-    });
-
-    $('.show_vidget_min').on('click', function () {
-      $(this).closest('.vidget').appendTo('.viget_full');
     });
 
     $('.check_type_subsection .ion-ios-arrow-down').on('click', function () {
@@ -72,22 +61,44 @@ angular.module('wogApp.vidget', [])
     });
   })
 
-.directive('vidgetControlPanel', function ($compile) {
+.directive('vidgetControlPanel', function ($compile, widgetControlService) {
   return {
-    restrict: 'E',
-    scope: {
-      content: '@'
-    },
-    template: '<div class="vidget_control_panel">' + '<span class="hide_vidget">_</span><span class="darg_on_me" data-title="Перетяніть для зміни положення">...</span><span class="close_vidget">×</span>' + '</div>'
+    //    restrict: 'E',
+    template: '<div class="vidget_control_panel" data-panel-id="">' + '<span class="hide_vidget" ng-click="hideEl()">_</span><span class="darg_on_me" data-title="Перетяніть для зміни положення">...</span><span class="close_vidget" ng-click="toStash()">×</span>' + '</div>',
+    link: function (scope, elem, attrs) {
+      setTimeout(function () {
+        try {
+          $('#week_fuel').trigger('click');
+          $('#week_money').trigger('click');
+          $('.table input').attr('placeholder', 'Пошук за номером карти');
+          $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
+            $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
+          });
+        } catch (e) {
+          //        do nothing
+        }
+      }, 1200);
+
+      scope.hideEl = function () {
+        var widget_name = elem.parent().attr('data-widget-id');
+        //        console.log(widget_name);
+        widgetControlService.checkStorage(widget_name, 'minimize');
+        widgetControlService.checkReloadStorage(widget_name);
+      }
+      scope.toStash = function () {
+        elem.find('active_btn').trigger('click');
+        //        console.log('to stash');
+        var widget_name = elem.parent().attr('data-widget-id');
+        widgetControlService.checkStorage(widget_name, 'close');
+        widgetControlService.checkReloadStorage(widget_name);
+      }
+
+    }
   }
 })
 
 .directive('cardControlPanel', function () {
   return {
-    restrict: 'E',
-    scope: {
-      content: '@'
-    },
     template: '<div class="card_control_panel">' +
       '<ul>' +
       '<li><a href="#"> Змінити: </a></li>' +
@@ -101,10 +112,6 @@ angular.module('wogApp.vidget', [])
 
 .directive('checkType', function () {
   return {
-    restrict: 'E',
-    scope: {
-      content: '@'
-    },
     template: '<div class="check_type_subsection">' + '<div>' + '<i class="ion-ios-arrow-down"></i>' + '<ul>' +
       '<li class="active_template_item">Автомобільний транспорт</li>' +
       '<li>Трактор транспорт</li>' +

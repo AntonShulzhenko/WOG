@@ -23,9 +23,7 @@ wogApp.config(function ($stateProvider, $urlRouterProvider) {
     controller: function ($scope, $rootScope) {
       $rootScope.title = '/ Підрозділи компанії';
       $rootScope.title_second = '/Назва підрозділу';
-      $(".scroll-subheader").resizable({
-        ghost: true,
-      });
+
     }
   })
 

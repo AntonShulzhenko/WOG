@@ -1,191 +1,262 @@
 <h2>Кабинет клієнта</h2>
 
 
-<div ng-app="wogApp.vidget" ng-controller="vidgetCtrl" class="dragme viget_full">
+<div ng-app="wogApp.vidget" ng-controller="vidgetCtrl">
+  <div class="dragme viget_full">
+    <!-- table "card operations"-->
 
-  <!-- table "card operations"-->
+    <div class="vidget">
+      <!--   ng-app="wt.responsive"-->
+      <div ng-controller="tableCardsCtrl" class="min_card_operation" data-widget-id="card_operations">
+        <h3><span>Операцїі з картками</span></h3>
+        <vidget-control-panel></vidget-control-panel>
+        <card-control-panel> </card-control-panel>
+        <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
+          <tr ng-repeat="item in data | filter:search:card" show-filter="true" class="mobile-table-el">
+            <td data-title="'✔'" data-title-mobile="✔">
+              <input type="checkbox">
+            </td>
+            <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Рахунок" sortable="'card'" filter="{'card':'text'}">
+              {{item.card}}
+              <br> <span class="small">{{item.type}}</span>
 
-  <div class="vidget">
-    <!--   ng-app="wt.responsive"-->
-    <div ng-controller="tableCardsCtrl" class="min_card_operation">
-      <h3><span>Операцїі з картками</span></h3>
-      <div class="show_vidget_min">
-        <i class="ion-ios-plus-outline"></i>
+              <div class="control-each-el">
+                <input class="check_table_item" type="checkbox">
+                <span ng-click="openClose($event)" class="open-close_table_item"></span>
+              </div>
+            </td>
+            <td data-title="'Держатель'" data-title-mobile="Держатель" sortable="'master'">
+              {{item.master}}
+            </td>
+            <td data-title="'Інформація'" data-title-mobile="Інформація" sortable="'info'">
+              {{item.info}}
+            </td>
+            <td data-title="'Телефони'" data-title-mobile="Телефони">
+              {{item.phone}}
+            </td>
+            <td data-title="'Ліміти'" data-title-mobile="Ліміти" sortable="'limits'" class="green_fonts">
+              {{item.limits}}
+            </td>
+            <td data-title="'Періоди'" data-title-mobile="Періоди" class="green_fonts">
+              {{item.period}}
+            </td>
+            <td data-title="'Статус'" data-title-mobile="Статус">
+              <i class="ion-ios-circle-filled {{item.status}}"></i>
+              <i class="ion-document"></i>
+              <i class="ion-android-options"></i>
+            </td>
+          </tr>
+        </table>
       </div>
-      <vidget-control-panel></vidget-control-panel>
-      <card-control-panel> </card-control-panel>
-      <table wt-responsive-table ng-table="cardTable" class="table table-striped responsive">
-        <tr ng-repeat="item in data | filter:search:card" show-filter="true" class="mobile-table-el">
-          <td data-title="'✔'" data-title-mobile="✔">
-            <input type="checkbox">
-          </td>
-          <td data-title="'Карта /Рахунок'" data-title-mobile="Карта / Рахунок" sortable="'card'" filter="{'card':'text'}">
-            {{item.card}}
-            <br> <span class="small">{{item.type}}</span>
-
-            <div class="control-each-el">
-              <input class="check_table_item" type="checkbox">
-              <span ng-click="openClose($event)" class="open-close_table_item"></span>
-            </div>
-          </td>
-          <td data-title="'Держатель'" data-title-mobile="Держатель" sortable="'master'">
-            {{item.master}}
-          </td>
-          <td data-title="'Інформація'" data-title-mobile="Інформація" sortable="'info'">
-            {{item.info}}
-          </td>
-          <td data-title="'Телефони'" data-title-mobile="Телефони">
-            {{item.phone}}
-          </td>
-          <td data-title="'Ліміти'" data-title-mobile="Ліміти" sortable="'limits'" class="green_fonts">
-            {{item.limits}}
-          </td>
-          <td data-title="'Періоди'" data-title-mobile="Періоди" class="green_fonts">
-            {{item.period}}
-          </td>
-          <td data-title="'Статус'" data-title-mobile="Статус">
-            <i class="ion-ios-circle-filled {{item.status}}"></i>
-            <i class="ion-document"></i>
-            <i class="ion-android-options"></i>
-          </td>
-        </tr>
-      </table>
     </div>
-  </div>
 
-  <!--  table "last transactions"-->
+    <!--  table "last transactions"-->
 
-  <div class="vidget">
-    <div ng-controller="tableLastTransactions" class="min_last_trns">
-      <h3><span>Останні транзакціїї</span></h3>
-      <div class="show_vidget_min">
-        <i class="ion-ios-plus-outline"></i>
+    <div class="vidget">
+      <div ng-controller="tableLastTransactions" class="min_last_trns" data-widget-id="last_trns">
+        <h3><span>Останні транзакціїї</span></h3>
+        <vidget-control-panel></vidget-control-panel>
+        <check-type></check-type>
+        <table wt-responsive-table ng-table="transTable" class="table table-striped">
+          <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
+            <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
+              {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
+              <div class="control-each-el">
+                <input class="check_table_item" type="checkbox">
+                <span ng-click="openClose($event)" class="open-close_table_item"></span>
+              </div>
+            </td>
+            <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
+              {{trns.card}}
+              <br> <span class="small">{{trns.master}}</span>
+            </td>
+            <td data-title="'Тип транзакції'" data-title-mobile="Тип транзакції" sortable="'pay_type'">
+              {{trns.pay_type}}
+            </td>
+            <td data-title="'Чек'" data-title-mobile="Чек">
+              {{trns.check_number}} <i class="ion-navicon green_fonts"></i>
+            </td>
+            <td data-title="'АЗК'" data-title-mobile="АЗК">
+              {{trns.azk}}
+            </td>
+            <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга" class="{{trns.fuel_type}}">
+
+            </td>
+            <td data-title="'Обєм'" data-title-mobile="Обєм" sortable="'fuel_vol'">
+              {{trns.fuel_vol}}
+            </td>
+            <td data-title="'Сума'" data-title-mobile="Сума" sortable="'money'">
+              {{trns.money}}
+            </td>
+          </tr>
+        </table>
+
       </div>
-      <vidget-control-panel></vidget-control-panel>
-      <check-type></check-type>
-      <table wt-responsive-table ng-table="transTable" class="table table-striped">
-        <tr ng-repeat="trns in data | filter:search:card" show-filter="true" class="mobile-table-el">
-          <td data-title="'Дата транзакції'" data-title-mobile="Дата транзакції" sortable="'transactionData'">
-            {{trns.transactionData}} <span class="table_time"> {{trns.transactionTime}}</span>
-            <div class="control-each-el">
-              <input class="check_table_item" type="checkbox">
-              <span ng-click="openClose($event)" class="open-close_table_item"></span>
-            </div>
-          </td>
-          <td data-title="'Карта / Держатель'" data-title-mobile="Карта / Держатель" sortable="'card'" filter="{'card':'text'}">
-            {{trns.card}}
-            <br> <span class="small">{{trns.master}}</span>
-          </td>
-          <td data-title="'Тип транзакції'" data-title-mobile="Тип транзакції" sortable="'pay_type'">
-            {{trns.pay_type}}
-          </td>
-          <td data-title="'Чек'" data-title-mobile="Чек">
-            {{trns.check_number}} <i class="ion-navicon green_fonts"></i>
-          </td>
-          <td data-title="'АЗК'" data-title-mobile="АЗК">
-            {{trns.azk}}
-          </td>
-          <td data-title="'Ресурс/послуга'" data-title-mobile="Ресурс/послуга" class="{{trns.fuel_type}}">
-
-          </td>
-          <td data-title="'Обєм'" data-title-mobile="Обєм" sortable="'fuel_vol'">
-            {{trns.fuel_vol}}
-          </td>
-          <td data-title="'Сума'" data-title-mobile="Сума" sortable="'money'">
-            {{trns.money}}
-          </td>
-        </tr>
-      </table>
-
     </div>
-  </div>
 
-  <!--  Fuel diagram-->
+    <!--  Fuel diagram-->
 
-  <div class="vidget">
-    <h3><span>Статистика використаних ресурсів</span></h3>
-    <div class="show_vidget_min">
-      <i class="ion-ios-plus-outline"></i>
+    <div class="vidget">
+      <div ng-controller="tableLastTransactions" data-widget-id="used_res">
+        <h3><span>Статистика використаних ресурсів</span></h3>
+        <check-type></check-type>
+        <vidget-control-panel></vidget-control-panel>
+        <div class="buttons_control_panel">
+          <button id="day_fuel" class="autocompare">День</button>
+          <button id="week_fuel" class="autocompare">Тиждень</button>
+          <button id="month_fuel" class="autocompare">Місяць</button>
+          <button id="year_fuel" class="autocompare">Рік</button>
+        </div>
+        <div id="container_diagram" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      </div>
     </div>
-    <check-type></check-type>
-    <vidget-control-panel></vidget-control-panel>
-    <div class="buttons_control_panel">
-      <button id="day_fuel" class="autocompare">День</button>
-      <button id="week_fuel" class="autocompare">Тиждень</button>
-      <button id="month_fuel" class="autocompare">Місяць</button>
-      <button id="year_fuel" class="autocompare">Рік</button>
-    </div>
-    <div id="container_diagram" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  </div>
 
-  <!--  Money diagram-->
+    <!--  Money diagram-->
 
-  <div class="vidget">
-    <h3><span>Грошові витрати</span></h3>
-    <div class="show_vidget_min">
-      <i class="ion-ios-plus-outline"></i>
+    <div class="vidget">
+      <div ng-controller="tableLastTransactions" data-widget-id="money_passd">
+        <h3><span>Грошові витрати</span></h3>
+        <check-type></check-type>
+        <vidget-control-panel></vidget-control-panel>
+        <div class="buttons_control_panel">
+          <button id="day_money" class="autocompare">День</button>
+          <button id="week_money" class="autocompare">Тиждень</button>
+          <button id="month_money" class="autocompare">Місяць</button>
+          <button id="year_money" class="autocompare">Рік</button>
+        </div>
+        <div id="container_diagram_money" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      </div>
     </div>
-    <check-type></check-type>
-    <vidget-control-panel></vidget-control-panel>
-    <div class="buttons_control_panel">
-      <button id="day_money" class="autocompare">День</button>
-      <button id="week_money" class="autocompare">Тиждень</button>
-      <button id="month_money" class="autocompare">Місяць</button>
-      <button id="year_money" class="autocompare">Рік</button>
-    </div>
-    <div id="container_diagram_money" class="diagramm" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  </div>
 
-  <!--  User resourses list-->
-  
-  <div class="vidget">
-    <h3><span>Залишок ресурсів</span></h3>
-    <div class="show_vidget_min">
-      <i class="ion-ios-plus-outline"></i>
-    </div>
-    <check-type></check-type>
-    <vidget-control-panel></vidget-control-panel>
-    <div class="balance_list" ng-controller="resoursesBalance">
-      <ul>
-        <li ng-repeat="item in fuel_types">
-          <p class="{{item.name}}">{{item.text}}</p>
-          <div class="">
-            <h5>Баланс</h5>
-            <span>{{item.balance}}</span>
-            <hr>
-            <span>до {{item.date}}</span>
-          </div>
-        </li>
-        <div class="clearfix"></div>
-      </ul>
-    </div>
-  </div>
+    <!--  User resourses list-->
 
-  <!--  New messages-->
-  
-  <div class="vidget">
-    <h3><span>Нові сповіщення</span></h3>
-    <div class="show_vidget_min">
-      <i class="ion-ios-plus-outline"></i>
-    </div>
-    <vidget-control-panel></vidget-control-panel>
-    <div class="client-message" ng-controller="clientMessager">
-      <h4 class="text-center"><i class="ion-email"></i>  {{massages_to_user.length}} {{word_num}} сповіщення</h4>
-      <div class="client-message-text" ng-repeat="mess in massages_to_user">
-        <p>{{mess.text}}</p>
-        <div class="message-control">
-          <span>{{mess.date}}</span>
-          <span>{{mess.time}}</span>
-          <span><i class="ion-eye"></i> відмітити прочитаним</span>
+    <div class="vidget">
+      <div ng-controller="tableLastTransactions" data-widget-id="resourses">
+        <h3><span>Залишок ресурсів</span></h3>
+        <check-type></check-type>
+        <vidget-control-panel></vidget-control-panel>
+        <div class="balance_list" ng-controller="resoursesBalance">
+          <ul>
+            <li ng-repeat="item in fuel_types">
+              <p class="{{item.name}}">{{item.text}}</p>
+              <div class="">
+                <h5>Баланс</h5>
+                <span>{{item.balance}}</span>
+                <hr>
+                <span>до {{item.date}}</span>
+              </div>
+            </li>
+            <div class="clearfix"></div>
+          </ul>
         </div>
       </div>
     </div>
+
+    <!--  New messages-->
+
+    <div class="vidget">
+      <div ng-controller="tableLastTransactions" data-widget-id="messages_users">
+        <h3><span>Нові сповіщення</span></h3>
+        <vidget-control-panel></vidget-control-panel>
+        <div class="client-message" ng-controller="clientMessager">
+          <h4 class="text-center"><i class="ion-email"></i>  {{massages_to_user.length}} {{word_num}} сповіщення</h4>
+          <div class="client-message-text" ng-repeat="mess in massages_to_user">
+            <p>{{mess.text}}</p>
+            <div class="message-control">
+              <span>{{mess.date}}</span>
+              <span>{{mess.time}}</span>
+              <span><i class="ion-eye"></i> відмітити прочитаним</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  widget min panel-->
+  </div>
+  <h2 class="text-center vidget_header">Додати віджети</h3>
+  <div class="vidget_min">
+   
+    <div class="clearfix"></div>
+     <div class="card_operations col-sm-4 col-md-4 col-xs-12">
+      <div class="w_min col-sm-12 col-md-12 col-xs-12">
+        <div class="w_left_panel">
+          <span>...</span>
+        </div>
+        <p><span>Операцїі з картками</span></p>
+        <div class="w_show" ng-click="fromStash($event)">
+          <i class="ion-ios-plus-outline"></i>
+        </div>
+      </div>
+      </div>
+     <div class="last_trns col-sm-4 col-md-4 col-xs-12">
+      <div class="w_min col-sm-12 col-md-12 col-xs-12">
+        <div class="w_left_panel">
+          <span>...</span>
+        </div>
+        <p><span>Останні транзакції</span></p>
+        <div class="w_show" ng-click="fromStash($event)">
+          <i class="ion-ios-plus-outline"></i>
+        </div>
+      </div>
+      </div>
+     <div class="used_res col-sm-4 col-md-4 col-xs-12">
+    <div class="w_min col-sm-12 col-md-12 col-xs-12">
+      <div class="w_left_panel">
+        <span>...</span>
+      </div>
+      <p><span>Статистика використаних ресурсів</span></p>
+      <div class="w_show" ng-click="fromStash($event)">
+        <i class="ion-ios-plus-outline"></i>
+      </div>
+    </div>
+</div>
+     <div class="money_passd col-sm-4 col-md-4 col-xs-12">
+      <div class="w_min col-sm-12 col-md-12 col-xs-12">
+        <div class="w_left_panel">
+          <span>...</span>
+        </div>
+        <p><span>Грошові витрати</span></p>
+        <div class="w_show" ng-click="fromStash($event)">
+          <i class="ion-ios-plus-outline"></i>
+        </div>
+      </div>
+     </div>
+     <div class="resourses col-sm-4 col-md-4 col-xs-12">
+      <div class="w_min col-sm-12 col-md-12 col-xs-12">
+        <div class="w_left_panel">
+          <span>...</span>
+        </div>
+        <p><span>Залишок ресурсів</span></p>
+        <div class="w_show" ng-click="fromStash($event)">
+          <i class="ion-ios-plus-outline"></i>
+        </div>
+      </div>
+      </div>
+     <div class="messages_users col-sm-4 col-md-4 col-xs-12">
+      <div class="w_min col-sm-12 col-md-12 col-xs-12">
+        <div class="w_left_panel">
+          <span>...</span>
+        </div>
+        <p><span>Нові сповіщення</span></p>
+        <div class="w_show" ng-click="fromStash($event)">
+          <i class="ion-ios-plus-outline"></i>
+        </div>
+      </div>
+      </div>
+<!--
+     <div class="col-sm-4 col-md-4 col-xs-12">
+<div class="w_min col-sm-12 col-md-12 col-xs-12">
+  <div class="w_left_panel">
+    <span>...</span>
+  </div>
+  <p><span>Операцїі з картками</span></p>
+  <div class="w_show">
+    <i class="ion-ios-plus-outline"></i>
   </div>
 </div>
+</div>
+-->
 
-  <!--  widget min panel-->
-  
-<h2 class="text-center vidget_header">Додати віджети</h3>
-  <div class="vidget_min">
-    <div class="clearfix"></div>
   </div>
+</div>
