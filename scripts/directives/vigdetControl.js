@@ -29,6 +29,11 @@ angular.module('wogApp.vidget', [])
           return handle.className === 'darg_on_me';
         }
       })
+      dragula([document.querySelector('.vidget_min')], {
+        moves: function (el, container, handle) {
+          return handle.className === 'w_left_panel';
+        }
+      })
     }
 
     $scope.openClose = function (e) {
@@ -61,11 +66,17 @@ angular.module('wogApp.vidget', [])
     //    restrict: 'E',
     template: '<div class="vidget_control_panel" data-panel-id="">' + '<span class="hide_vidget" ng-click="hideEl()">_</span><span class="darg_on_me" data-title="Перетяніть для зміни положення">...</span><span class="close_vidget" ng-click="toStash()">×</span>' + '</div>',
     link: function (scope, elem, attrs) {
+
+
+
       scope.hideEl = function () {
         var widget_name = elem.parent().attr('data-widget-id');
         //        console.log(widget_name);
         widgetControlService.checkStorage(widget_name, 'minimize');
         widgetControlService.checkReloadStorage(widget_name);
+        if (widget_name == 'used_res' || widget_name == 'money_passd') {
+          $('.active_btn').trigger('click');
+        }
       }
       scope.toStash = function () {
 

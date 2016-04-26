@@ -97,7 +97,7 @@
     <!--  Fuel diagram-->
 
     <div class="vidget">
-      <div ng-controller="tableLastTransactions" data-widget-id="used_res">
+      <div ng-controller="userMainCtrl" data-widget-id="used_res">
         <h3><span>Статистика використаних ресурсів</span></h3>
         <check-type></check-type>
         <vidget-control-panel></vidget-control-panel>
@@ -114,7 +114,7 @@
     <!--  Money diagram-->
 
     <div class="vidget">
-      <div ng-controller="tableLastTransactions" data-widget-id="money_passd">
+      <div ng-controller="userMainCtrl" data-widget-id="money_passd">
         <h3><span>Грошові витрати</span></h3>
         <check-type></check-type>
         <vidget-control-panel></vidget-control-panel>
@@ -131,11 +131,11 @@
     <!--  User resourses list-->
 
     <div class="vidget">
-      <div ng-controller="tableLastTransactions" data-widget-id="resourses">
+      <div ng-controller="resoursesBalance" data-widget-id="resourses">
         <h3><span>Залишок ресурсів</span></h3>
         <check-type></check-type>
         <vidget-control-panel></vidget-control-panel>
-        <div class="balance_list" ng-controller="resoursesBalance">
+        <div class="balance_list">
           <ul>
             <li ng-repeat="item in fuel_types">
               <p class="{{item.name}}">{{item.text}}</p>
@@ -155,10 +155,10 @@
     <!--  New messages-->
 
     <div class="vidget">
-      <div ng-controller="tableLastTransactions" data-widget-id="messages_users">
+      <div ng-controller="clientMessager" data-widget-id="messages_users">
         <h3><span>Нові сповіщення</span></h3>
         <vidget-control-panel></vidget-control-panel>
-        <div class="client-message" ng-controller="clientMessager">
+        <div class="client-message">
           <h4 class="text-center"><i class="ion-email"></i>  {{massages_to_user.length}} {{word_num}} сповіщення</h4>
           <div class="client-message-text" ng-repeat="mess in massages_to_user">
             <p>{{mess.text}}</p>
