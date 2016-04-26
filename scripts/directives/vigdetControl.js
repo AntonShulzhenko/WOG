@@ -7,13 +7,13 @@ angular.module('wogApp.vidget', [])
       var widget_name = btn.closest('.w_min').parent().attr('data-w-min-id');
       widgetControlService.checkStorage(widget_name, 'close');
       widgetControlService.checkReloadStorage(widget_name);
+      $('.active_btn').trigger('click');
     }
 
     $scope.fromStash = function (e) {
       var btn = $(e.currentTarget);
       findWidget(btn);
     }
-
 
     $.ajax({
       url: 'scripts/lib/dragula.js',
@@ -31,8 +31,7 @@ angular.module('wogApp.vidget', [])
       })
     }
 
-    $rootScope.openClose = function (e) {
-      console.log('mobile-check')
+    $scope.openClose = function (e) {
       var btn = $(e.target);
       btn.closest('tr').toggleClass('mobile-table-el');
     }
@@ -42,23 +41,19 @@ angular.module('wogApp.vidget', [])
       console.log($scope.modal_img);
     };
 
-    $('.card_control_panel ul li:first-child').on('click', function () {
-      $(this).parent().toggleClass('open_table_panel');
-    })
+    setTimeout(function () {
+      try {
+        $('#week_fuel').trigger('click');
+        $('#week_money').trigger('click');
+        $('.table input').attr('placeholder', 'Пошук за номером карти');
+        $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
+          $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
+        });
+      } catch (e) {
+        //        do nothing
+      }
+    }, 1500);
 
-    $('.buttons_control_panel button').on('click', function () {
-      $(this).addClass('active_btn');
-      $(this).siblings().removeClass('active_btn');
-    });
-
-    $('.check_type_subsection .ion-ios-arrow-down').on('click', function () {
-      $(this).parent().toggleClass('opened');
-      $('.check_type_subsection li').on('click', function () {
-        $(this).addClass('active_template_item');
-        $(this).siblings().removeClass('active_template_item');
-        $(this).closest('div').removeClass('opened');
-      });
-    });
   })
 
 .directive('vidgetControlPanel', function ($compile, widgetControlService) {
@@ -66,19 +61,6 @@ angular.module('wogApp.vidget', [])
     //    restrict: 'E',
     template: '<div class="vidget_control_panel" data-panel-id="">' + '<span class="hide_vidget" ng-click="hideEl()">_</span><span class="darg_on_me" data-title="Перетяніть для зміни положення">...</span><span class="close_vidget" ng-click="toStash()">×</span>' + '</div>',
     link: function (scope, elem, attrs) {
-      setTimeout(function () {
-        try {
-          $('#week_fuel').trigger('click');
-          $('#week_money').trigger('click');
-          $('.table input').attr('placeholder', 'Пошук за номером карти');
-          $('.min_card_operation .ng-table-sort-header th:first-child').on('click', function () {
-            $(this).closest('table').find('input[type=checkbox]').attr('checked', 'checked');
-          });
-        } catch (e) {
-          //        do nothing
-        }
-      }, 1200);
-
       scope.hideEl = function () {
         var widget_name = elem.parent().attr('data-widget-id');
         //        console.log(widget_name);
@@ -86,7 +68,7 @@ angular.module('wogApp.vidget', [])
         widgetControlService.checkReloadStorage(widget_name);
       }
       scope.toStash = function () {
-        elem.find('active_btn').trigger('click');
+
         //        console.log('to stash');
         var widget_name = elem.parent().attr('data-widget-id');
         widgetControlService.checkStorage(widget_name, 'close');
@@ -99,9 +81,15 @@ angular.module('wogApp.vidget', [])
 
 .directive('cardControlPanel', function () {
   return {
+    link: function (scope, elem, attrs) {
+      scope.openTablePanel = function () {
+        console.log($('.card_control_panel'));
+        $('.card_control_panel').find('ul').toggleClass('open_table_panel');
+      }
+    },
     template: '<div class="card_control_panel">' +
       '<ul>' +
-      '<li><a href="#"> Змінити: </a></li>' +
+      '<li ng-click=openTablePanel()><a href="#"> Змінити: </a></li>' +
       '<li><a href="#"> Статус </a></li>' +
       '<li><a href="#"> Ресурси </a></li>' +
       '<li><a href="#"> Послуги </a></li>' +
@@ -112,6 +100,21 @@ angular.module('wogApp.vidget', [])
 
 .directive('checkType', function () {
   return {
+    link: function (scope, elem, attrs) {
+      $('.buttons_control_panel button').on('click', function () {
+        $(this).addClass('active_btn');
+        $(this).siblings().removeClass('active_btn');
+      });
+
+      $('.check_type_subsection .ion-ios-arrow-down').on('click', function () {
+        $(this).parent().toggleClass('opened');
+        $('.check_type_subsection li').on('click', function () {
+          $(this).addClass('active_template_item');
+          $(this).siblings().removeClass('active_template_item');
+          $(this).closest('div').removeClass('opened');
+        });
+      })
+    },
     template: '<div class="check_type_subsection">' + '<div>' + '<i class="ion-ios-arrow-down"></i>' + '<ul>' +
       '<li class="active_template_item">Автомобільний транспорт</li>' +
       '<li>Трактор транспорт</li>' +
