@@ -64,7 +64,8 @@
 }
 
 @media screen and (max-width:1280px) and (min-width:0px) {
-  .add_department_form select, .create_user_detp {
+  .add_department_form select,
+  .create_user_detp {
     font-size: 12px;
   }
   .balance_list li {
@@ -286,6 +287,12 @@
 }
 
 @media screen and (min-width:0px) and (max-width:767px) {
+  .scroll-subheader-body-content {
+    width: calc(100% - 225px);
+  }
+  .arrow-left-subheader {
+    margin-left: 110px;
+  }
   .stats_body div {
     padding: 2px;
   }

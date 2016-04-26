@@ -1771,8 +1771,8 @@ div.all_scores {
 .button-open_scroll-subheader {
   position: absolute;
   bottom: -35px;
-  margin-left: -110px;
   left: 50%;
+  margin-left: -70px;
 }
 
 .button-open_scroll-subheader span {
@@ -1786,15 +1786,23 @@ div.all_scores {
   padding-right: 18px;
 }
 
-.scroll-resize {}
-
-.scroll-subheader-body-content {
-  width: calc(100% - 260px);
-  float: left;
-  overflow-y: auto;
-  height: 130px;
+.scroll-resize {
+  left: -95px;
+  width: calc(100% + 95px);
+  position: absolute;
+  top: 70px;
 }
 
+.scroll-subheader-body-content {
+  width: calc(100% - 305px);
+  float: left;
+  overflow-y: auto;
+  height: 150px;
+}
+
+.scroll-subheader-body .row{
+  overflow: hidden;
+}
 .scroll-subheader-body {
   background: #fff;
   height: 150px;
@@ -1802,17 +1810,19 @@ div.all_scores {
 
 .arrow-left-subheader,
 .arrow-right-subheader {
-  line-height: 120px;
+  line-height: 150px;
   font-size: 35px;
   text-align: center;
-  width: 130px;
-  height: 120px;
+  width: 50px;
+  height: 150px;
   float: left;
   background: #124f33;
   color: #00ab4e;
 }
 
-.arrow-left-subheader {}
+.arrow-left-subheader {
+  margin-left: 190px;
+}
 
 .arrow-right-subheader {}
 
