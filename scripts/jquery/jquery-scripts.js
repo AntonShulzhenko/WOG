@@ -53,6 +53,6 @@ $(document).ready(function () {
     size: 3
   });
 
-  $('.widget-nav .caret').addClass('ion-chevron-down');
+  $('.select-wrap .caret').addClass('ion-chevron-down');
 
 });

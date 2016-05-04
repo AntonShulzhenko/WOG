@@ -6,6 +6,10 @@
   margin-left: 15px;
 }
 
+.vidget h3.mb_25 {
+  margin-bottom: 25px;
+}
+
 .widget-nav {
   margin-top: 15px;
   float: right;
@@ -28,30 +32,100 @@
   padding-right: 0;
 }
 
-.widget-nav .bootstrap-select>.dropdown-toggle {
+.select-wrap .bootstrap-select>.dropdown-toggle {
   border: none;
   padding: 0 25px 0 0;
   background-color: transparent;
   box-shadow: none;
 }
 
-.widget-nav .bootstrap-select>.dropdown-toggle:hover {
+.select-wrap .bootstrap-select>.dropdown-toggle:hover {
   background-color: transparent;
 }
 
-.widget-nav .bootstrap-select>.dropdown-toggle:focus,
-.widget-nav .bootstrap-select>.dropdown-toggle:active {
+.select-wrap .bootstrap-select>.dropdown-toggle:focus,
+.select-wrap .bootstrap-select>.dropdown-toggle:active {
   outline: none !important;
 }
 
-.widget-nav .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+.select-wrap .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
   width: 70px;
 }
 
-.widget-nav .bootstrap-select.btn-group .dropdown-toggle .caret {
+.select-wrap .bootstrap-select.btn-group .dropdown-toggle .caret {
   border: none;
   top: 0;
   right: 20px;
   margin-top: 0;
   color: #00ab4e;
+}
+
+.card-services__viewport {
+  padding: 40px 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 260px;
+  margin: 10px;
+  border-radius: 3px;
+  border: 1px solid #ecebeb;
+  background-color: #fff;
+}
+
+.service-item__head {
+  padding: 25px 18px 25px 70px;
+  border-bottom: 1px dashed #d9d9d9;
+  background-repeat: no-repeat;
+  background-position: 18px center;
+}
+
+.service-item__head_chicken {
+  background-image: url(../img/chicken.png);
+}
+
+.service-item__head_pan {
+  background-image: url(../img/pan.png);
+}
+
+.service-item__head_hd {
+  background-image: url(../img/hd.png);
+}
+
+.service-item__head_ic {
+  background-image: url(../img/ic.png);
+}
+
+.service-item__head_sendwitch {
+  background-image: url(../img/sendwitch.png);
+}
+
+.service-item__head p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.service-item__opt {
+  background-color: #f9f9f9;
+}
+
+.service-item__select,
+.service-item__sum {
+  width: 50%;
+  text-align: center;
+  padding: 15px;
+}
+
+.service-item__sum {
+  border-left: 1px solid #f0f1f1;
+}
+
+.service-item__sum p {
+  margin-bottom: 0;
 }
