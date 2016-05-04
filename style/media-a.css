@@ -1,0 +1,34 @@
+@media screen and (max-width: 900px) {
+  .widget-nav .widget-nav__li {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vidget h3.pull-left {
+    float: none !important;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .widget-nav {
+    float: none !important;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .widget-nav__li:first-child {
+    float: none;
+  }
+
+  .widget-wrap {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .service-item {
+    margin: 10px 0;
+  }
+}
