@@ -1,0 +1,57 @@
+.widget-wrap {
+  padding: 0 20px;
+}
+
+.vidget h3.ml_15 {
+  margin-left: 15px;
+}
+
+.widget-nav {
+  margin-top: 15px;
+  float: right;
+}
+
+.widget-nav .widget-nav__li {
+  float: left;
+  padding: 12px 30px;
+  border-left: 1px solid #f4f5f5;
+  font-weight: 500;
+  color: #000;
+}
+
+.widget-nav .widget-nav__li:first-child,
+.widget-nav .widget-nav__li:nth-child(2) {
+  border-left: none;
+}
+
+.widget-nav li:last-child {
+  padding-right: 0;
+}
+
+.widget-nav .bootstrap-select>.dropdown-toggle {
+  border: none;
+  padding: 0 25px 0 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.widget-nav .bootstrap-select>.dropdown-toggle:hover {
+  background-color: transparent;
+}
+
+.widget-nav .bootstrap-select>.dropdown-toggle:focus,
+.widget-nav .bootstrap-select>.dropdown-toggle:active {
+  outline: none !important;
+}
+
+.widget-nav .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 70px;
+}
+
+.widget-nav .bootstrap-select.btn-group .dropdown-toggle .caret {
+  border: none;
+  top: 0;
+  right: 20px;
+  margin-top: 0;
+  color: #00ab4e;
+}

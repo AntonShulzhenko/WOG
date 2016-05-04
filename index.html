@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="style/angular-responsive-tables.css">
 
   <!-- New styles -->
+  <link rel="stylesheet" href="style/bootstrap-select.min.css">
   <link rel="stylesheet" href="style/styles-a.css">
   <link rel="stylesheet" href="style/media-a.css">
 
@@ -70,13 +71,30 @@
 
     <main>
       <div class="vidget">
-        <div>
-          <h3><span>Нові сповіщення</span></h3>
-          <vidget-control-panel></vidget-control-panel>
-          <div>
-            
+          <div class="clearfix widget-wrap card-services">
+            <vidget-control-panel></vidget-control-panel>
+
+            <h3 class="pull-left ml_15"><span>Послуги</span></h3>
+
+            <ul class="nav widget-nav pull-right">
+              <li class="widget-nav__li">Встановити ліміти для всіх послуг</li>
+              <li class="widget-nav__li">
+                <select name="" id="" class="selectpicker">
+                  <option value="День" selected="selected">День</option>
+                  <option value="Месяц">Месяц</option>
+                  <option value="Год">Год</option>
+                </select>
+              </li>
+              <li class="widget-nav__li">1000л</li>
+              <li class="widget-nav__li">10 000грн</li>
+            </ul>
+
+            <div class="card-services__viewport">
+              <div class="service-item">
+                
+              </div>
+            </div>
           </div>
-        </div>
       </div>
     </main>
 
@@ -131,6 +149,10 @@
   <script src="scripts/lib/tooltipsy.min.js"></script>
   <script src="scripts/jquery/tooltips.js"></script>
   <!--  <script src="scripts/lib/angular-animate.js"></script>-->
+
+  <!-- New scripts -->
+  <!-- Select -->
+  <script src="scripts/lib/bootstrap-select.min.js"></script>
 
 </body>
 

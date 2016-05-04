@@ -36,7 +36,7 @@ $(document).ready(function () {
       }
     });
   }
-  
+
   setInterval(function () {
     if ($('nav').hasClass('minimize')) {
       $(".menu_hover").parent().removeClass('invisible');
@@ -46,4 +46,13 @@ $(document).ready(function () {
       $(".menu_hover").parent().addClass('invisible');
     })
   }, 100);
+
+
+  // New
+  $('.selectpicker').selectpicker({
+    size: 3
+  });
+
+  $('.widget-nav .caret').addClass('ion-chevron-down');
+
 });
