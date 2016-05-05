@@ -1,5 +1,29 @@
+[class*=col-].pl30 {
+  padding-left: 30px;
+}
+
 [class*=col-].pl45 {
   padding-left: 45px;
+}
+
+.bg-f9f9f9 {
+  background-color: #f9f9f9;
+}
+
+.lh70 {
+  line-height: 70px;
+}
+
+.h84 {
+  height: 84px;
+}
+
+.lh84 {
+  line-height: 84px;
+}
+
+.bt-e1e1e1 {
+  border-top: 1px solid #e1e1e1;
 }
 
 /* CARD WIDGET */
@@ -131,6 +155,16 @@
   line-height: 38px;
   width: 120px;
   margin-bottom: 20px;
+}
+
+.card-data__label_type2 {
+  width: auto;
+  height: 14px;
+  line-height: 14px;
+}
+
+.card-data__label_ml15 {
+  margin-left: 15px;
 }
 
 .card-data__label_ml60 {
@@ -448,3 +482,16 @@
   background-color: #fff;
 }
 /* /SERVICE WIDGET */
+
+
+.widget__p {
+  color: #000;
+  margin-bottom: 0;
+}
+
+.message-toggle__p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 0;
+}
