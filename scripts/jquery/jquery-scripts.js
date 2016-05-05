@@ -55,4 +55,17 @@ $(document).ready(function () {
 
   $('.select-wrap .caret').addClass('ion-chevron-down');
 
+  $('#confirm-modal').on('shown.bs.modal', function (e) {
+    setTimeout(function() {
+      $('#confirm-modal').modal('hide');
+    }, 1000);
+  });
+
+  $('#confirm-modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var color = button.data('color');
+    var modal = $(this);
+
+    modal.find('.modal-content').css('background-color', color);
+  });
 });

@@ -73,7 +73,7 @@
       <div class="vidget">
         <div class="card-data">
           <div class="card-data__header clearfix">
-            <div class="card-data__account pull-left">
+            <div class="card-data__account pull-left clearfix">
               <a href="#" class="card-data__back">
                 <i class="ion-ios-arrow-thin-left"></i>
               </a>
@@ -93,7 +93,7 @@
           <div class="card-data__cont">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <label class="card-data__label">Держатель карти (ПІБ)<input type="text" class="set_dept_name"></label>
 
                   <label class="card-data__label clearfix">Номер телефону <a href="#" class="card-data__pin-restore pull-right">відновити PIN</a><input type="tel" class="set_dept_name"></label>
@@ -101,7 +101,7 @@
                   <label class="card-data__label">Інформація<input type="text" class="set_dept_name"></label>
                 </div>
 
-                <div class="col-sm-5 pl45">
+                <div class="col-lg-5 col-md-4 col-sm-6 pl45">
                   <span class="card-data__label">Тип карти <i class="ion-ios-information"></i></span>
 
                   <input type="radio" name="ct" class="card-data__radio" id="personal">
@@ -126,19 +126,33 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="clearfix hidden-lg hidden-md"></div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
                   <span class="card-data__label">Рахунок <i class="ion-ios-information"></i></span>
 
                   <div class="card-status">
-                    <input type="radio" name="status" id="active-card" checked><label for="active-card" class="card-status__label"><span class="card-status__rs"></span>Активна</label>
-                    <input type="radio" name="status" id="block-card"><label for="block-card" class="card-status__label"><span class="card-status__rs"></span>Заблокувати карту</label>
-                    <input type="radio" name="status" id="stop-card"><label for="stop-card" class="card-status__label"><span class="card-status__rs"></span>Призупинити дію карти</label>
+                    <input type="radio" name="status" id="active-card" checked>
+                    <label for="active-card" class="card-status__label" data-toggle="modal" data-target="#confirm-modal" data-color="#00ab4e"><span class="card-status__rs green"></span>Активна</label>
+                    <input type="radio" name="status" id="block-card">
+                    <label for="block-card" class="card-status__label" data-toggle="modal" data-target="#confirm-modal" data-color="#fb0303"><span class="card-status__rs red"></span>Заблокувати карту</label>
+                    <input type="radio" name="status" id="stop-card">
+                    <label for="stop-card" class="card-status__label" data-toggle="modal" data-target="#confirm-modal" data-color="#7a7a7a"><span class="card-status__rs gray"></span>Призупинити дію карти</label>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="confirm-modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <p class="ion-ios-checkmark-outline check"></p>
+              <p class="txt">Данні збережено</p>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
       </div>
 
       <div class="vidget">

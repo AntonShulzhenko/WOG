@@ -116,6 +116,10 @@
   border-bottom: 1px dashed #000;
 }
 
+.card-data__pin-restore:hover {
+  border-color: transparent;
+}
+
 .card-data__pin-restore:visited {
   color: #000;
 }
@@ -156,6 +160,102 @@
 .card-data__radio:checked + .card-data__label_type .radio-icon::before {
   content: "\f3a7";
   color: #007e45;
+}
+
+.card-status {
+  width: 100%;
+  max-width: 340px;
+}
+
+.card-status input[type=radio] {
+  display: none;
+}
+
+.card-status input[type=radio]:checked + .card-status__label {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #f0f0f0;
+  font-size: 16px;
+}
+
+.card-status__label {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  padding-left: 50px;
+  border-top: 1px solid #e1e1e1;
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+}
+
+.card-status__label:nth-child(2) {
+  border-top: none;
+}
+
+.card-status__label .card-status__rs {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -9px;
+}
+
+.card-status__label .card-status__rs::before {
+  content: "\f400";
+  font-family: "Ionicons";
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.card-status__label .card-status__rs.green::before {
+  color: #00ab4e;
+}
+
+.card-status__label .card-status__rs.red::before {
+  color: #fb0303;
+}
+
+.card-status__label .card-status__rs.gray::before {
+  color: #7a7a7a;
+}
+
+#confirm-modal .modal-dialog {
+  margin-top: 270px;
+  max-width: 380px;
+  border-radius: 6px;
+}
+
+#confirm-modal .modal-content {
+  height: 190px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(136, 156, 176, 0.26);
+  text-align: center;
+  padding-top: 45px;
+}
+
+#confirm-modal .modal-content p {
+  color: #fff;
+  line-height: 1;
+  font-weight: 400;
+}
+
+#confirm-modal .modal-content .check {
+  font-size: 48px;
+  margin-bottom: 35px;
+}
+
+#confirm-modal .modal-content .txt {
+  font-size: 20px;
 }
 /* /CARD WIDGET */
 
