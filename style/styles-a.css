@@ -1,3 +1,7 @@
+[class*=col-].pl45 {
+  padding-left: 45px;
+}
+
 /* CARD WIDGET */
 .card-data {
   background-color: #fff;
@@ -84,6 +88,75 @@
   margin-left: 40px;
   vertical-align: middle;
 }
+
+.card-data__cont {
+  padding: 20px 25px 0;
+}
+
+.card-data__label {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+}
+
+.card-data__label i {
+  font-size: 12px;
+}
+
+.card-data__pin-restore {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000;
+  border-bottom: 1px dashed #000;
+}
+
+.card-data__pin-restore:visited {
+  color: #000;
+}
+
+.card-data__label_type {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 38px;
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.card-data__label_ml60 {
+  margin-left: 60px;
+}
+
+.card-data__radio {
+  display: none;
+}
+
+.card-data__radio:checked + .card-data__label_type {
+  color: #007e45;
+  font-weight: 700;
+}
+
+.card-data__label_type .radio-icon {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+}
+
+.card-data__label_type .radio-icon:before {
+  content: "\f3a6";
+  font-family: "Ionicons";
+}
+
+.card-data__radio:checked + .card-data__label_type .radio-icon::before {
+  content: "\f3a7";
+  color: #007e45;
+}
 /* /CARD WIDGET */
 
 
@@ -122,6 +195,7 @@
   padding-right: 0;
 }
 
+/*  SELECT  */
 .select-wrap .bootstrap-select>.dropdown-toggle {
   border: none;
   padding: 0 25px 0 0;
@@ -149,6 +223,25 @@
   margin-top: 0;
   color: #00ab4e;
 }
+
+.select-wrap_card .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100%;
+  max-width: 340px;
+  height: 38px;
+  border: 1px solid rgba(0, 126, 69, 0.2);
+  background-color: rgba(0, 126, 69, 0.02);
+  border-radius: 5px;
+}
+
+.select-wrap_card .bootstrap-select>.dropdown-toggle {
+  line-height: 38px;
+  padding: 0 20px;
+}
+
+.select-wrap_card .bootstrap-select.btn-group .dropdown-toggle .caret {
+  color: #000;
+}
+/*  /SELECT  */
 
 .card-services__viewport {
   padding: 40px 0 0;

@@ -91,7 +91,52 @@
           </div>
 
           <div class="card-data__cont">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-4">
+                  <label class="card-data__label">Держатель карти (ПІБ)<input type="text" class="set_dept_name"></label>
 
+                  <label class="card-data__label clearfix">Номер телефону <a href="#" class="card-data__pin-restore pull-right">відновити PIN</a><input type="tel" class="set_dept_name"></label>
+
+                  <label class="card-data__label">Інформація<input type="text" class="set_dept_name"></label>
+                </div>
+
+                <div class="col-sm-5 pl45">
+                  <span class="card-data__label">Тип карти <i class="ion-ios-information"></i></span>
+
+                  <input type="radio" name="ct" class="card-data__radio" id="personal">
+                  <label class="card-data__label card-data__label_type" for="personal">
+                    <span class="radio-icon"></span>
+                    Індивідуальна
+                  </label>
+
+                  <input type="radio" name="ct" class="card-data__radio" id="normal" checked>
+                  <label class="card-data__label card-data__label_type card-data__label_ml60" for="normal">
+                    <span class="radio-icon"></span>
+                    Звичайна
+                  </label>
+
+                  <label class="card-data__label">Рахунок</label>
+                  <div class="select-wrap select-wrap_card">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <span class="card-data__label">Рахунок <i class="ion-ios-information"></i></span>
+
+                  <div class="card-status">
+                    <input type="radio" name="status" id="active-card" checked><label for="active-card" class="card-status__label"><span class="card-status__rs"></span>Активна</label>
+                    <input type="radio" name="status" id="block-card"><label for="block-card" class="card-status__label"><span class="card-status__rs"></span>Заблокувати карту</label>
+                    <input type="radio" name="status" id="stop-card"><label for="stop-card" class="card-status__label"><span class="card-status__rs"></span>Призупинити дію карти</label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
