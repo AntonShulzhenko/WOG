@@ -15,15 +15,19 @@
 .ml5 { margin-left: 5px; }
 
 .pl30 { padding-left: 30px; }
+.pt20 { padding-top: 20px; }
 .pt25 { padding-top: 25px; }
+.pb30 { padding-bottom: 30px; }
 
 .bg-f9f9f9 { background-color: #f9f9f9; }
+.bg-fff { background-color: #fff; }
 
 .lh62 { line-height: 62px; }
 .lh70 { line-height: 70px; }
 .lh84 { line-height: 84px; }
 
 .h85 { height: 85px; }
+.h90 { height: 90px; }
 
 .bt-e1e1e1 { border-top: 1px solid #e1e1e1; }
 
@@ -645,3 +649,106 @@
   margin-left: 0;
 }
 /* /PERIOD WIDGET */
+
+
+.available__inner {
+  background-color: #f9f9f9;
+  padding: 0 10px;
+}
+
+.available__tab {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 92px;
+  color: #000;
+  height: 92px;
+  margin-top: 5px;
+  background-color: #f9f9f9;
+  float: left;
+}
+
+.available__tab:visited {
+  color: #000;
+}
+
+.available__tab:hover {
+  background-color: #fff;
+}
+
+.available__tab_first {
+  padding: 0 135px 0 15px;
+}
+
+.available__tab_second {
+  padding: 0 30px 0 45px;
+}
+
+.available__tab_second.active {
+  background-color: #fff;
+  color: #00ab4e;
+  font-weight: 700;
+}
+
+.available__tab_second i {
+  font-size: 22px;
+  margin-left: 30px;
+}
+
+.check-box_type2 {
+  margin: 8px 0 0;
+}
+
+.check-box_type2 .check-box__text {
+  font-size: 18px;
+}
+
+.set_dept_name_search {
+  margin: 0;
+  font-size: 12px;
+  padding: 0 30px 0 20px;
+  color: #000;
+  text-indent: 0;
+}
+
+.label-search {
+  position: relative;
+  width: 100%;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.label-search::after {
+  content: '\f4a4';
+  font-family: "Ionicons";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -12px;
+  font-size: 18px;
+  color: #000;
+}
+
+.gas-stations {
+  height: 300px;
+  margin: 10px 0;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.gas-stations__item {
+  display: inline-block;
+  width: 32.7%;
+  height: 90px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #eeecec;
+  border-radius: 5px;
+}
+
+.gas-stations__item_hidden {
+  visibility: collapse;
+}

@@ -68,4 +68,18 @@ $(document).ready(function () {
 
     modal.find('.modal-content').css('background-color', color);
   });
+
+  // TABLE
+  $('.period-table tbody td').on('mousedown', function() {
+    $('.period-table tbody td').mousemove(function() {
+      $(this).addClass('active');
+    });
+  });
+
+  // LAST FLEX ELEMENT
+  function createLastItem(container) {
+      var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
+      container.append(el);
+  }
+  createLastItem($('.gas-stations'));
 });
