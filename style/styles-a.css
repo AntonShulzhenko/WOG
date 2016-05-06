@@ -10,37 +10,22 @@
   display: inline-block;
 }
 
-.mr25 {
-  margin-right: 25px;
-}
+.mr25 { margin-right: 25px; }
+.mr5 { margin-right: 5px; }
+.ml5 { margin-left: 5px; }
 
-.pt25 {
-  padding-top: 25px;
-}
+.pl30 { padding-left: 30px; }
+.pt25 { padding-top: 25px; }
 
-.bg-f9f9f9 {
-  background-color: #f9f9f9;
-}
+.bg-f9f9f9 { background-color: #f9f9f9; }
 
-.lh62 {
-  line-height: 62px;
-}
+.lh62 { line-height: 62px; }
+.lh70 { line-height: 70px; }
+.lh84 { line-height: 84px; }
 
-.lh70 {
-  line-height: 70px;
-}
+.h85 { height: 85px; }
 
-.h85 {
-  height: 85px;
-}
-
-.lh84 {
-  line-height: 84px;
-}
-
-.bt-e1e1e1 {
-  border-top: 1px solid #e1e1e1;
-}
+.bt-e1e1e1 { border-top: 1px solid #e1e1e1; }
 
 /* CARD WIDGET */
 .card-data {
@@ -592,3 +577,71 @@
   transition: all 0.2s ease-in-out;
 }
 /* /SAVE WIDGET */
+
+/* PERIOD WIDGET */
+.period-table {
+  width: 100%;
+  min-height: .01%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.period-table table {
+  width: 100%;
+  max-width: 100%;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.period-table table td {
+  vertical-align: middle;
+  min-width: 41px;
+}
+
+.period-table table thead tr {
+  height: 70px;
+}
+
+.period-table table tbody tr {
+  height: 46px;
+}
+
+.period-table table tbody td {
+  border: 1px solid #e1e1e1;
+  background-color: #fbfbfb;
+}
+
+.period-table table tbody .active {
+  background-color: #d9ece2;
+}
+
+.period-table table thead td {
+  font-weight: 700;
+  vertical-align: top;
+  padding-top: 45px;
+  font-size: 11px;
+}
+
+.period-table .first-td {
+  min-width: 216px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  padding: 0 15px 0 50px;
+  border: none;
+  background-color: #fff;
+}
+
+.period-table table thead .first-td {
+  font-size: 10px;
+  font-weight: 700;
+  color: #656464;
+  border-right: 1px solid #e1e1e1;
+  padding-top: 35px;
+}
+
+.period-table table thead .first-td i {
+  font-size: 18px;
+  margin-left: 0;
+}
+/* /PERIOD WIDGET */
