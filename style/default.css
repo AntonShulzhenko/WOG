@@ -733,6 +733,7 @@ table {
   margin-bottom: 70px;
   font-weight: 600;
   padding-bottom: 20px;
+  color: #000;
 }
 
 .vidget.over {
@@ -1849,6 +1850,7 @@ div.all_scores {
   background: #00ab4e;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  cursor: move;
 }
 
 .w_min {

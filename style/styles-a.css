@@ -6,16 +6,32 @@
   padding-left: 45px;
 }
 
+.dib {
+  display: inline-block;
+}
+
+.mr25 {
+  margin-right: 25px;
+}
+
+.pt25 {
+  padding-top: 25px;
+}
+
 .bg-f9f9f9 {
   background-color: #f9f9f9;
+}
+
+.lh62 {
+  line-height: 62px;
 }
 
 .lh70 {
   line-height: 70px;
 }
 
-.h84 {
-  height: 84px;
+.h85 {
+  height: 85px;
 }
 
 .lh84 {
@@ -483,7 +499,7 @@
 }
 /* /SERVICE WIDGET */
 
-
+/* MESSAGE WIDGET */
 .widget__p {
   color: #000;
   margin-bottom: 0;
@@ -492,6 +508,87 @@
 .message-toggle__p {
   font-size: 18px;
   font-weight: 300;
+  line-height: 24px;
   color: #000;
   margin-bottom: 0;
+  margin: 20px 0;
 }
+
+.check-box {
+  cursor: pointer;
+  color: #000;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 22px 0;
+}
+
+.check-box input[type=checkbox] {
+  display: none;
+}
+
+.check-box input[type=checkbox] + .check-box__text::before {
+  content: "\f372";
+  font-family: "Ionicons";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.check-box input[type=checkbox]:checked + .check-box__text::before {
+  content: "\f374";
+  color: #007e45;
+}
+
+.check-box input[type=checkbox]:disabled + .check-box__text::before {
+  content: "\f371";
+  color: #cdcdcd;
+}
+
+/* /MESSAGE WIDGET */
+
+/* SAVE WIDGET */
+.save-widget {
+  padding: 0 30px;
+}
+
+.save-widget .widget__p {
+  line-height: 45px;
+}
+
+.save-btn {
+  width: 290px;
+  height: 43px;
+  padding: 0;
+  background-color: #fcc30e;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 43px;
+  color: #000;
+  position: relative;
+}
+
+.save-btn::after {
+  content: "\f3fd";
+  font-family: "Ionicons";
+  font-size: 36px;
+  display: inline-block;
+  margin-left: 15px;
+  position: absolute;
+  line-height: 43px;
+}
+
+.save-btn:hover {
+  background-color: #fecf38;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* /SAVE WIDGET */
