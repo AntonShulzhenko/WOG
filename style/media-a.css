@@ -1,0 +1,170 @@
+@media screen and (max-width: 1200px) {
+  .card-data__label_type {
+      margin-left: 0;
+      width: 50%;
+      float: left;
+  }
+
+  .message-toggle .card-data__label_type {
+    width: 45px;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card-data__label_type {
+    float: none;
+    width: 100%;
+    height: 14px;
+    margin-bottom: 12px;
+  }
+
+  .card-data__label_type {
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .widget-nav .widget-nav__li {
+    padding: 10px 15px;
+  }
+
+  .card-data__p {
+    font-size: 24px;
+  }
+
+  .card-data__p_sm {
+    font-size: 14px;
+  }
+
+  .save-widget .widget__p {
+    float: none !important;
+    margin-bottom: 20px;
+  }
+
+  .save-widget .save-btn {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vidget h3.pull-left {
+    float: none !important;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .widget-nav {
+    float: none !important;
+    margin-bottom: 15px;
+  }
+
+  .card-data__cont [class*=col-].pl45 {
+    padding-left: 15px;
+  }
+
+  .card-data__cont [class*=col-] {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .card-data__label {
+    max-width: 100%;
+  }
+
+  .card-data__label_type {
+    height: 38px;
+    width: 45%;
+  }
+
+  .select-wrap_card .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    max-width: 100%;
+  }
+
+  .select-wrap {
+    margin-bottom: 20px;
+  }
+
+  .card-status {
+    max-width: 100%;
+  }
+
+  #confirm-modal .modal-dialog {
+    margin: 150px auto 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .widget-nav__li:first-child {
+    float: none;
+  }
+
+  .widget-wrap {
+    padding: 0 15px;
+  }
+
+  .card-data__account,
+  .card-data__save {
+    float: none !important;
+  }
+
+  .card-data__save {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .message-opt .row.h85 {
+    height: auto;
+  }
+
+  .message-opt .widget__p {
+    display: block;
+    line-height: 1;
+    margin-top: 20px;
+  }
+
+  .message-toggle .card-data__label_type {
+    height: 14px;
+  }
+
+  .message-toggle__p {
+    font-size: 14px;
+  }
+
+  .save-widget .widget__p {
+    line-height: 18px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card-data__cont {
+    padding: 20px 5px 0;
+  }
+
+  .card-data__p {
+    font-size: 20px;
+  }
+
+  .card-data__p_sm {
+    font-size: 14px;
+  }
+
+  .message-opt [class*=col-].pl30 {
+    padding-left: 15px;
+  }
+
+  .save-widget .widget__p {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .service-item {
+    margin: 10px 0;
+  }
+}

@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="style/angular-responsive-tables.css">
 
   <!-- New styles -->
+  <link rel="stylesheet" href="style/bootstrap-select.min.css">
   <link rel="stylesheet" href="style/styles-a.css">
   <link rel="stylesheet" href="style/media-a.css">
 
@@ -69,7 +70,744 @@
     </nav>
 
     <main>
-      <div ui-view></div>
+<!-- CARD-DATA -->
+      <div class="vidget">
+        <div class="card-data">
+          <div class="card-data__header clearfix">
+            <div class="card-data__account pull-left clearfix">
+              <a href="#" class="card-data__back">
+                <i class="ion-ios-arrow-thin-left"></i>
+              </a>
+
+              <div class="card-data__info">
+                <p class="card-data__p card-data__p_sm">Основний рахунок</p>
+                <p class="card-data__p">Картка <span>7825990000000050</span></p>
+              </div>
+            </div>
+
+            <a href="#" class="card-data__save pull-right">
+              Зберегти
+              <i class="ion-ios-plus-outline"></i>
+            </a>
+          </div>
+
+          <div class="card-data__cont">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <label class="card-data__label">Держатель карти (ПІБ)<input type="text" class="set_dept_name"></label>
+
+                  <label class="card-data__label clearfix">Номер телефону <a href="#" class="card-data__pin-restore pull-right">відновити PIN</a><input type="tel" class="set_dept_name"></label>
+
+                  <label class="card-data__label">Інформація<input type="text" class="set_dept_name"></label>
+                </div>
+
+                <div class="col-lg-5 col-md-4 col-sm-6 pl45">
+                  <span class="card-data__label">Тип карти <i class="ion-ios-information"></i></span>
+
+                  <input type="radio" name="ct" class="card-data__radio" id="personal">
+                  <label class="card-data__label card-data__label_type" for="personal">
+                    <span class="radio-icon"></span>
+                    Індивідуальна
+                  </label>
+
+                  <input type="radio" name="ct" class="card-data__radio" id="normal" checked>
+                  <label class="card-data__label card-data__label_type card-data__label_ml60" for="normal">
+                    <span class="radio-icon"></span>
+                    Звичайна
+                  </label>
+
+                  <label class="card-data__label">Рахунок</label>
+                  <div class="select-wrap select-wrap_card">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="clearfix hidden-lg hidden-md"></div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <span class="card-data__label">Рахунок <i class="ion-ios-information"></i></span>
+
+                  <div class="card-status">
+                    <input type="radio" name="status" id="active-card" checked>
+                    <label for="active-card" class="card-status__label" data-toggle="modal" data-target="#confirm-modal" data-color="#00ab4e"><span class="card-status__rs green"></span>Активна</label>
+                    <input type="radio" name="status" id="block-card">
+                    <label for="block-card" class="card-status__label" data-toggle="modal" data-target="#confirm-modal" data-color="#fb0303"><span class="card-status__rs red"></span>Заблокувати карту</label>
+                    <input type="radio" name="status" id="stop-card">
+                    <label for="stop-card" class="card-status__label" data-toggle="modal" data-target="#confirm-modal" data-color="#7a7a7a"><span class="card-status__rs gray"></span>Призупинити дію карти</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- .modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="confirm-modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <p class="ion-ios-checkmark-outline check"></p>
+              <p class="txt">Данні збережено</p>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      </div>
+<!-- /CARD-DATA -->
+
+<!-- CARD SERVICE WIDGET -->
+      <div class="vidget">
+        <div class="clearfix widget-wrap card-services">
+          <vidget-control-panel></vidget-control-panel>
+
+          <h3 class="pull-left ml_15 mb_25"><span>Послуги</span></h3>
+
+          <ul class="nav widget-nav pull-right">
+            <li class="widget-nav__li">Встановити ліміти для всіх послуг</li>
+            <li class="widget-nav__li">
+              <div class="select-wrap">
+                <select name="" id="" class="selectpicker">
+                  <option value="День" selected="selected">День</option>
+                  <option value="Месяц">Месяц</option>
+                  <option value="Год">Год</option>
+                </select>
+              </div>
+            </li>
+            <li class="widget-nav__li">1000л</li>
+            <li class="widget-nav__li">10 000грн</li>
+          </ul>
+
+          <div class="clearfix"></div>
+
+          <!-- CARD-SERVICE VIEWPORT -->
+          <div class="card-services__viewport">
+            <div class="service-item">
+              <div class="service-item__head service-item__head_chicken">
+                <p>Основні страви</p>
+              </div>
+
+              <div class="service-item__opt clearfix">
+                <div class="service-item__select pull-left">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="service-item__sum pull-right">
+                  <p>10 000грн</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__head service-item__head_pan">
+                <p>Основні страви</p>
+              </div>
+
+              <div class="service-item__opt clearfix">
+                <div class="service-item__select pull-left">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="service-item__sum pull-right">
+                  <p>10 000грн</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__head service-item__head_hd">
+                <p>Основні страви</p>
+              </div>
+
+              <div class="service-item__opt clearfix">
+                <div class="service-item__select pull-left">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="service-item__sum pull-right">
+                  <p>10 000грн</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__head service-item__head_ic">
+                <p>Основні страви</p>
+              </div>
+
+              <div class="service-item__opt clearfix">
+                <div class="service-item__select pull-left">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="service-item__sum pull-right">
+                  <p>10 000грн</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__head service-item__head_sendwitch">
+                <p>Основні страви</p>
+              </div>
+
+              <div class="service-item__opt clearfix">
+                <div class="service-item__select pull-left">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="service-item__sum pull-right">
+                  <p>10 000грн</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="card-services__head">Додати послуги</p>
+
+            <!-- CARD-SERVICE BAR -->
+            <div class="card-services__bar">
+              <div class="service-item service-item_preview">
+                <div class="service-item__head service-item__head_chicken">
+                  <p>Основні страви</p>
+                </div>
+
+                <div class="service-item__opt clearfix">
+                  <div class="service-item__select pull-left">
+                    <div class="select-wrap">
+                      <select name="" id="" class="selectpicker">
+                        <option value="День" selected="selected">День</option>
+                        <option value="Месяц">Месяц</option>
+                        <option value="Год">Год</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="service-item__sum pull-right">
+                    <p>10 000грн</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="service-item service-item_preview">
+                <div class="service-item__head service-item__head_ic">
+                  <p>Основні страви</p>
+                </div>
+
+                <div class="service-item__opt clearfix">
+                  <div class="service-item__select pull-left">
+                    <div class="select-wrap">
+                      <select name="" id="" class="selectpicker">
+                        <option value="День" selected="selected">День</option>
+                        <option value="Месяц">Месяц</option>
+                        <option value="Год">Год</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="service-item__sum pull-right">
+                    <p>10 000грн</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="service-item service-item_preview">
+                <div class="service-item__head service-item__head_pan">
+                  <p>Основні страви</p>
+                </div>
+
+                <div class="service-item__opt clearfix">
+                  <div class="service-item__select pull-left">
+                    <div class="select-wrap">
+                      <select name="" id="" class="selectpicker">
+                        <option value="День" selected="selected">День</option>
+                        <option value="Месяц">Месяц</option>
+                        <option value="Год">Год</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="service-item__sum pull-right">
+                    <p>10 000грн</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /CARD-SERVICE BAR -->
+          </div>
+          <!-- /CARD-SERVICE VIEWPORT -->
+        </div>
+      </div>
+<!-- /CARD SERVICE WIDGET -->
+
+<!-- PERIOD WIDGET -->
+      <div class="vidget">
+        <div class="clearfix period">
+          <vidget-control-panel></vidget-control-panel>
+
+          <h3 class="mb_25"><span>Періоди</span></h3>
+
+          <p class="widget__p bt-e1e1e1 pl30 lh62"><i class="ion-ios-information-outline mr5"></i>Вкажіть дні години, коли операції з картою будуть доступні</p>
+
+          <div class="period-table">
+            <table>
+              <thead>
+                <tr>
+                  <td class="first-td"><i class="ion-android-calendar mr5"></i>Дні/години</td>
+                  <td></td>
+                  <td>01</td>
+                  <td>02</td>
+                  <td>03</td>
+                  <td>04</td>
+                  <td>05</td>
+                  <td>06</td>
+                  <td>07</td>
+                  <td>08</td>
+                  <td>09</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="first-td">Понеділок</td>
+                  <td class="active"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="first-td">Вівторок</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="first-td">Середа</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="first-td">Четвер</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="first-td">П'ятниця</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="first-td">Субота</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="first-td">Неділя</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="widget__p pl30 lh62">
+            <label class="check-box">
+              <input type="checkbox">
+              <span class="check-box__text">Заборонити заправку в  державні святкові дні <i class="ion-ios-information ml5"></i></span>
+            </label>
+          </p>
+        </div>
+      </div>
+<!-- /PERIOD WIDGET -->
+
+<!-- AVAILABLE WIDGET -->
+      <div class="vidget">
+        <div class="clearfix widget-wrap available">
+          <vidget-control-panel></vidget-control-panel>
+
+          <h3 class="ml_15 mb_25"><span>Доступні по картці АЗС</span></h3>
+
+          <div class="available__inner">
+            <div class="container-fluid">
+              <div class="row">
+                <a href="#" class="available__tab available__tab_first">Доступні по картці термінали</a>
+                <a href="#" class="available__tab available__tab_second active">Додати АЗС <i class="ion-ios-plus"></i></a>
+              </div>
+
+              <div class="row pt20 pb30 bg-fff">
+                <div class="col-sm-4">
+                  <div class="select-wrap select-wrap_card">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <label class="check-box check-box_type2">
+                    <input type="checkbox">
+                    <span class="check-box__text">Показати тільки улюблені АЗС <i class="ion-ios-information ml5"></i></span>
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label class="label-search">
+                    <input type="text" class="set_dept_name set_dept_name_search" placeholder="Пошук за назвою">
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="gas-stations">
+                  <div class="gas-stations__item">
+                    
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+
+                  <div class="gas-stations__item">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /AVAILABLE WIDGET -->
+
+<!-- MESSAGE WIDGET -->
+      <div class="vidget">
+        <div class="clearfix message-opt">
+          <vidget-control-panel></vidget-control-panel>
+
+          <h3 class="mb_25"><span>Повідомлення держателю картки</span></h3>
+
+          <div class="message-toggle">
+            <div class="container-fluid">
+              <div class="row lh84 h85 bt-e1e1e1">
+                <div class="col-sm-12 pl30">
+                  <p class="widget__p dib mr25">Ввімкнути повідомлення про операціїї по картці</p>
+
+                  <input type="radio" name="message-toggle" class="card-data__radio" id="no">
+                  <label class="card-data__label card-data__label_type card-data__label_type2" for="no">
+                    <span class="radio-icon"></span>
+                    Ні
+                  </label>
+
+                  <input type="radio" name="message-toggle" class="card-data__radio" id="yes" checked>
+                  <label class="card-data__label card-data__label_type card-data__label_type2 card-data__label_ml15" for="yes">
+                    <span class="radio-icon"></span>
+                    Так
+                  </label>
+                </div>
+              </div>
+
+              <div class="row bg-f9f9f9">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6 pl30">
+                  <p class="message-toggle__p">Назва події</p>
+                </div>
+
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6">
+                  <p class="message-toggle__p">Налаштування</p>
+                </div>
+              </div>
+
+              <div class="row pt25">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6 pl30">
+                  <p class="message-toggle__p">Зміна налаштувань картки</p>
+                </div>
+
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6">
+                  <label class="check-box">
+                    <input type="checkbox">
+                    <span class="check-box__text">Відправляти SMS-повідомлення</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="row bt-e1e1e1">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6 pl30">
+                  <p class="message-toggle__p">Блокування карти</p>
+                </div>
+
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6">
+                  <label class="check-box">
+                    <input type="checkbox">
+                    <span class="check-box__text">Відправляти SMS-повідомлення</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="row bt-e1e1e1">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6 pl30">
+                  <p class="message-toggle__p">Останній чек</p>
+                </div>
+
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6">
+                  <label class="check-box">
+                    <input type="checkbox">
+                    <span class="check-box__text">Відправляти SMS-повідомлення</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /MESSAGE WIDGET -->
+
+<!-- SAVE WIDGET -->
+      <div class="vidget">
+        <div class="clearfix save-widget">
+          <p class="widget__p pull-left">
+            <a href="#" class="card-data__back"><i class="ion-ios-arrow-thin-left"></i></a>
+            Повернутися до списку карток бех збереження данних
+          </p>
+
+          <button class="save-btn pull-right">Зберегти</button>
+      </div>
+<!-- /SAVE WIDGET -->
+
+      </div>
     </main>
 
   </div>
@@ -123,6 +861,10 @@
   <script src="scripts/lib/tooltipsy.min.js"></script>
   <script src="scripts/jquery/tooltips.js"></script>
   <!--  <script src="scripts/lib/angular-animate.js"></script>-->
+
+  <!-- New scripts -->
+  <!-- Select -->
+  <script src="scripts/lib/bootstrap-select.min.js"></script>
 
 </body>
 

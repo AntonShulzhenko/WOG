@@ -36,7 +36,7 @@ $(document).ready(function () {
       }
     });
   }
-  
+
   setInterval(function () {
     if ($('nav').hasClass('minimize')) {
       $(".menu_hover").parent().removeClass('invisible');
@@ -46,4 +46,40 @@ $(document).ready(function () {
       $(".menu_hover").parent().addClass('invisible');
     })
   }, 100);
+
+
+  // New
+  $('.selectpicker').selectpicker({
+    size: 3
+  });
+
+  $('.select-wrap .caret').addClass('ion-chevron-down');
+
+  $('#confirm-modal').on('shown.bs.modal', function (e) {
+    setTimeout(function() {
+      $('#confirm-modal').modal('hide');
+    }, 1000);
+  });
+
+  $('#confirm-modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var color = button.data('color');
+    var modal = $(this);
+
+    modal.find('.modal-content').css('background-color', color);
+  });
+
+  // TABLE
+  $('.period-table tbody td').on('mousedown', function() {
+    $('.period-table tbody td').mousemove(function() {
+      $(this).addClass('active');
+    });
+  });
+
+  // LAST FLEX ELEMENT
+  function createLastItem(container) {
+      var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
+      container.append(el);
+  }
+  createLastItem($('.gas-stations'));
 });
