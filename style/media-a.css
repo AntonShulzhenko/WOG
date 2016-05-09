@@ -10,6 +10,14 @@
     float: none;
     margin-bottom: 0;
   }
+
+  .gas-stations__item_add {
+    padding-right: 60px;
+  }
+
+  .gas-stations__item_add::before {
+    right: 25px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -22,6 +30,10 @@
 
   .card-data__label_type {
     line-height: 14px;
+  }
+
+  .gas-stations__item {
+    width: 49.4%;
   }
 }
 
@@ -95,6 +107,14 @@
   #confirm-modal .modal-dialog {
     margin: 150px auto 0;
   }
+
+  .available .check-box_type2 {
+    margin: 0 0 20px;
+  }
+
+  .available__tab_first {
+    padding-right: 50px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -113,6 +133,23 @@
 
   .card-data__save {
     margin-top: 20px;
+  }
+
+  .gas-stations__item {
+    width: 100%;
+  }
+
+  .available__tab {
+    padding: 20px;
+    width: 50%;
+    line-height: 24px;
+    height: 90px;
+    text-align: center;
+  }
+
+  .available__tab_second i {
+    margin-left: 20px;
+    font-size: 20px;
   }
 }
 
@@ -160,6 +197,33 @@
 
   .save-widget .widget__p {
     height: auto;
+  }
+
+  .gas-station__label {
+    width: 50px;
+  }
+
+  .gas-station__dep {
+    width: calc(100% - 100px);
+  }
+
+  .gas-station__dep p {
+    font-size: 12px;
+  }
+
+  .available__tab {
+    padding: 15px 10px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 75px;
+  }
+
+  .available__tab_second i {
+    margin-left: 10px;
+  }
+
+  .check-box_type2 .check-box__text {
+    font-size: 14px;
   }
 }
 

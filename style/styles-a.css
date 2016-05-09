@@ -674,6 +674,7 @@
 
 .available__tab:hover {
   background-color: #fff;
+  color: #000;
 }
 
 .available__tab_first {
@@ -731,7 +732,7 @@
 
 .gas-stations {
   height: 300px;
-  margin: 10px 0;
+  margin: 0 0 10px;
   overflow-y: auto;
   display: flex;
   justify-content: space-between;
@@ -743,12 +744,207 @@
   display: inline-block;
   width: 32.7%;
   height: 90px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   background-color: #fff;
   border: 1px solid #eeecec;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .gas-stations__item_hidden {
   visibility: collapse;
+}
+
+.gas-stations__item_add {
+  position: relative;
+  cursor: pointer;
+}
+
+.gas-stations__item_add::before {
+  font-family: "Ionicons";
+  font-size: 36px;
+  line-height: 1;
+  display: block;
+  position: absolute;
+  right: 47px;
+  top: 50%;
+  margin-top: -18px;
+}
+
+.gas-stations__item_green::before {
+  content: "\f48b";
+  color: #00ab4e;
+}
+
+.gas-stations__item_add p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 0;
+  max-width: 67%;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.gas-station__dep,
+.gas-station__label,
+.gas-station__add {
+  height: 100%;
+}
+
+.gas-station__dep {
+  padding: 0 20px;
+  border-left: 1px dashed #dedede;
+  border-right: 1px dashed #dedede;
+  height: 70%;
+  float: left;
+  width: calc(100% - 110px);
+  position: relative;
+  top: 15%;
+}
+
+.gas-station__dep p {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.gas-station__label {
+  width: 60px;
+  margin-bottom: 0;
+  cursor: pointer;
+  position: relative;
+  float: left;
+}
+
+.gas-station__label input[type=checkbox] {
+  display: none;
+}
+
+.gas-station__label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gas-station__label input[type=checkbox] + span::before {
+  content: "\f3ae";
+  display: block;
+  font-family: "Ionicons";
+  font-size: 36px;
+  line-height: 1;
+  color: #d6d6d5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.gas-station__label:active input[type=checkbox] + span::before {
+  color: #fecf00;
+}
+
+.gas-station__label input[type=checkbox]:checked + span::before {
+  content: "\f2fc";
+  color: #fecf00;
+}
+
+.gas-station__add {
+  width: 50px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.gas-station__add::before,
+.gas-station__add span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.gas-station__add::before {
+  content: "\f48a";
+  display: block;
+  font-family: "Ionicons";
+  font-size: 24px;
+  line-height: 1;
+  color: #000;
+}
+
+.gas-station__add span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+  opacity: 0;
+}
+
+.gas-stations__item.allow {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.23);
+  border: none;
+}
+
+.gas-stations__item.allow .gas-station__label {
+  width: 0;
+  opacity: 0;
+  visibility: collapse;
+}
+
+.gas-stations__item.allow .gas-station__add {
+  width: 140px;
+  background-color: #00ab4e;
+}
+
+.gas-stations__item.allow .gas-station__add::before {
+  content: "\f48b";
+  color: #fff;
+  left: 20%;
+}
+
+.gas-stations__item.allow .gas-station__add span {
+  opacity: 1;
+  left: 60%;
+}
+
+.gas-stations__item.allow .gas-station__dep {
+  width: calc(100% - 140px);
+  border: none;
 }

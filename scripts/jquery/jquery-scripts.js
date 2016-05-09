@@ -82,4 +82,18 @@ $(document).ready(function () {
       container.append(el);
   }
   createLastItem($('.gas-stations'));
+
+  // .gas-stations__item hover
+  function gsHover() {
+    var item = $('.gas-stations__item'),
+        addBtn = $('.gas-station__add');
+
+    addBtn.hover(function() {
+      $(this).parent(item).addClass('allow');
+    }, function() {
+      $(this).parent(item).removeClass('allow');
+    });
+  }
+
+  gsHover();
 });
