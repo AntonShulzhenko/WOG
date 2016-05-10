@@ -6,13 +6,22 @@
   padding-left: 45px;
 }
 
-.dib {
-  display: inline-block;
-}
+.maxw960 { max-width: 960px; }
 
-.mr25 { margin-right: 25px; }
+.dib { display: inline-block; }
+
+.ma { margin-left: auto; margin-right: auto; }
 .mr5 { margin-right: 5px; }
+.mr15 { margin-right: 15px; }
+.mr25 { margin-right: 25px; }
 .ml5 { margin-left: 5px; }
+.ml25 { margin-left: 25px; }
+.mt5 { margin-top: 5px; }
+.mt25 { margin-top: 25px; }
+.mt40 { margin-top: 40px; }
+.mb25 { margin-bottom: 25px; }
+.mb40 { margin-bottom: 40px; }
+.mb70 { margin-bottom: 70px; }
 
 .pl30 { padding-left: 30px; }
 .pt20 { padding-top: 20px; }
@@ -22,6 +31,7 @@
 .bg-f9f9f9 { background-color: #f9f9f9; }
 .bg-fff { background-color: #fff; }
 
+.lh1 { line-height: 1; }
 .lh62 { line-height: 62px; }
 .lh70 { line-height: 70px; }
 .lh84 { line-height: 84px; }
@@ -31,6 +41,13 @@
 
 .bt-e1e1e1 { border-top: 1px solid #e1e1e1; }
 
+.trans {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 /* CARD WIDGET */
 .card-data {
   background-color: #fff;
@@ -83,6 +100,14 @@
 .card-data__p_sm {
   font-size: 14px;
   margin-bottom: 5px;
+}
+
+.card-data__p_fs18 {
+  font-size: 18px;
+}
+
+.card-data__p_mb40 {
+  margin-bottom: 40px;
 }
 
 .card-data__p span {
@@ -991,12 +1016,156 @@
   width: calc(100% - 141px);
   border: none;
 }
-
-.trans {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
 /* /AVAILABLE WIDGET */
+
+/* CARD-DATA_MAIN WIDGET */
+.card-data_main .card-data__cont {
+  border-radius: 5px;
+  margin-bottom: 55px;
+}
+
+.card-data_main .card-data__p {
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.card-data_main .card-data__back {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
+
+.card-data_main .card-data__save i {
+  margin-left: 20px;
+}
+/* /CARD-DATA_MAIN WIDGET */
+
+/* CARD-DATA_TABLE WIDGET */
+.card-data__tools .card-data__back {
+  margin-right: 0;
+  font-size: 20px;
+  background-color: #fafcfb;
+}
+
+.card-data__back_lt {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-data__back_rt {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* table */
+.cd-table {
+  width: 100%;
+  border-top: 1px solid #ededed;
+}
+
+.cd-table td {
+  color: #000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cd-table thead tr {
+  height: 40px;
+  background-color: #f9f9f9;
+}
+
+.cd-table thead td {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  vertical-align: middle;
+  border-right: 1px solid #ededed;
+}
+
+.cd-table thead .calendar i {
+  font-size: 12px;
+  color: #00ab4e;
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.cd-table thead .drop-down {
+  cursor: pointer;
+}
+
+.cd-table thead .drop-down i {
+  display: inline-block;
+  width: 13px;
+  height: 12px;
+  background-color: #00553c;
+  border-radius: 2px;
+  margin-left: 15px;
+  font-size: 14px;
+  line-height: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.cd-table tbody tr {
+  min-height: 68px;
+  border-bottom: 1px dashed #ededed;
+}
+
+.cd-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.cd-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.cd-table tbody td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px dashed #ededed;
+  vertical-align: top;
+}
+
+.cd-table thead td:last-child,
+.cd-table tbody td:last-child {
+  border-right: none;
+  padding-left: 50px;
+}
+
+.cd-table .date {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cd-table .desc i {
+  font-size: 24px;
+  color: #00ab4e;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.cd-table .desc:last-child {
+  margin-bottom: 0;
+}
+
+.cd-table .desc::before {
+  font-family: "Ionicons";
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.cd-table .desc_off::before {
+  content: "\f2a9";
+  color: #ff0404;
+  font-size: 14px;
+}
+
+.cd-table .desc_on::before {
+  content: "\f489";
+  color: #00ab4e;
+  font-size: 24px;
+}
+/* /table */
+/* /CARD-DATA_TABLE WIDGET */

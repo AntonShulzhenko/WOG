@@ -18,6 +18,10 @@
   .gas-stations__item_add::before {
     right: 25px;
   }
+
+  .card-data_main .card-data__cont {
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -59,6 +63,10 @@
     float: none !important;
     margin: 0 auto;
     display: block;
+  }
+
+  .card-data__p_fs18 {
+    font-size: 18px;
   }
 }
 
@@ -150,6 +158,10 @@
   .available__tab_second i {
     margin-left: 20px;
     font-size: 20px;
+  }
+
+  .card-data__tools {
+    margin-top: 20px;
   }
 }
 
@@ -264,6 +276,30 @@
 
   .save-widget .save-btn {
     width: 100%;
+  }
+
+  .card-data_main {
+    padding: 0 15px;
+  }
+
+  .card-data_main .card-data__cont {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
+  .card-data_main .card-data__p_fs18 {
+    font-size: 16px;
+  }
+
+  .card-data_main .card-data__p {
+    margin-left: 0;
+  }
+
+  .card-data__tools {
+    margin-top: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 }
 
