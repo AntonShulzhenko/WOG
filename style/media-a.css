@@ -1,3 +1,17 @@
+@media screen and (max-width: 1440px) {
+  #modal-resources .modal-dialog {
+    max-width: 940px;
+    margin-left: -575px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #modal-resources .modal-dialog {
+    left: calc(50% + 80px);
+    margin-left: -510px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .card-data__label_type {
       margin-left: 0;
@@ -38,6 +52,20 @@
 
   .gas-stations__item {
     width: 49.4%;
+  }
+
+  #modal-resources .modal-dialog {
+    max-width: 680px;
+    margin-left: -380px;
+  }
+
+  #modal-resources .modal-title,
+  #modal-resources .widget-nav {
+    float: none !important;
+  }
+
+  #modal-resources .widget-nav li:first-child {
+    padding-left: 0;
   }
 }
 
@@ -82,6 +110,11 @@
     margin-bottom: 15px;
   }
 
+  .widget-nav .widget-nav__li .select-wrap,
+  .service-item__select .select-wrap {
+    margin-bottom: 0;
+  }
+
   .card-data__cont [class*=col-].pl45 {
     padding-left: 15px;
   }
@@ -123,6 +156,20 @@
   .available__tab_first {
     padding-right: 50px;
   }
+
+  #modal-resources .modal-dialog {
+    max-width: 90%;
+    margin-left: -45%;
+    left: 50%;
+  }
+
+  #modal-resources .modal-header {
+    padding-top: 40px;
+  }
+
+  #modal-resources .widget-nav {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -162,6 +209,20 @@
 
   .card-data__tools {
     margin-top: 20px;
+  }
+
+  #modal-resources .widget__p,
+  #modal-resources .save-btn {
+    float: none !important;
+  }
+
+  #modal-resources .widget__p {
+    max-width: 280px;
+  }
+
+  #modal-resources .save-btn {
+    margin: 20px auto 0;
+    display: block;
   }
 }
 
@@ -300,6 +361,39 @@
     position: absolute;
     right: 20px;
     top: 20px;
+  }
+
+  #modal-resources .modal-dialog {
+    max-width: 96%;
+    margin-left: -48%;
+  }
+
+  #modal-resources .modal-body {
+    padding: 0 10px 10px;
+  }
+
+  #modal-resources .modal-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #modal-resources .service-item {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  #modal-resources .service-item_preview {
+    max-width: 60%;
+  }
+
+  #modal-resources .widget__p {
+    line-height: 18px;
+    height: 45px;
+    text-align: left;
+  }
+
+  .resourses-info p {
+    font-size: 16px;
   }
 }
 

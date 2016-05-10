@@ -29,9 +29,11 @@
 .pb30 { padding-bottom: 30px; }
 
 .bg-f9f9f9 { background-color: #f9f9f9; }
+.bg-f6f6f6 { background-color: #f6f6f6; }
 .bg-fff { background-color: #fff; }
 
 .lh1 { line-height: 1; }
+.lh45 { line-height: 45px; }
 .lh62 { line-height: 62px; }
 .lh70 { line-height: 70px; }
 .lh84 { line-height: 84px; }
@@ -1169,3 +1171,124 @@
 }
 /* /table */
 /* /CARD-DATA_TABLE WIDGET */
+
+#modal-resources .modal-dialog {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: -705px;
+  margin-bottom: 100px;
+  position: absolute;
+  left: calc(50% + 210px);
+  top: 10%;
+}
+
+#modal-resources .modal-header {
+  padding: 60px 20px 30px;
+  border-bottom: none;
+}
+
+#modal-resources .widget-nav {
+  margin-top: 0;
+}
+
+#modal-resources .modal-title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 45px;
+  color: #000;
+}
+
+#modal-resources .modal-header .close {
+  font-size: 20px;
+  color: #000;
+  float: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  margin: 0;
+  opacity: 0.6;
+}
+
+#modal-resources .modal-header .close:hover,
+#modal-resources .modal-header .close:active {
+  opacity: 1;
+}
+
+#modal-resources .modal-body {
+  padding: 0 20px 25px;
+}
+
+#modal-resources .modal-footer {
+  padding: 30px 20px;
+  border-color: #ebebeb;
+}
+
+#modal-resources .save-btn {
+  width: 200px;
+}
+
+#modal-resources .save-btn::after {
+  content: "\f3fe";
+  font-size: 18px;
+}
+
+.service-item__opt_ttt {
+  font-weight: 500;
+}
+
+.service-item__opt_ttt .service-item__vol,
+.service-item__opt_ttt .service-item__select,
+.service-item__opt_ttt .service-item__sum {
+  padding: 10px;
+}
+
+.service-item__opt_ttt .service-item__select {
+  width: 33%;
+}
+
+.service-item__opt_ttt .service-item__select .select-wrap {
+  line-height: 1;
+}
+
+.service-item__opt_ttt .service-item__vol {
+  width: 30%;
+  border-left: 1px solid #f0f1f1;
+}
+
+.service-item__vol p {
+  margin-bottom: 0;
+}
+
+.service-item__opt_ttt .service-item__sum {
+  width: 37%;
+}
+
+.service-item__head_fuel {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.service-item__head_fuel img {
+  margin: 0 auto;
+  height: 24px;
+}
+
+.resourses-info {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.resourses-info p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.resourses-info .card-data__back {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fafcfb;
+  margin-left: 15px;
+  font-size: 22px;
+}
