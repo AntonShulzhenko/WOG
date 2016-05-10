@@ -69,13 +69,6 @@ $(document).ready(function () {
     modal.find('.modal-content').css('background-color', color);
   });
 
-  // TABLE
-  $('.period-table tbody td').on('mousedown', function() {
-    $('.period-table tbody td').mousemove(function() {
-      $(this).addClass('active');
-    });
-  });
-
   // LAST FLEX ELEMENT
   function createLastItem(container) {
     var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
@@ -90,12 +83,49 @@ $(document).ready(function () {
     var item = $('.gas-stations__item'),
         addBtn = $('.gas-station__add');
 
-    addBtn.hover(function() {
+    addBtn.mouseover(function() {
       $(this).parent(item).addClass('allow');
-    }, function() {
+    });
+
+    addBtn.mouseout(function() {
       $(this).parent(item).removeClass('allow');
     });
   }
 
   gsHover();
+
+  function selected() {
+    var td = $('.period-table td:not(td.first-td)');
+    var isDragging = false;
+    var isSelected = false;
+
+    td.mousedown(function(e) {
+      $(e.target).toggleClass('sel');
+      $(window).mousemove(function(evt) {
+        isDragging = true;
+        if ($(evt.target).hasClass('sel')) {
+          isSelected = false;
+          $(evt.target).addClass('sel');
+        } else {
+          isSelected = true;
+          $(evt.target).removeClass('sel');
+        }
+        $(window).unbind("mousemove");
+      });
+    }).mouseup(function() {
+      var wasDragging = isDragging;
+      isDragging = false;
+      $(window).unbind("mousemove");
+    }).mouseover(function(e) {
+      if (isDragging) {
+        if (isSelected) {
+          $(this).removeClass('sel');
+        } else {
+          $(this).addClass('sel');
+        }
+      }
+    });
+  }
+
+  selected();
 });

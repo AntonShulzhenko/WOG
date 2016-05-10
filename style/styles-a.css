@@ -606,6 +606,13 @@
   height: 70px;
 }
 
+.period-table table thead td {
+  font-weight: 700;
+  vertical-align: top;
+  padding-top: 45px;
+  font-size: 11px;
+}
+
 .period-table table tbody tr {
   height: 46px;
 }
@@ -613,17 +620,11 @@
 .period-table table tbody td {
   border: 1px solid #e1e1e1;
   background-color: #fbfbfb;
+  cursor: pointer;
 }
 
-.period-table table tbody .active {
+.period-table table tbody .sel {
   background-color: #d9ece2;
-}
-
-.period-table table thead td {
-  font-weight: 700;
-  vertical-align: top;
-  padding-top: 45px;
-  font-size: 11px;
 }
 
 .period-table .first-td {
@@ -634,6 +635,11 @@
   padding: 0 15px 0 50px;
   border: none;
   background-color: #fff;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .period-table table thead .first-td {
@@ -650,7 +656,7 @@
 }
 /* /PERIOD WIDGET */
 
-
+/* AVAILABLE WIDGET */
 .available__inner {
   background-color: #f9f9f9;
   padding: 0 10px;
@@ -735,6 +741,7 @@
   margin: 0 0 10px;
   padding-bottom: 10px;
   overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
@@ -819,6 +826,7 @@
 }
 
 .gas-station__dep p {
+  max-width: 200px;
   margin-bottom: 0;
   font-size: 13px;
   font-weight: 400;
@@ -980,7 +988,7 @@
 }
 
 .gas-stations__item.allow .gas-station__dep {
-  width: calc(100% - 140px);
+  width: calc(100% - 141px);
   border: none;
 }
 
@@ -991,3 +999,4 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+/* /AVAILABLE WIDGET */

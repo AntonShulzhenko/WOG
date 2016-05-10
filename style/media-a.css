@@ -176,6 +176,21 @@
     line-height: 18px;
     height: 45px;
   }
+
+  .period .widget__p {
+    height: auto;
+    line-height: 18px;
+    margin-bottom: 30px;
+    padding: 20px 20px 0 30px;
+  }
+
+  .period .widget__p .check-box {
+    margin: 0;
+  }
+
+  .period-table .first-td {
+    min-width: 160px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -245,6 +260,10 @@
   .gas-stations__item.allow {
     box-shadow: none;
     border: 1px solid #ececec;
+  }
+
+  .save-widget .save-btn {
+    width: 100%;
   }
 }
 
