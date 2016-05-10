@@ -78,8 +78,10 @@ $(document).ready(function () {
 
   // LAST FLEX ELEMENT
   function createLastItem(container) {
-      var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
+    var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
+    if($(window).width() > 1024) {
       container.append(el);
+    }
   }
   createLastItem($('.gas-stations'));
 

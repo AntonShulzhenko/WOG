@@ -733,6 +733,7 @@
 .gas-stations {
   height: 300px;
   margin: 0 0 10px;
+  padding-bottom: 10px;
   overflow-y: auto;
   display: flex;
   justify-content: space-between;
@@ -744,7 +745,7 @@
   display: inline-block;
   width: 32.7%;
   height: 90px;
-  margin: 10px 0;
+  margin-top: 10px;
   background-color: #fff;
   border: 1px solid #eeecec;
   border-radius: 5px;
@@ -753,6 +754,8 @@
 
 .gas-stations__item_hidden {
   visibility: collapse;
+  width: 0;
+  height: 0;
 }
 
 .gas-stations__item_add {
@@ -774,6 +777,11 @@
 .gas-stations__item_green::before {
   content: "\f48b";
   color: #00ab4e;
+}
+
+.gas-stations__item_red::before {
+  content: "\f207";
+  color: #ed1c24;
 }
 
 .gas-stations__item_add p {
@@ -887,25 +895,36 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  -webkit-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  -ms-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+}
+
+.gas-station__add span {
+  left: 60%;
 }
 
 .gas-station__add::before {
-  content: "\f48a";
   display: block;
   font-family: "Ionicons";
   font-size: 24px;
   line-height: 1;
   color: #000;
+}
+
+.gas-station__add_minus::before {
+  content: "\f463";
+}
+
+.gas-station__add_plus::before {
+  content: "\f48a";
 }
 
 .gas-station__add span {
@@ -914,6 +933,7 @@
   line-height: 18px;
   color: #fff;
   opacity: 0;
+  left: 100%;
 }
 
 .gas-stations__item.allow {
@@ -933,10 +953,25 @@
   background-color: #00ab4e;
 }
 
+.gas-stations__item.allow .gas-station__add_plus {
+  background-color: #00ab4e;
+}
+
+.gas-stations__item.allow .gas-station__add_minus {
+  background-color: #ed1c24;
+}
+
 .gas-stations__item.allow .gas-station__add::before {
-  content: "\f48b";
   color: #fff;
   left: 20%;
+}
+
+.gas-stations__item.allow .gas-station__add_plus::before {
+  content: "\f48b";
+}
+
+.gas-stations__item.allow .gas-station__add_minus::before {
+  content: "\f464";
 }
 
 .gas-stations__item.allow .gas-station__add span {
@@ -947,4 +982,12 @@
 .gas-stations__item.allow .gas-station__dep {
   width: calc(100% - 140px);
   border: none;
+}
+
+.trans {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

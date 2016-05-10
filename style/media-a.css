@@ -225,6 +225,27 @@
   .check-box_type2 .check-box__text {
     font-size: 14px;
   }
+
+  .gas-stations__item.allow .gas-station__add {
+    width: 100px;
+  }
+
+  .gas-stations__item.allow .gas-station__dep {
+    width: calc(100% - 100px);
+  }
+
+  .gas-stations__item.allow .gas-station__add span {
+    left: 62%;
+  }
+
+  .gas-stations__item.allow .gas-station__add::before {
+    left: 15%;
+  }
+
+  .gas-stations__item.allow {
+    box-shadow: none;
+    border: 1px solid #ececec;
+  }
 }
 
 @media screen and (max-width: 320px) {
