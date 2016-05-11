@@ -36,6 +36,21 @@
   .card-data_main .card-data__cont {
     max-width: 90%;
   }
+
+  .build-route__h-bottom > p {
+    max-width: 30%;
+    line-height: 18px;
+    margin-top: 15px;
+  }
+
+  .build-route__h-bottom .check-box {
+    padding-right: 30px;
+  }
+
+  .build-route__h-bottom .fuel-types__toggler {
+    padding-left: 30px;
+    width: 190px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -67,6 +82,27 @@
   #modal-resources .widget-nav li:first-child {
     padding-left: 0;
   }
+
+  .build-route__h-top .route-arrow {
+    width: 7%;
+  }
+
+  .build-route__h-top .save-btn_route {
+    max-width: 30%;
+  }
+
+  .build-route__b-bottom {
+    flex-wrap: wrap;
+    padding: 15px 15px 20px;
+  }
+
+  .build-route__h-bottom .check-box {
+    padding-right: 30px;
+    line-height: 18px;
+    max-width: 30%;
+    height: 100%;
+    padding-top: 15px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -95,6 +131,18 @@
 
   .card-data__p_fs18 {
     font-size: 18px;
+  }
+
+  .build-route__h-bottom > p {
+    max-width: 37%;
+  }
+
+  .build-route__h-bottom .check-box_type2 .check-box__text {
+    font-size: 14px;
+  }
+
+  .build-route__b-bottom .card-data__save {
+    margin-top: 15px;
   }
 }
 
@@ -170,6 +218,15 @@
   #modal-resources .widget-nav {
     margin-bottom: 0;
   }
+
+  .build-route__h-top .select-wrap {
+    margin-bottom: 0;
+  }
+
+  .build-route__h-bottom .check-box {
+    padding-right: 20px;
+    max-width: 27%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -224,6 +281,78 @@
     margin: 20px auto 0;
     display: block;
   }
+
+  .build-route__h-top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .build-route__h-top .select-wrap {
+    max-width: 40%;
+  }
+
+  .build-route__h-top .route-arrow {
+    width: 10%;
+    margin: 0 15px;
+  }
+
+  .build-route__h-top .save-btn_route {
+    max-width: 220px;
+    margin-top: 15px;
+  }
+
+  .build-route__h-bottom {
+    height: auto;
+    padding: 0;
+  }
+
+  .build-route__h-bottom .check-box {
+    padding: 25px 20px;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px dashed #d6d6d6;
+  }
+
+  .build-route__h-bottom .check-box_type2 .check-box__text {
+    font-size: 18px;
+  }
+
+  .build-route__h-bottom > p {
+    max-width: 60%;
+    padding-right: 20px;
+  }
+
+  .build-route__b-top {
+    padding: 25px 20px 15px;
+  }
+
+  .build-route__b-top p {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .build-route__b-bottom {
+    display: block;
+    text-align: center;
+  }
+
+  .build-route__b-bottom .widget__p {
+    margin: 15px 0 0;
+  }
+
+  .build-route__b-bottom .card-data__save {
+    display: inline-block;
+  }
+
+  .build-route__b-top .label-search {
+    max-width: 60%;
+  }
+
+  .build-route__b-top .label-search .set_dept_name_search {
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -263,6 +392,18 @@
 
   .period-table .first-td {
     min-width: 160px;
+  }
+
+  .build-route__h-bottom .check-box,
+  .build-route__h-bottom > p,
+  .build-route__h-bottom .fuel-types {
+    float: none !important;
+  }
+
+  .build-route__h-bottom > p {
+    padding-left: 20px;
+    margin-bottom: 15px;
+    max-width: 100%;
   }
 }
 

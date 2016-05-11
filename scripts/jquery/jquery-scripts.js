@@ -69,7 +69,7 @@ $(document).ready(function () {
     modal.find('.modal-content').css('background-color', color);
   });
 
-  // LAST FLEX ELEMENT
+  // last flex element
   function createLastItem(container) {
     var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
     if($(window).width() > 1024) {
@@ -94,6 +94,7 @@ $(document).ready(function () {
 
   gsHover();
 
+  // selecting td
   function selected() {
     var td = $('.period-table td:not(td.first-td)');
     var isDragging = false;
@@ -128,4 +129,19 @@ $(document).ready(function () {
   }
 
   selected();
+
+  // fuel-types toggler
+  function toggleFuelTypes() {
+    var fuelTypes = $('body').find('div.fuel-types'),
+        btn = fuelTypes.find('a.fuel-types__toggler'),
+        fuelWrap = fuelTypes.find('div.fuel-types__wrap');
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
+      fuelWrap.toggle();
+    });
+  }
+
+  toggleFuelTypes();
 });
