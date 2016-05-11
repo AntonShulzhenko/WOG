@@ -445,12 +445,30 @@
   display: none;
 }
 
+.service-item_not-available {
+  background-color: rgba(119, 117, 117, 0.84);
+}
+
+.service-item_not-available .service-item__head {
+  background-image: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.service-item_not-available .service-item__head p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #fff;
+}
+
 .service-item__head {
   padding: 25px 18px 25px 70px;
   border-bottom: 1px dashed #d9d9d9;
   background-repeat: no-repeat;
   background-position: 18px center;
   text-align: left;
+  overflow: hidden;
 }
 
 .service-item__head_chicken {
@@ -766,7 +784,7 @@
 .gas-stations {
   height: 300px;
   margin: 0 0 10px;
-  padding-bottom: 10px;
+  padding: 0 5px 10px;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -923,6 +941,8 @@
   position: relative;
   float: right;
   cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .gas-station__add::before,

@@ -293,6 +293,7 @@
 
   .gas-station__dep {
     width: calc(100% - 100px);
+    padding: 0 10px;
   }
 
   .gas-station__dep p {
@@ -331,7 +332,6 @@
   }
 
   .gas-stations__item.allow {
-    box-shadow: none;
     border: 1px solid #ececec;
   }
 
