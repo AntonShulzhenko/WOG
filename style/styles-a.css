@@ -613,8 +613,8 @@
   font-size: 36px;
   display: inline-block;
   margin-left: 15px;
-  position: absolute;
   line-height: 43px;
+  vertical-align: middle;
 }
 
 .save-btn:hover {
@@ -1192,6 +1192,7 @@
 /* /table */
 /* /CARD-DATA_TABLE WIDGET */
 
+/* RESOURSES MODAL */
 #modal-resources .modal-dialog {
   width: 100%;
   max-width: 1200px;
@@ -1312,3 +1313,25 @@
   margin-left: 15px;
   font-size: 22px;
 }
+/* /RESOURSES MODAL */
+
+/* TERMINAL-CHAIN WIDGET */
+.vidget_terminal-chain {
+  padding: 0;
+}
+
+.build-route__header {
+  padding: 30px 25px 25px;
+}
+
+.select-wrap_route {
+  width: 100%;
+  max-width: 28%;
+  display: inline-block;
+}
+
+.save-btn_route::after {
+  content: "\f474";
+  font-size: 23px;
+}
+/* /TERMINAL-CHAIN WIDGET */
