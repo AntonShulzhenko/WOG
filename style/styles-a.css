@@ -1324,7 +1324,7 @@
 }
 /* /RESOURSES MODAL */
 
-/* TERMINAL-CHAIN WIDGET */
+/* TERMINAL-CHAIN WIDGET (build route) */
 .vidget_terminal-chain {
   padding: 0;
 }
@@ -1620,4 +1620,80 @@
   font-size: 16px;
   margin-left: 10px;
 }
-/* /TERMINAL-CHAIN WIDGET */
+/* /TERMINAL-CHAIN WIDGET (build route) */
+
+/* TERMINAL-CHAIN WIDGET (gas stations search) */
+.vidget_terminal-chain .wrap {
+  height: 85vh;
+}
+
+.search-sidebar {
+  width: 370px;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-bottom: 50px;
+}
+
+.search-sidebar__header {
+  height: 190px;
+}
+
+.search-sidebar__h-top {
+  padding: 25px 15px 10px;
+}
+
+.search-sidebar__h-top .check-box {
+  margin-top: 15px;
+}
+
+.search-sidebar__h-top .select-wrap_card .bootstrap-select>.dropdown-toggle {
+  line-height: 45px;
+}
+
+.search-sidebar__h-top .select-wrap_card .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  height: 45px;
+}
+
+.search-sidebar__h-top .check-box__text {
+  font-size: 12px;
+}
+
+.search-sidebar__h-bottom,
+.search-sidebar__body,
+.search-sidebar__footer {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.search-sidebar__h-bottom .label-search .set_dept_name_search {
+  background-color: #fff;
+  color: #006940;
+  height: 45px;
+}
+
+.search-sidebar__body {
+  overflow-y: auto;
+}
+
+.search-sidebar__footer {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+/* /TERMINAL-CHAIN WIDGET (gas stations search) */

@@ -407,6 +407,87 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .build-route__h-top {
+    display: block;
+  }
+
+  .build-route__h-top .select-wrap {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .build-route__h-top .save-btn_route {
+    max-width: 100%;
+  }
+
+  .build-route__h-top .route-arrow {
+    width: 12px;
+    margin: 0 auto 15px;
+    height: 40px;
+  }
+
+  .build-route__h-top .route-arrow::before {
+    width: 1px;
+    height: calc(100% - 12px);
+    border-left: 1px dashed #00a950;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+
+  .build-route__h-top .route-arrow::after {
+    content: "\f35f";
+    top: auto;
+    bottom: 0;
+    line-height: 12px;
+    font-size: 24px;
+  }
+
+  .fuel-types__wrap {
+    max-height: 210px;
+    overflow-y: auto;
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fuel-types {
+    text-align: center;
+  }
+
+  .fuel-types,
+  .build-route__h-bottom .fuel-types__toggler {
+    width: 100%;
+  }
+
+  .build-route__h-bottom .fuel-types__toggler.active {
+    border-bottom: 1px dashed #d6d6d6;
+  }
+
+  .fuel-types__check {
+    float: none;
+    width: 100%;
+  }
+
+  .fuel-types__check:first-child,
+  .fuel-types__check:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .fuel-types__check:nth-child(odd) {
+    border: none;
+  }
+
+  .build-route__h-bottom .check-box_type2 .check-box__text {
+    font-size: 16px;
+  }
+
+  .build-route__b-top .label-search {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 380px) {
   .card-data__cont {
     padding: 20px 5px 0;

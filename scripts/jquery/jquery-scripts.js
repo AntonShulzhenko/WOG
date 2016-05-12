@@ -144,4 +144,18 @@ $(document).ready(function () {
   }
 
   toggleFuelTypes();
+
+  function searchSidebarBodyHeight() {
+    var h = $('.search-sidebar__header').height(),
+        f = $('.search-sidebar__footer').height(),
+        side = $('.search-sidebar').height(),
+        b = $('.search-sidebar__body');
+
+    b.height(side - (h + f) - 10);
+    
+    $(window).resize(searchSidebarBodyHeight);
+  }
+
+  searchSidebarBodyHeight();
+
 });
