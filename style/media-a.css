@@ -103,6 +103,10 @@
     height: 100%;
     padding-top: 15px;
   }
+
+  .gas-stations__item_search {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -226,6 +230,10 @@
   .build-route__h-bottom .check-box {
     padding-right: 20px;
     max-width: 27%;
+  }
+
+  .search-sidebar__h-top .select-wrap {
+    margin-bottom: 0;
   }
 }
 
@@ -616,6 +624,26 @@
 
   .resourses-info p {
     font-size: 16px;
+  }
+
+  .search-sidebar {
+    width: 100%;
+  }
+
+  .gas-stations__item_search.allow .gas-station__dep {
+    width: calc(100% - 135px);
+  }
+
+  .gas-stations__item_search .gas-station__dep p {
+    font-size: 11px;
+  }
+
+  .gas-stations__item_search.allow .gas-station__add {
+    width: 135px;
+  }
+
+  .gas-stations__item_search.allow .gas-station__opt span {
+    left: 0;
   }
 }
 
