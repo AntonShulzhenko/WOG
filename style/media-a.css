@@ -545,23 +545,23 @@
     font-size: 14px;
   }
 
-  .gas-stations__item.allow .gas-station__add {
+  .gas-station__add:hover {
     width: 100px;
   }
 
-  .gas-stations__item.allow .gas-station__dep {
+  .gas-stations__add:hover ~ .gas-station__dep {
     width: calc(100% - 100px);
   }
 
-  .gas-stations__item.allow .gas-station__add span {
+  .gas-station__add:hover span {
     left: 62%;
   }
 
-  .gas-stations__item.allow .gas-station__add::before {
+  .gas-station__add:hover::before {
     left: 15%;
   }
 
-  .gas-stations__item.allow {
+  .gas-stations__item:hover {
     border: 1px solid #ececec;
   }
 
@@ -630,7 +630,7 @@
     width: 100%;
   }
 
-  .gas-stations__item_search.allow .gas-station__dep {
+  .gas-stations__item_search .gas-stations__add ~ .gas-station__dep {
     width: calc(100% - 135px);
   }
 
@@ -638,11 +638,11 @@
     font-size: 11px;
   }
 
-  .gas-stations__item_search.allow .gas-station__add {
+  .gas-stations__item_search .gas-station__add:hover {
     width: 135px;
   }
 
-  .gas-stations__item_search.allow .gas-station__opt span {
+  .gas-stations__item_search .gas-station__add:hover .gas-station__opt span {
     left: 0;
   }
 }
