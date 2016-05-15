@@ -79,30 +79,30 @@ $(document).ready(function () {
   createLastItem($('.gas-stations'));
 
   // .gas-stations__item hover
-  function gsHover() {
-    var item = $('.gas-stations__item'),
-        addBtn = $('.gas-station__add'),
-        mapBtn = $('.gas-station__show-map');
-
-
-    addBtn.mouseover(function() {
-      $(this).parent(item).addClass('allow');
-
-      if( mapBtn.length != 0 ) {
-        mapBtn.addClass('clickable-map');
-      }
-    });
-
-    addBtn.mouseout(function() {
-      $(this).parent(item).removeClass('allow');
-
-      if( mapBtn.length != 0 ) {
-        mapBtn.removeClass('clickable-map');
-      }
-    });
-  }
-
-  gsHover();
+  // function gsHover() {
+  //   var item = $('.gas-stations__item'),
+  //       addBtn = $('.gas-station__add'),
+  //       mapBtn = $('.gas-station__show-map');
+  //
+  //
+  //   addBtn.mouseover(function() {
+  //     $(this).parent(item).addClass('allow');
+  //
+  //     if( mapBtn.length != 0 ) {
+  //       mapBtn.addClass('clickable-map');
+  //     }
+  //   });
+  //
+  //   addBtn.mouseout(function() {
+  //     $(this).parent(item).removeClass('allow');
+  //
+  //     if( mapBtn.length != 0 ) {
+  //       mapBtn.removeClass('clickable-map');
+  //     }
+  //   });
+  // }
+  //
+  // gsHover();
 
   function searchSidebarToggle() {
     var searchSidebar = $('.search-sidebar'),
@@ -114,7 +114,7 @@ $(document).ready(function () {
 
     if ( windowWidth <= 768 ) {
 
-      $('.gas-station__add').on('click', '.gas-station__show-map', function() {
+      clickMapBtn.on('click', function() {
         searchSidebar.animate({'left': '-100%'});
       });
 
