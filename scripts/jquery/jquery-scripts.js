@@ -90,7 +90,7 @@ $(document).ready(function () {
     if ( windowWidth <= 768 ) {
 
       clickMapBtn.on('click', function() {
-        searchSidebar.animate({'left': -searchSidebarWidth});
+        searchSidebar.animate({'left': '-100%'});
         mapContainer.css('width', '100%');
       });
 
@@ -219,9 +219,6 @@ function initMap() {
   google.maps.event.addListener(infowindow, 'domready', function() {
     var ov = $('.gm-style .gm-style-iw');
     ov.siblings().css('display', 'none');
-    ov.prev().children(':nth-child(2)').css({'display' : 'none'});
-
-     // Remove the white background DIV
-     ov.prev().children(':nth-child(4)').css({'display' : 'none'});
+    ov.children().css('min-width', '279px');
   });
 }

@@ -107,6 +107,12 @@
   .gas-stations__item_search {
     width: 100%;
   }
+
+  #department .modal-dialog {
+    max-width: 90%;
+    right: 50%;
+    margin-right: -45%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -234,6 +240,12 @@
 
   .search-sidebar__h-top .select-wrap {
     margin-bottom: 0;
+  }
+
+  #department .build-route__b-top .label-search {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -656,6 +668,24 @@
 
   .map-container {
     width: 100%;
+  }
+
+  #department .build-route__b-top .label-search {
+    max-width: 100%;
+  }
+
+  .info-window {
+    width: 279px;
+  }
+
+  .info-window__body {
+    padding: 20px;
+  }
+
+  .gm-style-iw {
+    width: 279px !important;
+    min-width: 279px !important;
+    margin-left: -140px !important;
   }
 }
 

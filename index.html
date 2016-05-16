@@ -1487,7 +1487,7 @@
             <div class="search-sidebar__body">
               <div class="gas-stations__item gas-stations__item_search">
                 <div class="gas-station__add trans clearfix">
-                  <div class="gas-station__opt gas-station__permit">
+                  <div class="gas-station__opt gas-station__permit" data-toggle="modal" data-target="#department">
                     <span>дозволити заправку</span>
                   </div>
 
@@ -1509,7 +1509,7 @@
 
               <div class="gas-stations__item gas-stations__item_search">
                 <div class="gas-station__add trans clearfix">
-                  <div class="gas-station__opt gas-station__permit">
+                  <div class="gas-station__opt gas-station__permit" data-toggle="modal" data-target="#department">
                     <span>дозволити заправку</span>
                   </div>
 
@@ -1531,7 +1531,7 @@
 
               <div class="gas-stations__item gas-stations__item_search">
                 <div class="gas-station__add trans clearfix">
-                  <div class="gas-station__opt gas-station__permit">
+                  <div class="gas-station__opt gas-station__permit" data-toggle="modal" data-target="#department">
                     <span>дозволити заправку</span>
                   </div>
 
@@ -1553,7 +1553,7 @@
 
               <div class="gas-stations__item gas-stations__item_search" id="1">
                 <div class="gas-station__add trans clearfix">
-                  <div class="gas-station__opt gas-station__permit">
+                  <div class="gas-station__opt gas-station__permit" data-toggle="modal" data-target="#department">
                     <span>дозволити заправку</span>
                   </div>
 
@@ -1575,7 +1575,7 @@
 
               <div class="gas-stations__item gas-stations__item_search" id="2">
                 <div class="gas-station__add trans clearfix">
-                  <div class="gas-station__opt gas-station__permit">
+                  <div class="gas-station__opt gas-station__permit" data-toggle="modal" data-target="#department">
                     <span>дозволити заправку</span>
                   </div>
 
@@ -1604,6 +1604,49 @@
           <div class="map-container" id="map"></div>
 
           <a href="#" class="show-sidebar card-data__back"><i class="ion-ios-arrow-thin-right"></i></a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="department" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="ion-close-round"></span></button>
+                <h4 class="modal-title" id="myModalLabel">ВІННИЦЬКА ФІЛІЯ АЗС"КОМСОМОЛЬСЬКЕ"</h4>
+              </div>
+              <div class="modal-body">
+                <div class="build-route__body">
+                  <div class="build-route__b-top bg-f6f6f6">
+                    <label class="label-search ml20">
+                      <input type="text" class="set_dept_name set_dept_name_search" placeholder="Пошук за номером карти">
+                    </label>
+                  </div>
+
+                  <div class="build-route__b-content bg-fff">
+
+                  </div>
+
+                  <div class="build-route__b-bottom bg-f6f6f6">
+                    <label class="check-box">
+                      Строк дії дозволу:
+                      <input type="checkbox">
+                      <span class="check-box__text">Весь час</span>
+                    </label>
+
+                    <p class="widget__p">
+                      вказати термін дії дозволу
+                      <a href="#" class="card-data__back card-data__back_calendar"><i class="ion-calendar"></i></a>
+                    </p>
+
+                    <a href="#" class="card-data__save">
+                      Зберегти
+                      <i class="ion-checkmark"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 <!-- /TERMINAL-CHAIN WIDGET (gas stations search) -->

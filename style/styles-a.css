@@ -15,6 +15,7 @@
 .mr15 { margin-right: 15px; }
 .mr25 { margin-right: 25px; }
 .ml5 { margin-left: 5px; }
+.ml20 { margin-left: 20px; }
 .ml25 { margin-left: 25px; }
 .mt5 { margin-top: 5px; }
 .mt25 { margin-top: 25px; }
@@ -1832,7 +1833,6 @@
 .info-window {
   width: 300px;
   min-height: 210px;
-  max-height: 236px;
   overflow: hidden;
   border-radius: 5px;
   background-color: #fff;
@@ -1882,14 +1882,79 @@
 
 /* styling default google map info window */
 .gm-style-iw {
-   width: 300px !important;
-   top: 35px !important;
-   left: 50% !important;
-   margin-left: -150px !important;
-   border-radius: 5px;
-   box-shadow: 0 2px 6px rgba(136, 156, 176, 0.26);
-   height: 236px !important;
+  width: 300px !important;
+  min-width: 300px !important;
+  top: 35px !important;
+  left: 50% !important;
+  margin-left: -150px !important;
+  border-radius: 5px;
+  min-height: 236px !important;
 }
 /* /styling default google map info window */
+#department {
+  position: absolute;
+}
+
+#department .modal-dialog {
+  width: 100%;
+  max-width: 740px;
+  position: absolute;
+  margin: 0;
+  bottom: 20px;
+  right: 45px;
+}
+
+#department .modal-body {
+  padding: 0;
+}
+
+#department .modal-content {
+  border: none;
+  box-shadow: 0 2px 6px rgba(136, 156, 176, 0.26);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#department .modal-header {
+  padding: 25px 20px 25px 30px;
+  background-color: #00a950;
+}
+
+#department .build-route__body {
+  box-shadow: none;
+}
+
+#department .build-route__b-bottom .card-data__save {
+  width: 140px;
+  height: 35px;
+  line-height: 35px;
+}
+
+#department .build-route__b-bottom .card-data__save i {
+  line-height: 35px;
+}
+
+#department .modal-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#department .build-route__b-top .label-search {
+  max-width: 50%;
+}
+
+#department .close {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+#department .close:hover {
+  opacity: 1;
+  color: #fff;
+}
 
 /* /TERMINAL-CHAIN WIDGET (gas stations search) */
