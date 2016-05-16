@@ -78,48 +78,25 @@ $(document).ready(function () {
   }
   createLastItem($('.gas-stations'));
 
-  // .gas-stations__item hover
-  // function gsHover() {
-  //   var item = $('.gas-stations__item'),
-  //       addBtn = $('.gas-station__add'),
-  //       mapBtn = $('.gas-station__show-map');
-  //
-  //
-  //   addBtn.mouseover(function() {
-  //     $(this).parent(item).addClass('allow');
-  //
-  //     if( mapBtn.length != 0 ) {
-  //       mapBtn.addClass('clickable-map');
-  //     }
-  //   });
-  //
-  //   addBtn.mouseout(function() {
-  //     $(this).parent(item).removeClass('allow');
-  //
-  //     if( mapBtn.length != 0 ) {
-  //       mapBtn.removeClass('clickable-map');
-  //     }
-  //   });
-  // }
-  //
-  // gsHover();
-
   function searchSidebarToggle() {
     var searchSidebar = $('.search-sidebar'),
         searchSidebarWidth = searchSidebar.width(),
         searchItem = searchSidebar.find('.gas-stations__item_search'),
         clickMapBtn = searchItem.find('.gas-station__show-map'),
         showSidebarBtn = $('.show-sidebar'),
-        windowWidth = $(window).width();
+        windowWidth = $(window).width(),
+        mapContainer = $('.map-container');
 
     if ( windowWidth <= 768 ) {
 
       clickMapBtn.on('click', function() {
-        searchSidebar.animate({'left': '-100%'});
+        searchSidebar.animate({'left': -searchSidebarWidth});
+        mapContainer.css('width', '100%');
       });
 
       showSidebarBtn.on('click', function() {
         searchSidebar.animate({'left': ''});
+        mapContainer.css('width', '');
       });
 
     }
@@ -187,9 +164,64 @@ $(document).ready(function () {
   }
 
   searchSidebarBodyHeight();
-
-
-
-
-
 });
+
+
+// Google map
+function initMap() {
+  var myLatLng = {
+    azs1: {lat: 50.487567, lng: 30.522837},
+    azs2: {lat: 46.853902, lng: 35.363836}
+  };
+
+  var img = 'img/map-ico.png';
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng.azs2,
+    zoom: 10
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng.azs2,
+    icon: img
+  });
+
+  marker.setMap(map);
+
+  var contentString = '<div class="info-window">'+
+  '<div class="info-window__header">'+
+  '<p>ВІННИЦЬКА ФІЛІЯ АЗС"КОМСОМОЛЬСЬКЕ"</p>'+
+  '</div>'+
+  '<div class="info-window__body">'+
+  '<p>Доступні продукти</p>'+
+  '<div class="info-window__prod">'+
+  '<img src="img/fuel-types/92mustang.png" alt="" class="prod-type img-responsive">'+
+  '<img src="img/fuel-types/95mustang.png" alt="" class="prod-type img-responsive">'+
+  '<img src="img/fuel-types/100mustang.png" alt="" class="prod-type img-responsive">'+
+  '<img src="img/fuel-types/DPmustang.png" alt="" class="prod-type img-responsive">'+
+  '<img src="img/fuel-types/DPmustang+.png" alt="" class="prod-type img-responsive">'+
+  '<img src="img/fuel-types/LGPmustang.png" alt="" class="prod-type img-responsive">'+
+  '</div>'+
+  '</div>'+
+  '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 300
+  });
+
+  infowindow.open(map, marker);
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  google.maps.event.addListener(infowindow, 'domready', function() {
+    var ov = $('.gm-style .gm-style-iw');
+    ov.siblings().css('display', 'none');
+    ov.prev().children(':nth-child(2)').css({'display' : 'none'});
+
+     // Remove the white background DIV
+     ov.prev().children(':nth-child(4)').css({'display' : 'none'});
+  });
+}

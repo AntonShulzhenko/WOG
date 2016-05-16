@@ -630,8 +630,16 @@
     width: 100%;
   }
 
+  .search-sidebar__header {
+    height: 210px;
+  }
+
   .gas-stations__item_search .gas-stations__add ~ .gas-station__dep {
     width: calc(100% - 135px);
+  }
+
+  .gas-stations__item_search .gas-station__add:hover ~ .gas-station__dep {
+    width: calc(100% - 140px);
   }
 
   .gas-stations__item_search .gas-station__dep p {
@@ -644,6 +652,10 @@
 
   .gas-stations__item_search .gas-station__add:hover .gas-station__opt span {
     left: 0;
+  }
+
+  .map-container {
+    width: 100%;
   }
 }
 

@@ -1723,6 +1723,55 @@
   height: 100%;
   position: relative;
   float: right;
+  text-align: center;
+}
+
+.gas-station__opt::before {
+  font-family: "Ionicons";
+  font-size: 18px;
+  line-height: 1;
+  color: #989797;
+  position: absolute;
+  top: 20px;
+}
+
+.gas-station__opt span {
+  font-size: 11px;
+  line-height: 14px;
+  left: 0;
+  bottom: 15px;
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.gas-station__show-map {
+  opacity: 0;
+  transition-delay: 100ms;
+}
+
+.gas-station__show-map::before {
+  content: "\f456";
+  right: 50%;
+  -moz-transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.gas-station__permit {
+  z-index: 2;
+}
+
+.gas-station__permit::before {
+  content: "+\f119";
+  width: 33px;
+  right: 15px;
+  font-size: 20px;
+  top: 35px;
 }
 
 .gas-stations__item_search .gas-station__add:hover {
@@ -1743,65 +1792,13 @@
   border-left: 1px solid rgba(255, 255, 255, 0.13);
 }
 
-.gas-station__opt {
-  text-align: center;
-}
-
-.gas-station__show-map {
-  opacity: 0;
-  transition-delay: 100ms;
-}
-
-.gas-station__permit {
-  z-index: 2;
-}
-
-.gas-station__opt::before {
-  font-family: "Ionicons";
-  font-size: 18px;
-  line-height: 1;
-  color: #989797;
-  position: absolute;
-  top: 20px;
-}
-
 .gas-stations__item_search .gas-station__add:hover .gas-station__opt::before {
   color: #fff;
-}
-
-.gas-station__permit::before {
-  content: "+\f119";
-  width: 33px;
-  right: 15px;
-  font-size: 20px;
-  top: 35px;
 }
 
 .gas-stations__item_search .gas-station__add:hover .gas-station__permit::before {
   right: 26px;
   top: 20px;
-}
-
-.gas-station__show-map::before {
-  content: "\f456";
-  right: 50%;
-  -moz-transform: translateX(50%);
-  -webkit-transform: translateX(50%);
-  -o-transform: translateX(50%);
-  -ms-transform: translateX(50%);
-  transform: translateX(50%);
-}
-
-.gas-station__opt span {
-  font-size: 11px;
-  line-height: 14px;
-  left: 0;
-  bottom: 15px;
-  -moz-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -o-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
 }
 
 .gas-stations__item_search .gas-station__add:hover .gas-station__opt span {
@@ -1818,7 +1815,7 @@
 }
 
 .map-container {
-  width: 100%;
+  width: calc(100% + 360px);
   height: 100%;
   border-radius: 18px;
 }
@@ -1833,11 +1830,12 @@
 }
 
 .info-window {
-  width: 295px;
+  width: 300px;
   min-height: 210px;
+  max-height: 236px;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(136, 156, 176, 0.26);
+  background-color: #fff;
 }
 
 .info-window__header {
@@ -1881,4 +1879,17 @@
   max-height: 18px;
   margin-bottom: 15px;
 }
+
+/* styling default google map info window */
+.gm-style-iw {
+   width: 300px !important;
+   top: 35px !important;
+   left: 50% !important;
+   margin-left: -150px !important;
+   border-radius: 5px;
+   box-shadow: 0 2px 6px rgba(136, 156, 176, 0.26);
+   height: 236px !important;
+}
+/* /styling default google map info window */
+
 /* /TERMINAL-CHAIN WIDGET (gas stations search) */
