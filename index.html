@@ -70,6 +70,1784 @@
     </nav>
 
     <main>
+<!-- CARD ACTIVATION STEP 1 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 1/8 : Налаштуваня типу карти та рахунку</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="activation__card-type activation__card-type_mw715 clearfix">
+              <span class="card-data__label">Тип карти <i class="ion-ios-information"></i></span>
+
+              <input type="radio" name="ctd" class="card-data__radio" id="personal">
+              <label class="card-data__label card-data__label_type" for="personal">
+                <span class="radio-icon"></span>
+                Індивідуальна
+              </label>
+
+              <input type="radio" name="ctd" class="card-data__radio" id="normal" checked>
+              <label class="card-data__label card-data__label_type card-data__label_ml60" for="normal">
+                <span class="radio-icon"></span>
+                Звичайна
+              </label>
+
+              <div class="clearfix"></div>
+
+              <p class="widget__p fs12"><i class="ion-ios-information-outline mr5"></i>В системі є можливість створити картки двох типів: звичайні та индивідуальні.</p>
+
+              <a href="#" class="link fs12">Більше інформації про типи карток</a>
+
+              <label class="card-data__label mt40">Підрозділ</label>
+
+              <div class="select-wrap w100p select-wrap_card">
+                <select name="" id="" class="selectpicker">
+                  <option value="День" selected="selected">Перевізники капусти</option>
+                  <option value="Месяц">Месяц</option>
+                  <option value="Год">Год</option>
+                </select>
+              </div>
+
+              <p class="widget__p fs12 mt15"><i class="ion-ios-information-outline mr5"></i>підрозділ в якому буде доступна картка</p>
+
+              <label class="card-data__label mt40">Рахунок</label>
+
+              <div class="select-wrap w100p select-wrap_card">
+                <select name="" id="" class="selectpicker">
+                  <option value="День" selected="selected">Перевізники капусти</option>
+                  <option value="Месяц">Месяц</option>
+                  <option value="Год">Год</option>
+                </select>
+              </div>
+
+              <p class="widget__p fs12 mt15"><i class="ion-ios-information-outline mr5"></i>Вкажіть рахунок для карток</p>
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 1 -->
+
+<!-- CARD ACTIVATION STEP 2 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 2/8 : Інформація про держателя картки</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="widget-wrap widget-wrap_info widget-wrap_bb clearfix">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <label class="card-data__label">Держатель карти (ПІБ)<input type="text" class="set_dept_name"></label>
+
+                    <label class="check-box check-box_mt0">
+                      <input type="checkbox">
+                      <span class="check-box__text">Використати дані для всіх карток</span>
+                    </label>
+
+                    <button class="save-btn save-btn_gray save-btn_maxw340">Налаштувати для деяких карток</button>
+                  </div>
+
+                  <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12">
+                        <label class="card-data__label">Інформація<input type="text" class="set_dept_name"></label>
+                      </div>
+
+                      <div class="col-lg-6 col-md-12">
+                        <label class="card-data__label">Номер телефонe<input type="tel" class="set_dept_name"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="widget-wrap widget-wrap_info clearfix">
+              <div class="container-fluid">
+                <h3 class="mb_15 ml_0 mt_0 pb_0"><span>Ресурси</span></h3>
+
+                <p class="widget__p widget__p_mb40 fs12 mt15"><i class="ion-ios-information-outline mr5"></i>Ви можете вказати окремі дані для деяких  або всії карток.</p>
+
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <label class="card-data__label">Номер карти</label>
+
+                    <div class="select-wrap w100p select-wrap_card mb15">
+                      <select name="" id="" class="selectpicker">
+                        <option value="День" selected="selected">7825990000000050</option>
+                        <option value="Месяц">7825990000000050</option>
+                        <option value="Год">7825990000000050</option>
+                      </select>
+                    </div>
+
+                    <div class="select-wrap w100p select-wrap_card">
+                      <select name="" id="" class="selectpicker">
+                        <option value="День" selected="selected">Номер карти</option>
+                        <option value="Месяц">7825990000000050</option>
+                        <option value="Год">7825990000000050</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-9 col-md-6 col-sm-6">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12">
+                        <label class="card-data__label">Держатель карти (ПІБ)<input type="text" class="set_dept_name"></label>
+                      </div>
+
+                      <div class="col-lg-4 col-md-12">
+                        <label class="card-data__label">Інформація<input type="text" class="set_dept_name"></label>
+                      </div>
+
+                      <div class="col-lg-4 col-md-12">
+                        <label class="card-data__label">Номер телефонe<input type="tel" class="set_dept_name"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 2 -->
+
+<!-- CARD ACTIVATION STEP 3 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Вибір налаштувань</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="activation__card-type activation__card-type_mw480 clearfix">
+              <h4 class="activation__h4">Збережені параметри</h4>
+
+              <p class="widget__p fs12 mt15"><i class="ion-ios-information-outline mr5"></i>Для налаштування наступних розділів використайте раніше збережені параметри</p>
+
+              <div class="select-wrap select-wrap_card mt15">
+                <select name="" id="" class="selectpicker">
+                  <option value="День" selected="selected">7825990000000050</option>
+                  <option value="Месяц">7825990000000050</option>
+                  <option value="Год">7825990000000050</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 3/8 : Налаштуваня статусу картки</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="activation__card-type clearfix">
+              <div class="card-status card-status_maxw600 ma clearfix">
+                <span class="card-data__label">Статус карти <i class="ion-ios-information"></i></span>
+
+                <input type="radio" name="stat" id="active" checked>
+                <label for="active" class="card-status__label card-status__label_act" id="active-label"><span class="card-status__rs green"></span>Активна</label>
+
+                <input type="radio" name="stat" id="block">
+                <label for="block" class="card-status__label card-status__label_act" id="block-label"><span class="card-status__rs red"></span>Заблокувати карту</label>
+
+                <input type="radio" name="stat" id="stop">
+                <label for="stop" class="card-status__label card-status__label_act" id="stop-label"><span class="card-status__rs gray"></span>Призупинити дію карти</label>
+
+                <div class="status-content">
+                  <p id="first-status" class="status-content__p"><i class="ion-ios-information mr5"></i>Інформація про те, що означає вибраний статус</p>
+                  <p id="second-status" class="status-content__p"><i class="ion-ios-information mr5"></i>Two</p>
+                  <p id="third-status" class="status-content__p"><i class="ion-ios-information mr5"></i>Three</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 3 -->
+
+<!-- CARD ACTIVATION STEP 4 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 4/8 : Налаштуваня доступних ресурсів</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="clearfix widget-wrap card-services">
+              <h3 class="pull-left ml_15 mb_25"><span>Ресурси</span></h3>
+
+              <ul class="nav widget-nav pull-right">
+                <li class="widget-nav__li">Встановити ліміти для всіх послуг</li>
+                <li class="widget-nav__li">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="widget-nav__li">1000л</li>
+                <li class="widget-nav__li">10 000грн</li>
+              </ul>
+
+              <div class="clearfix"></div>
+
+              <!-- CARD-SERVICE VIEWPORT -->
+              <div class="card-services__viewport">
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__balance service-item__balance_borb">
+                    <h5 class="service-item__h5">Баланс</h5>
+                    <div class="clearfix">
+                      <i class="ion-minus-circled service-item__control pull-left"></i>
+                      <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                      <i class="ion-plus-circled service-item__control pull-right"></i>
+                    </div>
+                    <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/DPmustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__balance service-item__balance_borb">
+                    <h5 class="service-item__h5">Баланс</h5>
+                    <div class="clearfix">
+                      <i class="ion-minus-circled service-item__control pull-left"></i>
+                      <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                      <i class="ion-plus-circled service-item__control pull-right"></i>
+                    </div>
+                    <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__balance service-item__balance_borb">
+                    <h5 class="service-item__h5">Баланс</h5>
+                    <div class="clearfix">
+                      <i class="ion-minus-circled service-item__control pull-left"></i>
+                      <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                      <i class="ion-plus-circled service-item__control pull-right"></i>
+                    </div>
+                    <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/100mustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__balance service-item__balance_borb">
+                    <h5 class="service-item__h5">Баланс</h5>
+                    <div class="clearfix">
+                      <i class="ion-minus-circled service-item__control pull-left"></i>
+                      <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                      <i class="ion-plus-circled service-item__control pull-right"></i>
+                    </div>
+                    <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <p>Гроші</p>
+                  </div>
+
+                  <div class="service-item__balance service-item__balance_borb">
+                    <h5 class="service-item__h5">Баланс</h5>
+                    <div class="clearfix">
+                      <i class="ion-minus-circled service-item__control pull-left"></i>
+                      <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                      <i class="ion-plus-circled service-item__control pull-right"></i>
+                    </div>
+                    <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="card-services__head">Додати ресурси</p>
+
+                <!-- CARD-SERVICE BAR -->
+                <div class="card-services__bar">
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_fuel">
+                      <img src="img/fuel-types/DPmustang+.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="service-item__balance service-item__balance_borb">
+                      <h5 class="service-item__h5">Баланс</h5>
+                      <div class="clearfix">
+                        <i class="ion-minus-circled service-item__control pull-left"></i>
+                        <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                        <i class="ion-plus-circled service-item__control pull-right"></i>
+                      </div>
+                      <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                    </div>
+
+                    <div class="service-item__opt service-item__opt_ttt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__vol pull-left">
+                        <p>1000л</p>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_fuel">
+                      <img src="img/fuel-types/DPmustang.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="service-item__balance service-item__balance_borb">
+                      <h5 class="service-item__h5">Баланс</h5>
+                      <div class="clearfix">
+                        <i class="ion-minus-circled service-item__control pull-left"></i>
+                        <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                        <i class="ion-plus-circled service-item__control pull-right"></i>
+                      </div>
+                      <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                    </div>
+
+                    <div class="service-item__opt service-item__opt_ttt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__vol pull-left">
+                        <p>1000л</p>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_fuel">
+                      <img src="img/fuel-types/euro5.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="service-item__balance service-item__balance_borb">
+                      <h5 class="service-item__h5">Баланс</h5>
+                      <div class="clearfix">
+                        <i class="ion-minus-circled service-item__control pull-left"></i>
+                        <span class="ng-binding service-item__capacity">1 000 000 л</span>
+                        <i class="ion-plus-circled service-item__control pull-right"></i>
+                      </div>
+                      <p class="service-item__exp-date">до 21 / 12 / 2015</p>
+                    </div>
+
+                    <div class="service-item__opt service-item__opt_ttt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__vol pull-left">
+                        <p>1000л</p>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /CARD-SERVICE BAR -->
+              </div>
+              <!-- /CARD-SERVICE VIEWPORT -->
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 4/8 : Налаштуваня доступних ресурсів</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="clearfix widget-wrap card-services">
+              <h3 class="pull-left ml_15 mb_25"><span>Ресурси</span></h3>
+
+              <ul class="nav widget-nav pull-right">
+                <li class="widget-nav__li">Встановити ліміти для всіх послуг</li>
+                <li class="widget-nav__li">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="widget-nav__li">1000л</li>
+                <li class="widget-nav__li">10 000грн</li>
+              </ul>
+
+              <div class="clearfix"></div>
+
+              <!-- CARD-SERVICE VIEWPORT -->
+              <div class="card-services__viewport">
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/DPmustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/100mustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/LGPmustang.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_fuel">
+                    <img src="img/fuel-types/DPmustang+.png" alt="" class="img-responsive">
+                  </div>
+
+                  <div class="service-item__opt service-item__opt_ttt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__vol pull-left">
+                      <p>1000л</p>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="card-services__head">Додати ресурси</p>
+
+                <!-- CARD-SERVICE BAR -->
+                <div class="card-services__bar">
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_fuel">
+                      <img src="img/fuel-types/DPmustang+.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="service-item__opt service-item__opt_ttt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__vol pull-left">
+                        <p>1000л</p>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_fuel">
+                      <img src="img/fuel-types/DPmustang.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="service-item__opt service-item__opt_ttt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__vol pull-left">
+                        <p>1000л</p>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_fuel">
+                      <img src="img/fuel-types/euro5.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="service-item__opt service-item__opt_ttt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__vol pull-left">
+                        <p>1000л</p>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /CARD-SERVICE BAR -->
+              </div>
+              <!-- /CARD-SERVICE VIEWPORT -->
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 4 -->
+
+<!-- CARD ACTIVATION STEP 5 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 5/8 : Налаштуваня доступних послуг</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="clearfix widget-wrap card-services">
+              <h3 class="pull-left ml_15 mb_25"><span>Послуги</span></h3>
+
+              <ul class="nav widget-nav pull-right">
+                <li class="widget-nav__li">Встановити ліміти для всіх послуг</li>
+                <li class="widget-nav__li">
+                  <div class="select-wrap">
+                    <select name="" id="" class="selectpicker">
+                      <option value="День" selected="selected">День</option>
+                      <option value="Месяц">Месяц</option>
+                      <option value="Год">Год</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="widget-nav__li">1000л</li>
+                <li class="widget-nav__li">10 000грн</li>
+              </ul>
+
+              <div class="clearfix"></div>
+
+              <!-- CARD-SERVICE VIEWPORT -->
+              <div class="card-services__viewport">
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_chicken">
+                    <p>Основні страви</p>
+                  </div>
+
+                  <div class="service-item__opt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_pan">
+                    <p>Основні страви</p>
+                  </div>
+
+                  <div class="service-item__opt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_hd">
+                    <p>Основні страви</p>
+                  </div>
+
+                  <div class="service-item__opt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_ic">
+                    <p>Основні страви</p>
+                  </div>
+
+                  <div class="service-item__opt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-item__head service-item__head_sendwitch">
+                    <p>Основні страви</p>
+                  </div>
+
+                  <div class="service-item__opt clearfix">
+                    <div class="service-item__select pull-left">
+                      <div class="select-wrap">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="service-item__sum pull-right">
+                      <p>10 000грн</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="card-services__head">Додати послуги</p>
+
+                <!-- CARD-SERVICE BAR -->
+                <div class="card-services__bar">
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_chicken">
+                      <p>Основні страви</p>
+                    </div>
+
+                    <div class="service-item__opt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_ic">
+                      <p>Основні страви</p>
+                    </div>
+
+                    <div class="service-item__opt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview">
+                    <div class="service-item__head service-item__head_pan">
+                      <p>Основні страви</p>
+                    </div>
+
+                    <div class="service-item__opt clearfix">
+                      <div class="service-item__select pull-left">
+                        <div class="select-wrap">
+                          <select name="" id="" class="selectpicker">
+                            <option value="День" selected="selected">День</option>
+                            <option value="Месяц">Месяц</option>
+                            <option value="Год">Год</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="service-item__sum pull-right">
+                        <p>10 000грн</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item service-item_preview service-item_not-available">
+                    <div class="service-item__head service-item__head_ic">
+                      <img src="img/ic-na.png" alt="">
+                      <p>Не доступно за умовами рахунку</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /CARD-SERVICE BAR -->
+              </div>
+              <!-- /CARD-SERVICE VIEWPORT -->
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 5 -->
+
+<!-- CARD ACTIVATION STEP 6 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 6/8 : Налаштуваня періодів</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="clearfix period">
+              <h3 class="mb_25"><span>Періоди</span></h3>
+
+              <p class="widget__p bt-e1e1e1 pl30 lh62"><i class="ion-ios-information-outline mr5"></i>Вкажіть дні години, коли операції з картою будуть доступні</p>
+
+              <div class="period-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <td class="first-td"><i class="ion-android-calendar mr5"></i>Дні/години</td>
+                      <td></td>
+                      <td>01</td>
+                      <td>02</td>
+                      <td>03</td>
+                      <td>04</td>
+                      <td>05</td>
+                      <td>06</td>
+                      <td>07</td>
+                      <td>08</td>
+                      <td>09</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="first-td">Понеділок</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="first-td">Вівторок</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="first-td">Середа</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="first-td">Четвер</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="first-td">П'ятниця</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="first-td">Субота</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="first-td">Неділя</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="widget__p pl30 mt20">
+                <label class="check-box">
+                  <input type="checkbox">
+                  <span class="check-box__text">Заборонити заправку в  державні святкові дні <i class="ion-ios-information ml5"></i></span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 6 -->
+
+<!-- CARD ACTIVATION STEP 7 -->
+      <div class="vidget">
+        <div class="activation">
+          <div class="activation__header">
+            <h2 class="activation__h2">Крок 7/8 : Налаштуваня списку АЗС</h2>
+
+            <div class="bg-f6f6f6 resourses-info text-center">
+              <p class="lh45">
+                На редагування вибрано <span>5</span> карт
+                <a href="#" class="card-data__back"><i class="ion-android-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card_control_panel">
+            <ul class="">
+              <li ng-click="openTablePanel()"><a href="#">Тип картки</a></li>
+              <li><a href="#">Інформація</a></li>
+              <li><a href="#">Статус</a></li>
+              <li><a href="#">Доступні ресурси</a></li>
+              <li><a href="#">Доступні послуги</a></li>
+              <li><a href="#">Періоди</a></li>
+              <li><a href="#">Доступні АЗС</a></li>
+            </ul>
+          </div>
+
+          <div class="activation__body">
+            <div class="clearfix widget-wrap available">
+              <h3 class="ml_15 mb_25"><span>Доступні по картці АЗС</span></h3>
+
+              <div class="available__inner">
+                <div class="container-fluid">
+                  <div class="row">
+                    <a href="#" class="available__tab available__tab_second active">Додати АЗС <i class="ion-ios-plus"></i></a>
+                  </div>
+
+                  <div class="row pt20 pb30 bg-fff">
+                    <div class="col-sm-4">
+                      <div class="select-wrap select-wrap_card">
+                        <select name="" id="" class="selectpicker">
+                          <option value="День" selected="selected">День</option>
+                          <option value="Месяц">Месяц</option>
+                          <option value="Год">Год</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="check-box check-box_type2">
+                        <input type="checkbox">
+                        <span class="check-box__text">Показати тільки улюблені АЗС <i class="ion-ios-information ml5"></i></span>
+                      </label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="label-search">
+                        <input type="text" class="set_dept_name set_dept_name_search" placeholder="Пошук за назвою">
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="gas-stations">
+                      <!-- GREEN -->
+                      <div class="gas-stations__item gas-stations__item_add gas-stations__item_green">
+                        <p>Дозволити заправку на всіх АЗС в результатах пошуку</p>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІНИЦЬКА ФІЛІЯ АЗС "МОГИЛІВ-ПОДІЛЬСЬКИЙ" Перша</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІННИЦЬКА ФІЛІЯ АЗС "КИЇВСЬКА 76"</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІННИЦЬКА ФІЛІЯ АЗС "КИЇВСЬКА 76"</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІННИЦЬКА ФІЛІЯ АЗС "КИЇВСЬКА 76"</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІННИЦЬКА ФІЛІЯ АЗС "КИЇВСЬКА 76"</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІНИЦЬКА ФІЛІЯ АЗС "МОГИЛІВ-ПОДІЛЬСЬКИЙ" Перша</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІННИЦЬКА ФІЛІЯ АЗС "ЖМЕРИНКА"</p>
+                        </div>
+                      </div>
+
+                      <div class="gas-stations__item">
+                        <div class="gas-station__add gas-station__add_plus trans">
+                          <span>дозволити заправку</span>
+                        </div>
+
+                        <label class="gas-station__label trans">
+                          <input type="checkbox">
+                          <span class="ion-android-star-outline"></span>
+                        </label>
+
+                        <div class="gas-station__dep trans">
+                          <p class="pos-center">ВІНИЦЬКА ФІЛІЯ АЗС "МОГИЛІВ-ПОДІЛЬСЬКИЙ" Перша</p>
+                        </div>
+                      </div>
+                      <!-- /GREEN -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activation__footer">
+            <div class="clearfix save-widget">
+              <button class="save-btn pull-right">Зберегти і продовжити</button>
+              <button class="save-btn save-btn_gray pseudo-none mr20 pull-right">Залишити без змін</button>
+
+              <p class="widget__p pull-left">
+                <a href="#" class="card-data__back card-data__back_sm"><i class="ion-close-round"></i></a>
+                відмінити активацію карток
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /CARD ACTIVATION STEP 7 -->
+
+<!-- CARD ACTIVATION STEP 8 -->
+<div class="vidget">
+  <div class="activation">
+    <div class="activation__header">
+      <h2 class="activation__h2">Крок 8/8 : Фінал активації</h2>
+    </div>
+
+    <div class="activation__body">
+      <div class="activation__card-type activation__card-type_mw480 clearfix">
+        <div class="confirm-block confirm-block_success ma text-center">
+          <p class="ion-ios-checkmark-outline confirm-block__check"></p>
+
+          <p class="confirm-block__txt">Данні збережено</p>
+        </div>
+
+        <p class="widget__p widget__p_mb25 fs12 mt15 text-center"><i class="ion-ios-information-outline mr5"></i>Ви можете зберегти налаштування для вікористання на ступного разу</p>
+
+        <input type="text" class="set_dept_name">
+
+        <button class="save-btn save-btn_w180 ma mt15">Зберегти</button>
+
+        <button class="save-btn save-btn_w180 save-btn_gray ma mt15">Збережено</button>
+
+        <div class="confirm-block confirm-block_cancel ma text-center">
+          <p class="ion-ios-checkmark-outline confirm-block__check"></p>
+
+          <p class="confirm-block__txt mb25">Відмінити активацію?</p>
+
+          <button class="save-btn save-btn_w180 save-btn_gray pseudo-none ma mt15">Так</button>
+        </div>
+
+        <button class="save-btn ma">Продовжити работу</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /CARD ACTIVATION STEP 8 -->
+
 <!-- CARD-DATA -->
       <div class="vidget">
         <div class="card-data">
@@ -1651,6 +3429,7 @@
       </div>
 <!-- /TERMINAL-CHAIN WIDGET (gas stations search) -->
 
+<!-- INFO WINDOW GM -->
       <div class="vidget">
         <div class="info-window">
           <div class="info-window__header">
@@ -1671,6 +3450,7 @@
           </div>
         </div>
       </div>
+<!-- /INFO WINDOW GM -->
     </main>
 
   </div>

@@ -13,14 +13,18 @@
 .ma { margin-left: auto; margin-right: auto; }
 .mr5 { margin-right: 5px; }
 .mr15 { margin-right: 15px; }
+.mr20 { margin-right: 20px; }
 .mr25 { margin-right: 25px; }
 .ml5 { margin-left: 5px; }
 .ml20 { margin-left: 20px; }
 .ml25 { margin-left: 25px; }
 .mt5 { margin-top: 5px; }
+.mt20 { margin-top: 20px; }
+.mt15 { margin-top: 15px; }
 .mt25 { margin-top: 25px; }
 .mt40 { margin-top: 40px; }
 .mb0 { margin-bottom: 0; }
+.mb15 { margin-bottom: 15px; }
 .mb25 { margin-bottom: 25px; }
 .mb40 { margin-bottom: 40px; }
 .mb70 { margin-bottom: 70px; }
@@ -56,6 +60,7 @@
   transition: all 0.3s ease-in-out;
 }
 
+.fs12 { font-size: 12px; }
 .fs14 { font-size: 14px; }
 /* CARD WIDGET */
 .card-data {
@@ -238,6 +243,7 @@
 .card-status {
   width: 100%;
   max-width: 340px;
+  position: relative;
 }
 
 .card-status input[type=radio] {
@@ -338,12 +344,36 @@
   padding: 0 20px;
 }
 
+.widget-wrap_info {
+  padding: 40px 50px;
+}
+
+.widget-wrap_bb {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.vidget h3.ml_0 {
+  margin-left: 0px;
+}
+
 .vidget h3.ml_15 {
   margin-left: 15px;
 }
 
+.vidget h3.mb_15 {
+  margin-bottom: 15px;
+}
+
 .vidget h3.mb_25 {
   margin-bottom: 25px;
+}
+
+.vidget h3.mt_0 {
+  margin-top: 0;
+}
+
+.vidget h3.pb_0 {
+  padding-bottom: 0;
 }
 
 .widget-nav {
@@ -546,6 +576,14 @@
   margin-bottom: 0;
 }
 
+.widget__p_mb25 {
+  margin-bottom: 25px;
+}
+
+.widget__p_mb40 {
+  margin-bottom: 40px;
+}
+
 .message-toggle__p {
   font-size: 18px;
   font-weight: 300;
@@ -561,6 +599,10 @@
   font-weight: 300;
   font-size: 14px;
   margin: 22px 0;
+}
+
+.check-box_mt0 {
+  margin-top: 0;
 }
 
 .check-box input[type=checkbox] {
@@ -601,9 +643,8 @@
 }
 
 .save-btn {
-  width: 290px;
   height: 43px;
-  padding: 0;
+  padding: 0 30px;
   background-color: #fcc30e;
   border-radius: 6px;
   border: none;
@@ -631,6 +672,28 @@
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+.save-btn_gray {
+  background-color: #e1e1e1;
+}
+
+.save-btn_gray:hover {
+  background-color: #d2d2d2;
+}
+
+.save-btn_gray.pseudo-none::before,
+.save-btn_gray.pseudo-none::after {
+  display: none;
+}
+
+.save-btn_w180 {
+  width: 180px;
+}
+
+.save-btn_maxw340 {
+  max-width: 340px;
+  width: 100%;
 }
 /* /SAVE WIDGET */
 
@@ -816,8 +879,6 @@
 
 .gas-stations__item_hidden {
   visibility: collapse;
-  width: 0;
-  height: 0;
 }
 
 .gas-stations__item_add {
@@ -1956,5 +2017,203 @@
   opacity: 1;
   color: #fff;
 }
-
 /* /TERMINAL-CHAIN WIDGET (gas stations search) */
+
+/* ACTIVATION */
+.activation__header {
+  padding: 15px 20px;
+}
+
+.activation__h2 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #000;
+  margin: 0 0 40px;
+}
+
+.activation__body {
+  padding: 20px 0;
+}
+
+.activation__footer {
+  padding: 30px 0 10px;
+  border-top: 1px solid #ebebeb;
+}
+
+.card-data__back_sm {
+  font-size: 18px;
+}
+
+.service-item__balance {
+  padding: 18px 20px 30px;
+}
+
+.service-item__balance_borb {
+  border-bottom: 1px dashed #d9d9d9;
+}
+
+.service-item_preview .service-item__balance {
+  display: none;
+}
+
+.service-item__h5 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  margin: 0 0 15px;
+}
+
+.service-item__capacity {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.service-item__control {
+  font-size: 18px;
+  line-height: 24px;
+  color: #cbc7c7;
+  cursor: pointer;
+}
+
+.service-item__exp-date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: #008c44;
+  margin: 30px 0 0;
+}
+
+.activation__body .period {
+  padding-bottom: 0;
+}
+
+.link {
+  color: #0a8f49;
+  text-decoration: underline !important;
+}
+
+.link:hover  {
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus,
+.link:active,
+.link:visited {
+  color: #0a8f49;
+}
+
+.activation__card-type {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 45px 15px;
+}
+
+.activation__card-type_mw715 {
+  max-width: 715px;
+}
+
+.activation__card-type_mw480 {
+  max-width: 480px;
+}
+
+.select-wrap_card.w100p .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  max-width: 100%;
+}
+
+.activation__card-type .card-data__label_type {
+  max-width: 140px;
+  width: 140px;
+}
+
+.activation .set_dept_name {
+  height: 40px;
+}
+
+.activation .save-btn {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.activation__h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.confirm-block {
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 80px;
+  padding: 40px;
+  border-radius: 6px;
+}
+
+.confirm-block_success {
+  background-color: #00ab4e;
+}
+
+.confirm-block_cancel {
+  background-color: #e62241;
+}
+
+.confirm-block p {
+  color: #fff;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.confirm-block__check {
+  font-size: 48px;
+  margin-bottom: 35px;
+}
+
+.confirm-block__txt {
+  font-size: 20px;
+}
+
+.status-content {
+  width: 100%;
+  max-width: 330px;
+  height: 180px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.status-content p {
+  display: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+}
+
+.card-status input[type=radio]:checked + .card-status__label#active-label ~ .status-content #first-status {
+  display: block;
+}
+
+.card-status input[type=radio]:checked + .card-status__label#block-label ~ .status-content #second-status {
+  display: block;
+}
+
+.card-status input[type=radio]:checked + .card-status__label#stop-label ~ .status-content #third-status {
+  display: block;
+}
+
+.card-status_maxw600 {
+  max-width: 650px;
+}
+
+.card-status__label_act {
+  max-width: 38%;
+}
+/* /ACTIVATION */

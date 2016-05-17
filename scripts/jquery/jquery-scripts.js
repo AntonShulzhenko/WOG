@@ -71,9 +71,12 @@ $(document).ready(function () {
 
   // last flex element
   function createLastItem(container) {
+    var item = $('.gas-stations__item');
     var el = $('<div class="gas-stations__item gas-stations__item_hidden"></div>');
     if($(window).width() > 1024) {
-      container.append(el);
+      if (item.length % 3 != 0) {
+        container.append(el);
+      }
     }
   }
   createLastItem($('.gas-stations'));

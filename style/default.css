@@ -771,32 +771,43 @@ table {
 }
 
 .card_control_panel {
+  display: inline-block;
+  width: 100%;
   margin: 0;
   padding-left: 0;
+  background-color: #0a8f49;
+}
+
+.card_control_panel ul {
+  margin: 15px 0;
+  padding-left: 30px;
 }
 
 .card_control_panel li {
   text-align: center;
   list-style-type: none;
   display: inline-block;
-  width: 100px;
-  height: 50px;
-  line-height: 50px;
+  height: 38px;
+  line-height: 38px;
   font-size: 14px;
+  margin: 0 5px;
 }
 
 .card_control_panel li a {
-  color: black;
-}
-
-.card_control_panel {
-  width: 100%;
-  background-color: #0a8f49;
   display: inline-block;
+  padding: 0 15px;
+  border-radius: 6px;
+  color: white;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-.card_control_panel li a {
-  color: white;
+.card_control_panel li a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .control-each-el {

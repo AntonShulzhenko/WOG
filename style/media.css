@@ -215,8 +215,13 @@
     background: url('../img/resize-i.png') no-repeat center center;
   }
   .card_control_panel li {
-    width: 80px;
     font-size: 12px;
+  }
+  .card_control_panel li a {
+    padding: 0 10px;
+  }
+  .card_control_panel ul {
+    padding-left: 20px;
   }
   footer p {
     font-size: 10px;
@@ -400,12 +405,10 @@
     font-size: 20px;
   }
   .card_control_panel ul {
-    height: 50px;
+    height: 38px;
     overflow: hidden;
-    padding-left: 0;
-  }
-  .card_control_panel li {
-    width: 20%;
+    padding: 0 15px;
+    text-align: center;
   }
   .card_control_panel ul.open_table_panel {
     height: 100%;

@@ -51,6 +51,10 @@
     padding-left: 30px;
     width: 190px;
   }
+
+  .save-btn {
+    padding: 0 15px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -89,6 +93,7 @@
 
   .build-route__h-top .save-btn_route {
     max-width: 30%;
+    padding: 0;
   }
 
   .build-route__b-bottom {
@@ -113,6 +118,10 @@
     right: 50%;
     margin-right: -45%;
   }
+
+  .activation__card-type .card-data__label_type {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -135,7 +144,7 @@
 
   .save-widget .save-btn {
     float: none !important;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     display: block;
   }
 
@@ -246,6 +255,14 @@
     max-width: 80%;
     margin: 0 auto;
     display: block;
+  }
+
+  .activation__card-type .card-data__label_type {
+    height: auto;
+  }
+
+  .card-status__label_act {
+    max-width: 240px;
   }
 }
 
@@ -372,6 +389,28 @@
 
   .build-route__b-top .label-search .set_dept_name_search {
     height: 40px;
+  }
+
+  .activation__h2 {
+    font-size: 20px;
+  }
+
+  .widget-wrap_info {
+    padding: 20px 0;
+  }
+
+  .status-content {
+    position: relative;
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  .activation .card-status {
+    max-width: 320px;
+  }
+
+  .card-status__label_act {
+    max-width: 100%;
   }
 }
 
