@@ -55,6 +55,14 @@
   .save-btn {
     padding: 0 15px;
   }
+
+  .repots-nav li {
+    width: 105px;
+  }
+
+  .reports-link_templ {
+    width: 140px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -121,6 +129,23 @@
 
   .activation__card-type .card-data__label_type {
     margin-bottom: 20px;
+  }
+
+  .repots-nav {
+    height: 65px;
+  }
+
+  .repots-nav li {
+    width: 80px;
+  }
+
+  .reports-link {
+    font-size: 12px;
+    line-height: 65px;
+  }
+
+  .reports-link_templ {
+    width: 90px;
   }
 }
 
@@ -263,6 +288,27 @@
 
   .card-status__label_act {
     max-width: 240px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .vidget_report-nav {
+    padding-right: 80px;
+  }
+
+  .repots-nav {
+    height: auto;
+  }
+
+  .reports-link_templ {
+    width: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .reports-link {
+    line-height: 50px;
   }
 }
 
@@ -412,6 +458,17 @@
   .card-status__label_act {
     max-width: 100%;
   }
+
+  .report-block {
+    padding: 15px 15px 0;
+  }
+
+  .report-item {
+    float: none;
+    margin: 0 auto 15px;
+    width: 100%;
+    max-width: 255px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -544,6 +601,16 @@
 
   .build-route__b-top .label-search {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .vidget_report-nav {
+    padding-right: 0;
+  }
+
+  .reports-link_templ {
+    top: 50px;
   }
 }
 
@@ -731,5 +798,15 @@
 @media screen and (max-width: 320px) {
   .service-item {
     margin: 10px 0;
+  }
+
+  .reports-link_templ {
+    box-shadow: none;
+  }
+
+  .reports-link_templ:hover {
+    -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0,171,77,1), inset 0px 0px 7px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: inset 0px -5px 0px 0px rgba(0,171,77,1), inset 0px 0px 7px 0px rgba(0,0,0,0.08);
+    box-shadow: inset 0px -5px 0px 0px rgba(0,171,77,1), inset 0px 0px 7px 0px rgba(0,0,0,0.08);
   }
 }

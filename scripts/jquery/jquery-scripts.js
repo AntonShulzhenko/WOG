@@ -208,9 +208,40 @@ function initMap() {
   '</div>'+
   '</div>';
 
+  var contentTable = '<div class="info-window info-window_table">'+
+    '<div class="gm-table-wrap">'+
+    '<table>'+
+    '<thead>'+
+    '<tr>'+
+    '<td>Дата транзакції</td>'+
+    '<td>Карта / Держатель</td>'+
+    '<td>Тип транзакції</td>'+
+    '<td>Чек</td>'+
+    '<td>АЗК</td>'+
+    '<td class="w150">Ресурс</td>'+
+    '<td>Об\'єм</td>'+
+    '<td>Сума</td>'+
+    '</tr>'+
+    '</thead>'+
+    '<tbody>'+
+    '<tr>'+
+    '<td class="no-wrap"><span class="date">10/11/2015</span><span class="time">12:00</span></td>'+
+    '<td>7825990000000050<span class="name">Іванський П.П.</span></td>'+
+    '<td>Оплата пального</td>'+
+    '<td class="no-wrap">125449879322 <i class="ion-navicon-round"></i></td>'+
+    '<td>Волинська філія «Київський Майдан»</td>'+
+    '<td><img src="img/fuel-types/95mustang.png" alt="" class="img-responsive"></td>'+
+    '<td>50л</td>'+
+    '<td class="no-wrap">1 000 000 грн</td>'+
+    '</tr>'+
+    '</tbody>'+
+    '</table>'+
+    '</div>'+
+    '</div>';
+
   var infowindow = new google.maps.InfoWindow({
-    content: contentString,
-    maxWidth: 300
+    content: contentTable
+    // maxWidth: 300
   });
 
   infowindow.open(map, marker);
