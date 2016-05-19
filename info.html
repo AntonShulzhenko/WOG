@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style/media.css">
 
   <!-- New styles -->
+  <link rel="stylesheet" href="style/footable.bootstrap.min.css">
   <link rel="stylesheet" href="style/font-awesome.min.css">
   <link rel="stylesheet" href="style/styles-a.css">
   <link rel="stylesheet" href="style/media-a.css">
@@ -25,30 +26,171 @@
   <div class="wrap">
 
     <header class="clearfix header-info">
-      <div class="maxw360 w100p ma clearfix">
-        <!-- <img class="pull-left" src="img/header-logo-min.png" alt=""> -->
-        <span class="days_numb__strong">Інформація по картці</span>
-        <p class="mb0" style="display: block;">7825990000000069</p>
+      <div class="maxw450 ma clearfix db">
+        <img class="pull-left mt5" src="img/header-logo-min.png" alt="">
+        <div class="db pull-right maxw370">
+          <span class="days_numb__strong m0">Інформація по картці</span>
+          <p class="mb0 pull-left mt20">7825990000000069</p>
+          <p class="mb0 pull-right mt20">Активна</p>
+        </div>
       </div>
     </header>
 
     <main class="pl20">
-      <div class="vidget"></div>
+      <div class="vidget vidget_maxw1024">
+        <h3 class="mb_20 ml_0 pb_0 mt_0 text-center"><span>Доступно ресурсів</span></h3>
 
-      <div class="vidget"></div>
+        <div class="card-services__viewport card-services__viewport_pt0 card-services_info clearfix">
+          <div class="service-item service-item_info service-item_maxw180">
+            <div class="service-item__head service-item__head_fuel">
+              <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+            </div>
 
-      <div class="vidget"></div>
+            <div class="service-item__opt">
+              <div class="service-item__vol p15">
+                <p class="fw500">1000л</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item service-item_info service-item_maxw180">
+            <div class="service-item__head service-item__head_fuel">
+              <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+            </div>
+
+            <div class="service-item__opt">
+              <div class="service-item__vol p15">
+                <p class="fw500">1000л</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item service-item_info service-item_maxw180">
+            <div class="service-item__head service-item__head_fuel">
+              <img src="img/fuel-types/95mustang.png" alt="" class="img-responsive">
+            </div>
+
+            <div class="service-item__opt">
+              <div class="service-item__vol p15">
+                <p class="fw500">1000л</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mb_20 ml_0 pb_0 text-center"><span>Транзакції</span></h3>
+
+        <div class="available__inner clearfix">
+          <a href="#" class="available__tab available__tab_first available__tab_info">Поточний місяць</a>
+          <a href="#" class="available__tab available__tab_second available__tab_info active">Минулий місяць</a>
+        </div>
+
+        <div class="card-data__cont">
+          <div class="table-info-wrap">
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>Дата транзакції</th>
+                  <th>Карта / Держатель</th>
+                  <th data-breakpoints="xs">Тип транзакції</th>
+                  <th data-breakpoints="xs">Чек</th>
+                  <th data-breakpoints="xs">АЗК</th>
+                  <th data-breakpoints="md sm xs">Ресурс</th>
+                  <th data-breakpoints="lg md sm xs">Об'єм</th>
+                  <th data-breakpoints="lg md sm xs">Сума</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="no-wrap date-td"><span>10/11/2015</span> 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_m95"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+
+                <tr class="bg-f9f9f9">
+                  <td class="no-wrap date-td">10/11/2015 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_m100"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+
+                <tr>
+                  <td class="no-wrap date-td">10/11/2015 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_mdp-plus"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+
+                <tr class="bg-f9f9f9">
+                  <td class="no-wrap date-td">10/11/2015 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_m92"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+
+                <tr>
+                  <td class="no-wrap date-td">10/11/2015 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_mdp"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+
+                <tr class="bg-f9f9f9">
+                  <td class="no-wrap date-td">10/11/2015 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_e95"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+
+                <tr>
+                  <td class="no-wrap date-td">10/11/2015 12:00</td>
+                  <td class="person-td">7825990000000050 Іванський П.П.</td>
+                  <td>Оплата пального</td>
+                  <td class="no-wrap bill-td">125449879322</td>
+                  <td>Волинська філія «Київський Майдан»</td>
+                  <td class="res res_mlpg"></td>
+                  <td>50л</td>
+                  <td class="no-wrap">1 000 000 грн</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </main>
+
   </div>
 
-  <footer class="w100p ml0">
-    <p>COPYRIGHT © 2015 WOG. ALL RIGHTS RESERVED</p>
-    <div class="footer_hotline">
-      <span>ГАРЯЧА ЛІНІЯ 0 800 300 525</span>
-    </div>
-    <div class="footer_faq">
-      <span><a href="">Питання відповідь</a></span>
-      <span><a ui-sref="opportunities">Можливості системи</a></span>
+  <footer class="ml0 pl0 w100p footer_info">
+    <div class="maxw370 ma text-center">
+      <p class="mb0">Телефон відповідальної особи</p>
+      <span class="days_numb__strong m0">0 800 300 525</span>
     </div>
   </footer>
 
@@ -92,10 +234,45 @@
   <!-- New scripts -->
   <!-- Select -->
   <script src="scripts/lib/bootstrap-select.min.js"></script>
+  <script src="scripts/lib/footable.js" type="text/javascript"></script>
 
   <!-- Google map -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9vaXWiKpWgc5iEtSUB7mV-riJ8OmE06c&callback=initMap"></script>
 
+  <script type="text/javascript">
+  	$(function () {
+      $('.info-table').footable();
+
+      function formateTd () {
+        var dateTd = $('td.date-td'), personTd = $('.person-td'), date, time, dateTxt, bold, small, span, nameTxt, name, reg = /\D/, dig, billTd = $('.bill-td'), icon = "<i class='ion-navicon-round ml20 c-00ab4e'></i>";
+
+        dateTd.each(function(i) {
+          dateTxt = dateTd.eq(i).text();
+          date = dateTxt.slice(0, 10);
+          time = dateTxt.slice(11);
+          span = $(this).find('span');
+          bold = "<span class='fw700'>" + date + "</span>";
+          small = "<span class='fs12'>" + time + "</span>";
+          $(this).html($(span)).append(bold + " " + small);
+        });
+
+        personTd.each(function(j) {
+          nameTxt = personTd.eq(j).text();
+          dig = nameTxt.slice(0, nameTxt.search(reg));
+          name = nameTxt.slice(dig.length, nameTxt.length);
+          var newName = "<span class='db'>" + name + "</span>";
+          $(this).html(dig + " " + newName);
+          console.log(dig);
+        });
+
+        billTd.each(function(k) {
+          billTd.eq(k).append(icon);
+        });
+      }
+
+      formateTd();
+  	});
+  </script>
 </body>
 
 </html>

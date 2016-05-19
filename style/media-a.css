@@ -63,6 +63,10 @@
   .reports-link_templ {
     width: 140px;
   }
+
+  .info-table .res {
+    background-position: 15px center;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -523,6 +527,36 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .header-info {
+    padding-left: 70px;
+  }
+
+  .header-info img {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+  }
+
+  .header-info .maxw370 {
+    float: none !important;
+  }
+
+  .header-info .days_numb__strong {
+    font-size: 30px;
+  }
+
+  .info-table tr {
+    height: 60px;
+  }
+
+  .info-table td,
+  .info-table th {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .build-route__h-top {
     display: block;
@@ -793,6 +827,36 @@
     min-width: 279px !important;
     margin-left: -140px !important;
   }
+
+  .header-info {
+    padding-left: 55px;
+  }
+
+  .header-info .days_numb__strong {
+    font-size: 24px;
+  }
+
+  .header-info img {
+    position: absolute;
+    left: 10px;
+    top: 17px;
+    width: 40px;
+  }
+
+  .card-services_info {
+    padding: 10px 0 0 10px;
+  }
+
+  .service-item_info {
+    max-width: 145px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+
+  .available__tab_info {
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -808,5 +872,9 @@
     -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0,171,77,1), inset 0px 0px 7px 0px rgba(0,0,0,0.08);
     -moz-box-shadow: inset 0px -5px 0px 0px rgba(0,171,77,1), inset 0px 0px 7px 0px rgba(0,0,0,0.08);
     box-shadow: inset 0px -5px 0px 0px rgba(0,171,77,1), inset 0px 0px 7px 0px rgba(0,0,0,0.08);
+  }
+
+  .service-item_info {
+    margin: 0 10px 10px 0;
   }
 }
