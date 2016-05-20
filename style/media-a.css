@@ -67,6 +67,20 @@
   .info-table .res {
     background-position: 15px center;
   }
+
+  .faq-button {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 38%;
+  }
+
+  .faq-button:after {
+    right: 20px;
+  }
+
+  .faq-panel {
+    padding-right: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -151,6 +165,10 @@
   .reports-link_templ {
     width: 90px;
   }
+
+  .faq-button {
+    padding-right: 40%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -191,6 +209,11 @@
 
   .build-route__b-bottom .card-data__save {
     margin-top: 15px;
+  }
+
+  .user-wrap {
+    float: none !important;
+    width: 100% !important;
   }
 }
 

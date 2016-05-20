@@ -167,6 +167,30 @@ $(document).ready(function () {
   }
 
   searchSidebarBodyHeight();
+
+  // FAQ
+  function faqAccordion() {
+    var faq = $('body').find('div.faq');
+    var button = faq.find('button.faq-button');
+
+    button.each(function(i) {
+      button.eq(i).on('click', function() {
+
+        if($(this).hasClass('active')) {
+          $(this).removeClass('active');
+          $(this).siblings().slideUp(300);
+        } else {
+          $(this).addClass('active');
+          $(this).siblings().slideDown(300);
+          $(this).parent().siblings().children('button.faq-button').removeClass('active');
+          $(this).parent().siblings().children('div.faq-panel').slideUp(300);
+        }
+
+      });
+    });
+  }
+
+  faqAccordion();
 });
 
 
