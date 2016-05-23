@@ -2833,4 +2833,57 @@ main.pl20.minimize {
 .vidget_user {
   margin-bottom: 20px;
 }
+
+.uc-p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000;
+}
+
+.uc-p:last-child {
+  margin-bottom: 0;
+}
+
+.uc-p_fs18 {
+  font-size: 18px;
+}
+
+.uc-table {
+  width: 100%;
+}
+
+.uc-table__tr {
+  border-bottom: 1px dashed #d1d1d1;
+  height: 50px;
+}
+
+.uc-table__tr_bbn {
+  border-bottom: none;
+}
+
+.uc-table__td {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  vertical-align: middle;
+  padding: 10px 30px;
+  border-right: 1px dashed #d1d1d1;
+}
+
+.uc-table__td:last-child {
+  border-right: none;
+}
+
+.uc-table__td_fs18 {
+  font-size: 18px;
+}
+
+.uc-table__td_brn {
+  border-right: none;
+}
+
+.uc-table__td_wnr {
+  white-space: nowrap;
+}
 /* /USER CABINET */
