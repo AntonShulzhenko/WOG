@@ -2882,4 +2882,53 @@ main.pl20.minimize {
 .uc-table__td_wnr {
   white-space: nowrap;
 }
+
+.uc-table__td_fw500 {
+  font-weight: 500;
+}
+
+.format {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  line-height: 20px;
+}
+
+.format::before {
+  content: "";
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 5px;
+}
+
+.format_pdf::before {
+  content: "\f1c1";
+  color: #8f0202;
+}
+
+.format_xls::before {
+  content: "\f1c3";
+  color: #007e45;
+}
+
+.format_doc::before {
+  content: "\f1c2";
+  color: #0c4d7a;
+}
+
+.upload-btn {
+  font-size: 18px;
+  color: #000;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn:visited {
+  color: #000;
+}
 /* /USER CABINET */
