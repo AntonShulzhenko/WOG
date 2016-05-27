@@ -2638,16 +2638,12 @@ main.pl20.minimize {
   width: 100%;
 }
 
+.container-fluid_p0 {
+  padding: 0;
+}
+
 .user-wrap .vidget {
   margin: 0 auto 20px;
-}
-
-.user-wrap_w60p {
-  max-width: 60%
-}
-
-.user-wrap_w38p {
-  max-width: 38%;
 }
 
 .h4 {

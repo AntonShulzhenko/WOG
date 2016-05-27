@@ -611,6 +611,14 @@
     font-size: 13px;
     padding: 0 10px;
   }
+
+  .uc-table__td_fs18 {
+    font-size: 14px;
+  }
+
+  .uc-table__td {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -940,6 +948,10 @@
 
   .card-data__save_cu {
     max-width: 100%;
+  }
+
+  .uc-table__td_phone i {
+    display: none;
   }
 }
 
