@@ -81,6 +81,14 @@
   .faq-panel {
     padding-right: 20px;
   }
+
+  .repots-nav_user li {
+    width: 150px;
+  }
+
+  .repots-nav_user .reports-link {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -169,6 +177,14 @@
   .faq-button {
     padding-right: 40%;
   }
+
+  .repots-nav_user li {
+    width: 120px;
+  }
+
+  .repots-nav_user .reports-link {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -222,6 +238,18 @@
 
   .faq-button {
     padding-right: 33%;
+  }
+
+  .repots-nav_user li {
+    width: auto;
+  }
+
+  .repots-nav_user .reports-link {
+    padding: 0 10px;
+    line-height: 1.5;
+    display: table-cell;
+    height: 65px;
+    vertical-align: middle;
   }
 }
 
@@ -365,6 +393,19 @@
 
   .faq-data {
     padding: 20px;
+  }
+
+  .vidget_user .reports-link_templ {
+    width: 106px;
+  }
+
+  .repots-nav_user li {
+    width: auto;;
+  }
+
+  .repots-nav_user .reports-link {
+    height: 50px;
+    width: 106px;
   }
 }
 
@@ -618,6 +659,15 @@
 
   .uc-table__td {
     padding: 10px;
+  }
+
+  .uc-table__td_minw140 {
+    min-width: 100px;
+  }
+
+  .uc-table__td_wb {
+    word-break: break-all;
+    min-width: 95px;
   }
 }
 

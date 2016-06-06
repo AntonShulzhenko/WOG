@@ -44,6 +44,8 @@
 .pl30 { padding-left: 30px; }
 .pt20 { padding-top: 20px; }
 .pt25 { padding-top: 25px; }
+.pt30 { padding-top: 30px; }
+.pb15 { padding-bottom: 15px; }
 .pb30 { padding-bottom: 30px; }
 
 .l0 { left: 0; }
@@ -66,6 +68,7 @@
 .h90 { height: 90px; }
 
 .bt-e1e1e1 { border-top: 1px solid #e1e1e1; }
+.bb-e1e1e1 { border-bottom: 1px solid #e1e1e1; }
 
 .trans {
   -webkit-transition: all 0.3s ease-in-out;
@@ -84,7 +87,9 @@
 .no-wrap { white-space: nowrap; }
 
 .w100p { width: 100%; }
+.w195 { width: 195px;}
 .w150 { width: 150px;}
+.w120 { width: 120px;}
 /* CARD WIDGET */
 .card-data {
   background-color: #fff;
@@ -652,9 +657,18 @@
   margin-right: 5px;
 }
 
+.check-box input[type=checkbox] + .check-box__text_bg::before {
+  font-size: 24px;
+  color: #7c7979;
+}
+
 .check-box input[type=checkbox]:checked + .check-box__text::before {
   content: "\f374";
   color: #007e45;
+}
+
+.check-box input[type=checkbox]:checked + .check-box__text_bg::before {
+  content: "\f373";
 }
 
 .check-box input[type=checkbox]:disabled + .check-box__text::before {
@@ -2634,16 +2648,8 @@ main.pl20.minimize {
 /*----- /INFO PAGE -----*/
 
 /* USER CABINET */
-.user-wrap {
-  width: 100%;
-}
-
 .container-fluid_p0 {
   padding: 0;
-}
-
-.user-wrap .vidget {
-  margin: 0 auto 20px;
 }
 
 .h4 {
@@ -2651,6 +2657,10 @@ main.pl20.minimize {
   font-weight: 500;
   color: #000;
   margin: 0 0 20px 30px;
+}
+
+.vam {
+  vertical-align: middle;
 }
 
 .gray-box-content {
@@ -2823,7 +2833,7 @@ main.pl20.minimize {
 /* /FAQ */
 
 .repots-nav_user li {
-  width: 190px;
+  width: 180px;
 }
 
 .vidget_user {
@@ -2858,6 +2868,10 @@ main.pl20.minimize {
   border-bottom: none;
 }
 
+.uc-table__tr_white {
+  background-color: #fff;
+}
+
 .uc-table__td {
   font-size: 14px;
   font-weight: 300;
@@ -2885,6 +2899,10 @@ main.pl20.minimize {
 
 .uc-table__td_fw500 {
   font-weight: 500;
+}
+
+.uc-table__td_minw140 {
+  min-width: 140px;
 }
 
 .format {
@@ -2930,5 +2948,50 @@ main.pl20.minimize {
 .upload-btn:active,
 .upload-btn:visited {
   color: #000;
+}
+
+.card-data__back_mr15 {
+  margin-right: 15px;
+}
+
+.card-data__back_ml0 {
+  margin-left: 0;
+}
+
+.card-data__back_fs22 {
+  font-size: 22px;
+}
+
+td .ml0 {
+  margin-left: 0;
+}
+
+td .mr15 {
+  margin-right: 15px;
+}
+
+td .fs18 {
+  font-size: 18px;
+}
+
+.uc-table__date {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.uc-table__time {
+  font-size: 12px;
+  padding-top: 5px;
+  border-top: 1px dashed #000;
+  display: inline-block;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.o-07 {
+  opacity: 0.7;
 }
 /* /USER CABINET */
