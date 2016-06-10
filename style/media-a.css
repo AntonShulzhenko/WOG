@@ -1,12 +1,14 @@
 @media screen and (max-width: 1440px) {
-  #modal-resources .modal-dialog {
+  #modal-resources .modal-dialog,
+  .modal-big .modal-dialog {
     max-width: 940px;
     margin-left: -575px;
   }
 }
 
 @media screen and (max-width: 1400px) {
-  #modal-resources .modal-dialog {
+  #modal-resources .modal-dialog,
+  .modal-big .modal-dialog {
     left: calc(50% + 80px);
     margin-left: -510px;
   }
@@ -107,7 +109,8 @@
     width: 49.4%;
   }
 
-  #modal-resources .modal-dialog {
+  #modal-resources .modal-dialog,
+  .modal-big .modal-dialog {
     max-width: 680px;
     margin-left: -380px;
   }
@@ -312,7 +315,8 @@
     padding-right: 50px;
   }
 
-  #modal-resources .modal-dialog {
+  #modal-resources .modal-dialog,
+  .modal-big .modal-dialog {
     max-width: 90%;
     margin-left: -45%;
     left: 50%;
@@ -883,7 +887,8 @@
     top: 20px;
   }
 
-  #modal-resources .modal-dialog {
+  #modal-resources .modal-dialog,
+  .modal-big .modal-dialog {
     max-width: 96%;
     margin-left: -48%;
   }
