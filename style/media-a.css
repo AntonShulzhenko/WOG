@@ -626,6 +626,25 @@
   .uc-table__td {
     padding: 10px 15px;
   }
+
+  .fuel-transfer {
+    padding-left: 0;
+    min-width: 1450px;
+  }
+
+  .fuel-transfer__sidebar {
+    position: relative;
+    float: left;
+  }
+
+  .fuel-transfer__body {
+    float: left;
+    width: auto;
+  }
+
+  #modal-card .modal-body {
+    overflow-x: auto;
+  }
 }
 
 @media screen and (max-width: 480px) {
