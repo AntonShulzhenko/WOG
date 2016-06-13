@@ -191,6 +191,22 @@ $(document).ready(function () {
   }
 
   faqAccordion();
+
+  function cutInfo() {
+    var info = $('.fuel-transfer__info span');
+
+    info.each(function(i) {
+      var base = $(this).text();
+      if($(this).text().length > 15) {
+        var excerpt = $(this).text().slice(0, 15) + '...';
+        $(this).text(excerpt);
+      }
+
+      $(this).hover(function() {$(this).text(base);}, function() {$(this).text(excerpt);});
+    });
+  }
+
+  cutInfo();
 });
 
 

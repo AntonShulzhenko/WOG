@@ -49,6 +49,7 @@
 .pt30 { padding-top: 30px; }
 .pb15 { padding-bottom: 15px; }
 .pb30 { padding-bottom: 30px; }
+.pr20 { padding-right: 20px; }
 
 .l0 { left: 0; }
 
@@ -84,11 +85,13 @@
 
 .fs12 { font-size: 12px; }
 .fs14 { font-size: 14px; }
+.fs16 { font-size: 16px; }
 
 .fw500 { font-weight: 500; }
 .fw700 { font-weight: 700; }
 
 .no-wrap { white-space: nowrap; }
+.wb-ba { word-break: break-all;}
 
 .w100p { width: 100%; }
 .w195 { width: 195px;}
@@ -3023,8 +3026,8 @@ td .fs18 {
 /* MODAL-CARD */
 #modal-card .close {
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 0;
+  top: 0;
   width: 30px;
   height: 30px;
   z-index: 10;
@@ -3034,6 +3037,7 @@ td .fs18 {
   color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,.3);
   float: none;
+  border-radius: 0 6px 0 0;
 }
 
 #modal-card .close:hover {
@@ -3047,18 +3051,19 @@ td .fs18 {
 .fuel-transfer {
   position: relative;
   overflow: hidden;
-  padding-left: 250px;
+  padding-left: 200px;
 }
 
 .fuel-transfer__sidebar {
   position: absolute;
   left: 0;
   top: 0;
-  width: 250px;
+  width: 200px;
   height: 100%;
   box-shadow: 1px 0 5px rgba(0,0,0,0.2);
   z-index: 10;
   border-right: none;
+  overflow: hidden;
 }
 
 .fuel-transfer__body {
@@ -3089,7 +3094,7 @@ td .fs18 {
 }
 
 .fill-fuel-table tbody td {
-  height: 105px;
+  height: 90px;
 }
 
 .h50 {
@@ -3098,5 +3103,28 @@ td .fs18 {
 
 .bn {
   border: none !important;
+}
+
+.fuel-transfer__info {
+  position: relative;
+  height: 20px;
+}
+
+.fuel-transfer__info span {
+  height: 20px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.fuel-transfer__info span:hover {
+  height: auto;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  border-radius: 2px;
 }
 /* /MODAL-CARD */
