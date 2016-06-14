@@ -71,6 +71,165 @@
     </nav>
 
     <main>
+<!-- REPORTS -->
+      <div class="vidget">
+        <button data-toggle="modal" data-target="#modal-resources2">modalka3</button>
+
+        <div id="modal-resources2" class="modal fade" role="dialog" style="display: none;">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header bn clearfix">
+                <button type="button" class="close close_btn" data-dismiss="modal">
+                  <i class="ion-android-close"></i>
+                </button>
+
+                <h4 class="modal-title pull-left col-000">Звіт по АЗС</h4>
+              </div>
+
+              <div class="modal-body">
+                <div class="add_department_form add_department_form_minh100p add_department_form_bt-n add_department_form_bb-n clearfix">
+                  <div class="col-sm-12">
+                    <p>Налаштуйте регулярну відправку звіту</p>
+
+                    <span class="small">
+                      <i class="ion-ios-information-outline"></i>
+                      Ви можете налаштувати відправку звіту в автоматичному режимі
+                    </span>
+                  </div>
+                </div>
+
+                <div class="add_department_form add_department_form_minh100p add_department_form_bb-n clearfix">
+                  <div class="col-sm-6">
+                    <p>Одержувачі звіту:</p>
+
+                    <span class="small">Додайте список електронны адрес, на які буде відправлятися звіт.</span>
+
+                    <textarea name="textarea" rows="4" class="textarea mt20" placeholder="Електронна адреса"></textarea>
+
+                    <span class="small">
+                      <i class="ion-ios-information-outline"></i>
+                      Кожну нову адресу вкажіть з нового рядка
+                    </span>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <p>Період звітності</p>
+
+                    <span class="small">За який період відображати дані в звіті?</span>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Доба</span>
+                    </label>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Тиждень</span>
+                    </label>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Місяць</span>
+                    </label>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Рік</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer bn clearfix">
+                <p class="widget__p pull-left lh45">
+                  <a href="#" class="card-data__back"><i class="ion-ios-arrow-thin-left"></i></a>
+                  Відмінити
+                </p>
+
+                <button class="save-btn pull-right">Зберегти</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vidget">
+        <h2 class="activation__h2 activation__h2_mb25 activation__h2_ml20 ">Збереження шаблону звіту <i class="ion-ios-arrow-thin-right c-00ab4e"></i></h2>
+
+        <div class="clearfix btd-dedede">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="add_department_form add_department_form_bt-n add_department_form_bb-n add_department_form_minh100p">
+                <p>Назва підрозділу</p>
+
+                <span class="small">
+                  <i class="ion-ios-information-outline"></i>
+                  Для зручності в роботі використовуйте назви реальних підрозділів
+                </span>
+
+                <input type="text" class="set_dept_name">
+              </div>
+
+              <div class="add_department_form add_department_form_minh100p">
+                <p>Налаштуйте регулярну відправку звіту</p>
+
+                <span class="small">
+                  <i class="ion-ios-information-outline"></i>
+                  Ви можете налаштувати відправку звіту в автоматичному режимі
+                </span>
+
+                <div class="row mt40">
+                  <div class="col-sm-6">
+                    <p>Одержувачі звіту:</p>
+
+                    <span class="small">Додайте список електронны адрес, на які буде відправлятися звіт.</span>
+
+                    <textarea name="textarea" rows="4" class="textarea mt20" placeholder="Електронна адреса"></textarea>
+
+                    <span class="small">
+                      <i class="ion-ios-information-outline"></i>
+                      Кожну нову адресу вкажіть з нового рядка
+                    </span>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <p>Період звітності</p>
+
+                    <span class="small">За який період відображати дані в звіті?</span>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Доба</span>
+                    </label>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Тиждень</span>
+                    </label>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Місяць</span>
+                    </label>
+
+                    <label class="check-box check-box_report">
+                      <input type="checkbox">
+                      <span class="check-box__text check-box__text_type2">Рік</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="create_dept col-md-3">
+              <button class="btn mt85">Зберегти <i class="ion-ios-checkmark-outline"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /REPORTS -->
+
 <!-- MODAL-CARD -->
       <div class="vidget">
         <button data-toggle="modal" data-target="#modal-card">modalka2</button>
@@ -835,7 +994,9 @@
           <div class="bg-f6f6f6 clearfix report-block">
             <div class="report-item">
               <div class="report-item__inner">
-                <h6 class="report__h6">Звіт по АЗС в Волинській області</h6>
+                <a href="#" class="report__a">Звіт по АЗС в Волинській області</a>
+
+                <a href="#" class="report__save">зберегти</a>
               </div>
 
               <div class="report-item__inner">

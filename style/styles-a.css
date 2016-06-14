@@ -31,6 +31,7 @@
 .mt20 { margin-top: 20px; }
 .mt25 { margin-top: 25px; }
 .mt40 { margin-top: 40px; }
+.mt85 { margin-top: 85px; }
 .mb0 { margin-bottom: 0; }
 .mb15 { margin-bottom: 15px; }
 .mb25 { margin-bottom: 25px; }
@@ -42,11 +43,14 @@
 .p15 { padding: 15px; }
 .p10 { padding: 10px; }
 .pl0 { padding-left: 0px; }
+.pl15 { padding-left: 15px; }
 .pl20 { padding-left: 20px; }
 .pl30 { padding-left: 30px; }
+.pt10 { padding-top: 10px; }
 .pt20 { padding-top: 20px; }
 .pt25 { padding-top: 25px; }
 .pt30 { padding-top: 30px; }
+.pb10 { padding-bottom: 10px; }
 .pb15 { padding-bottom: 15px; }
 .pb30 { padding-bottom: 30px; }
 .pr20 { padding-right: 20px; }
@@ -72,6 +76,7 @@
 .h90 { height: 90px; }
 
 .bt-e1e1e1 { border-top: 1px solid #e1e1e1; }
+.btd-dedede { border-top: 1px dashed #dedede; }
 .bb-e1e1e1 { border-bottom: 1px solid #e1e1e1; }
 .bbd-d9 { border-bottom: 1px dashed #d9d9d9; }
 
@@ -654,6 +659,17 @@
   margin-top: 0;
 }
 
+.check-box_report {
+  display: block;
+  margin: 0;
+  padding: 9px 0 9px 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.check-box_report:last-child {
+  border-bottom: none;
+}
+
 .check-box input[type=checkbox] {
   display: none;
 }
@@ -675,12 +691,17 @@
   color: #7c7979;
 }
 
+.check-box input[type=checkbox] + .check-box__text_type2::before {
+  color: #7c7979;
+}
+
 .check-box input[type=checkbox]:checked + .check-box__text::before {
   content: "\f374";
   color: #007e45;
 }
 
-.check-box input[type=checkbox]:checked + .check-box__text_bg::before {
+.check-box input[type=checkbox]:checked + .check-box__text_bg::before,
+.check-box input[type=checkbox]:checked + .check-box__text_type2::before {
   content: "\f373";
 }
 
@@ -2113,6 +2134,10 @@
   margin-bottom: 25px;
 }
 
+.activation__h2_ml20 {
+  margin-left: 20px;
+}
+
 .activation__body {
   padding: 20px 0;
 }
@@ -2388,13 +2413,13 @@
   font-size: 24px;
   color: #00ab4e;
   position: absolute;
-  left: 25px;
-  top: 25px;
+  left: 15px;
+  top: 15px;
 }
 
 .report-item__inner {
   height: 50%;
-  padding: 25px;
+  padding: 15px;
   position: relative;
 }
 
@@ -2402,15 +2427,40 @@
   border-bottom: 1px dashed #dedede;
 }
 
-.report__h6 {
+.report__a {
+  display: block;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   color: #000;
-  position: absolute;
-  bottom: 25px;
-  margin: 0;
-  width: 79%;
+  margin: 50px 0 10px;
+  cursor: pointer;
+}
+
+.report__a::after {
+  content: "\f044";
+  font-family: "FontAwesome";
+  display: none;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.report__a:visited {
+  color: #000;
+}
+
+.report__a:hover,
+.report__a:active {
+  color: #006f42;
+}
+
+.report__a:hover::after {
+  display: inline-block;
+}
+
+.report-item .card-data__back:hover i,
+.report-item .card-data__back:active i {
+  color: #006f42;
 }
 
 .report__p {
@@ -2422,9 +2472,41 @@
 }
 
 .report__p_green {
-  color: #00553c;
   position: absolute;
   bottom: 25px;
+}
+
+.report__p:hover,
+.report__p:active {
+  color: #00553c;
+}
+
+.report__save {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #00553c;
+  margin-left: 15px;
+  text-decoration: none;
+  border-bottom: 1px dashed #00553c;
+}
+
+.report__save:visited {
+  color: #00553c;
+}
+
+.report__save::before {
+  content: "\f3fe";
+  font-family: "Ionicons";
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.report__save:hover,
+.report__save:active {
+  border: none;
 }
 
 .spinner {
@@ -3128,3 +3210,61 @@ td .fs18 {
   border-radius: 2px;
 }
 /* /MODAL-CARD */
+
+.add_department_form_bt-n {
+  border-top: none;
+}
+
+.add_department_form_bb-n {
+  border-bottom: none;
+}
+
+.add_department_form_minh100p {
+  min-height: 100%;
+}
+
+#modal-resources2 .modal-dialog {
+  width: 100%;
+  max-width: 710px;
+  margin-left: -460px;
+  margin-bottom: 100px;
+  position: absolute;
+  left: calc(50% + 210px);
+  top: 10%;
+}
+
+#modal-resources2 .modal-content {
+  overflow: hidden;
+}
+
+#modal-resources2 .modal-header {
+  padding: 30px;
+}
+
+#modal-resources2 .modal-body {
+  padding: 0;
+}
+
+#modal-resources2 .modal-footer {
+  padding: 20px;
+}
+
+#modal-resources2 .close {
+  width: 53px;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #f5f5f5;
+  color: #00553c;
+  border-radius: 6px 6px 0 10px;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  opacity: 1;
+}
+
+#modal-resources2 .close:hover {
+  background-color: #00553c;
+  color: #f5f5f5;
+}

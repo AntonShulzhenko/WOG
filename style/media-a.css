@@ -12,6 +12,11 @@
     left: calc(50% + 80px);
     margin-left: -510px;
   }
+
+  #modal-resources2 .modal-dialog {
+    margin-left: -395px;
+    left: calc(50% + 80px);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -190,6 +195,12 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+  .create_dept .mt85 {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .widget-nav .widget-nav__li {
     padding: 10px 15px;
@@ -359,6 +370,13 @@
 
   .info-txt {
     padding: 0 25px;
+  }
+
+  #modal-resources2 .modal-dialog {
+    margin: 100px auto 0;
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }
 
