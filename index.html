@@ -71,6 +71,107 @@
     </nav>
 
     <main>
+<!-- TERMINAL-CHAIN WIDGET (build route) -->
+      <div class="vidget vidget_terminal-chain">
+        <div class="build-route">
+          <div class="build-route__header">
+            <div class="build-route__h-top">
+              <div class="select-wrap select-wrap_card select-wrap_route">
+                <input type="text" class="set_dept_name" id="input-start" placeholder="Місце відправлення">
+              </div>
+
+              <div class="route-arrow"></div>
+
+              <div class="select-wrap select-wrap_card select-wrap_route">
+                <input type="text" class="set_dept_name" id="input-end" placeholder="Місце прибуття">
+              </div>
+
+              <button class="save-btn save-btn_route" id="submit-route">Побудувати маршрут</button>
+            </div>
+
+            <div class="build-route__h-bottom clearfix">
+              <!-- <label class="check-box check-box_type2 pull-left">
+                <input type="checkbox">
+                <span class="check-box__text">Показати тільки улюблені АЗС <i class="ion-ios-information ml5"></i></span>
+              </label> -->
+
+              <p class="pull-right fs14 mb0 col-000 lh72"><i>вкажіть види палива, які повинні бути на АЗС по маршруту</i></p>
+
+              <div class="fuel-types pull-left">
+                <a href="#" class="fuel-types__toggler trans">Види палива</a>
+
+                <div class="fuel-types__wrap clearfix">
+                  <label class="fuel-types__check">
+                    <input type="checkbox">
+                    <span><img src="img/fuel-types/DPmustang.png" alt="" class="img-responsive"></span>
+                  </label>
+                  <label class="fuel-types__check">
+                    <input type="checkbox">
+                    <span><img src="img/fuel-types/95mustang.png" alt="" class="img-responsive"></span>
+                  </label>
+                  <label class="fuel-types__check">
+                    <input type="checkbox">
+                    <span><img src="img/fuel-types/100mustang.png" alt="" class="img-responsive"></span>
+                  </label>
+                  <label class="fuel-types__check">
+                    <input type="checkbox">
+                    <span><img src="img/fuel-types/LGPmustang.png" alt="" class="img-responsive"></span>
+                  </label>
+                  <label class="fuel-types__check">
+                    <input type="checkbox">
+                    <span><img src="img/fuel-types/DPmustang+.png" alt="" class="img-responsive"></span>
+                  </label>
+                  <label class="fuel-types__check">
+                    <input type="checkbox">
+                    <span><img src="img/fuel-types/euro5.png" alt="" class="img-responsive"></span>
+                  </label>
+
+                  <div class="clearfix"></div>
+
+                  <button type="button" name="button" class="fuel-types__btn trans">Ok</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div id="map" class="map-container"></div>
+          </div>
+
+          <div class="build-route__body">
+            <div class="build-route__b-top bg-f6f6f6 text-center">
+              <p class="mb0">Дозволити заправку по карткам на маршруті</p>
+
+              <label class="label-search">
+                <input type="text" class="set_dept_name set_dept_name_search" placeholder="Пошук за номером карти">
+              </label>
+            </div>
+
+            <div class="build-route__b-content bg-fff">
+
+            </div>
+
+            <div class="build-route__b-bottom bg-f6f6f6">
+              <label class="check-box">
+                Строк дії дозволу:
+                <input type="checkbox">
+                <span class="check-box__text">Весь час</span>
+              </label>
+
+              <p class="widget__p">
+                вказати термін дії дозволу
+                <a href="#" class="card-data__back card-data__back_calendar"><i class="ion-calendar"></i></a>
+              </p>
+
+              <a href="#" class="card-data__save">
+                Зберегти
+                <i class="ion-checkmark"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- /TERMINAL-CHAIN WIDGET (build route) -->
 <!-- REPORTS -->
       <div class="vidget">
         <button data-toggle="modal" data-target="#modal-resources2">modalka3</button>
@@ -168,7 +269,7 @@
                   Для зручності в роботі використовуйте назви реальних підрозділів
                 </span>
 
-                <input type="text" class="set_dept_name">
+                <input type="text" class="set_dept_name" id="ttt">
               </div>
 
               <div class="add_department_form add_department_form_minh100p">
@@ -969,7 +1070,7 @@
 <!-- REPORTS -->
       <div class="vidget vidget_terminal-chain">
         <div class="wrap">
-          <div class="map-container" id="map"></div>
+          <!-- <div class="map-container" id="map"></div> -->
         </div>
       </div>
 
@@ -1024,7 +1125,7 @@
       </div>
 
       <div class="vidget">
-        <div class="info-window info-window_table">
+        <div class="info-window info-window_table" id="info-table">
           <div class="gm-table-wrap">
             <table>
               <thead>
@@ -4118,116 +4219,6 @@
       </div>
 <!-- /MODAL-RESOURSES -->
 
-<!-- TERMINAL-CHAIN WIDGET (build route) -->
-      <div class="vidget vidget_terminal-chain">
-        <div class="build-route">
-          <div class="build-route__header">
-            <div class="build-route__h-top">
-              <div class="select-wrap select-wrap_card select-wrap_route">
-                <select name="" id="" class="selectpicker">
-                  <option value="День" selected="selected">Звідки</option>
-                  <option value="Месяц">Месяц</option>
-                  <option value="Год">Год</option>
-                </select>
-              </div>
-
-              <div class="route-arrow"></div>
-
-              <div class="select-wrap select-wrap_card select-wrap_route">
-                <select name="" id="" class="selectpicker">
-                  <option value="День" selected="selected">Куди</option>
-                  <option value="Месяц">Месяц</option>
-                  <option value="Год">Год</option>
-                </select>
-              </div>
-
-              <button class="save-btn save-btn_route">Побудувати маршрут</button>
-            </div>
-
-            <div class="build-route__h-bottom clearfix">
-              <label class="check-box check-box_type2 pull-left">
-                <input type="checkbox">
-                <span class="check-box__text">Показати тільки улюблені АЗС <i class="ion-ios-information ml5"></i></span>
-              </label>
-
-              <p class="pull-right fs14 mb0 col-000 lh72"><i>вкажіть види палива, які повинні бути на АЗС по маршруту</i></p>
-
-              <div class="fuel-types pull-left">
-                <a href="#" class="fuel-types__toggler trans">Види палива</a>
-
-                <div class="fuel-types__wrap clearfix">
-                  <label class="fuel-types__check">
-                    <input type="checkbox">
-                    <span><img src="img/fuel-types/DPmustang.png" alt="" class="img-responsive"></span>
-                  </label>
-                  <label class="fuel-types__check">
-                    <input type="checkbox">
-                    <span><img src="img/fuel-types/95mustang.png" alt="" class="img-responsive"></span>
-                  </label>
-                  <label class="fuel-types__check">
-                    <input type="checkbox">
-                    <span><img src="img/fuel-types/100mustang.png" alt="" class="img-responsive"></span>
-                  </label>
-                  <label class="fuel-types__check">
-                    <input type="checkbox">
-                    <span><img src="img/fuel-types/LGPmustang.png" alt="" class="img-responsive"></span>
-                  </label>
-                  <label class="fuel-types__check">
-                    <input type="checkbox">
-                    <span><img src="img/fuel-types/DPmustang+.png" alt="" class="img-responsive"></span>
-                  </label>
-                  <label class="fuel-types__check">
-                    <input type="checkbox">
-                    <span><img src="img/fuel-types/euro5.png" alt="" class="img-responsive"></span>
-                  </label>
-
-                  <div class="clearfix"></div>
-
-                  <button type="button" name="button" class="fuel-types__btn trans">Ok</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="build-route__map">
-            map here
-          </div>
-
-          <div class="build-route__body">
-            <div class="build-route__b-top bg-f6f6f6 text-center">
-              <p class="mb0">Дозволити заправку по карткам на маршруті</p>
-
-              <label class="label-search">
-                <input type="text" class="set_dept_name set_dept_name_search" placeholder="Пошук за номером карти">
-              </label>
-            </div>
-
-            <div class="build-route__b-content bg-fff">
-
-            </div>
-
-            <div class="build-route__b-bottom bg-f6f6f6">
-              <label class="check-box">
-                Строк дії дозволу:
-                <input type="checkbox">
-                <span class="check-box__text">Весь час</span>
-              </label>
-
-              <p class="widget__p">
-                вказати термін дії дозволу
-                <a href="#" class="card-data__back card-data__back_calendar"><i class="ion-calendar"></i></a>
-              </p>
-
-              <a href="#" class="card-data__save">
-                Зберегти
-                <i class="ion-checkmark"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-<!-- /TERMINAL-CHAIN WIDGET (build route) -->
-
 <!-- TERMINAL-CHAIN WIDGET (gas stations search) -->
       <div class="vidget vidget_terminal-chain">
         <div class="wrap">
@@ -4424,7 +4415,7 @@
 
 <!-- INFO WINDOW GM -->
       <div class="vidget">
-        <div class="info-window">
+        <div class="info-window" id="info-window">
           <div class="info-window__header">
             <p>ВІННИЦЬКА ФІЛІЯ АЗС"КОМСОМОЛЬСЬКЕ"</p>
           </div>
@@ -4502,7 +4493,9 @@
   <script src="scripts/lib/bootstrap-select.min.js"></script>
 
   <!-- Google map -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9vaXWiKpWgc5iEtSUB7mV-riJ8OmE06c&callback=initMap"></script>
+  <script src="scripts/services/gmap.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEOtI9PrQs4vjrJdfrGoytYeMbskMQfls&signed_in=true&libraries=places,drawing&language=uk&callback=initMap" async defer></script>
 </body>
 
 </html>

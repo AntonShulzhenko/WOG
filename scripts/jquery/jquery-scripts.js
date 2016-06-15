@@ -209,90 +209,72 @@ $(document).ready(function () {
   cutInfo();
 });
 
-
 // Google map
-function initMap() {
-  var myLatLng = {
-    azs1: {lat: 50.487567, lng: 30.522837},
-    azs2: {lat: 46.853902, lng: 35.363836}
-  };
-
-  var img = 'img/map-ico.png';
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: myLatLng.azs2,
-    zoom: 10
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng.azs2,
-    icon: img
-  });
-
-  marker.setMap(map);
-
-  var contentString = '<div class="info-window">'+
-  '<div class="info-window__header">'+
-  '<p>ВІННИЦЬКА ФІЛІЯ АЗС"КОМСОМОЛЬСЬКЕ"</p>'+
-  '</div>'+
-  '<div class="info-window__body">'+
-  '<p>Доступні продукти</p>'+
-  '<div class="info-window__prod">'+
-  '<img src="img/fuel-types/92mustang.png" alt="" class="prod-type img-responsive">'+
-  '<img src="img/fuel-types/95mustang.png" alt="" class="prod-type img-responsive">'+
-  '<img src="img/fuel-types/100mustang.png" alt="" class="prod-type img-responsive">'+
-  '<img src="img/fuel-types/DPmustang.png" alt="" class="prod-type img-responsive">'+
-  '<img src="img/fuel-types/DPmustang+.png" alt="" class="prod-type img-responsive">'+
-  '<img src="img/fuel-types/LGPmustang.png" alt="" class="prod-type img-responsive">'+
-  '</div>'+
-  '</div>'+
-  '</div>';
-
-  var contentTable = '<div class="info-window info-window_table">'+
-    '<div class="gm-table-wrap">'+
-    '<table>'+
-    '<thead>'+
-    '<tr>'+
-    '<td>Дата транзакції</td>'+
-    '<td>Карта / Держатель</td>'+
-    '<td>Тип транзакції</td>'+
-    '<td>Чек</td>'+
-    '<td>АЗК</td>'+
-    '<td class="w150">Ресурс</td>'+
-    '<td>Об\'єм</td>'+
-    '<td>Сума</td>'+
-    '</tr>'+
-    '</thead>'+
-    '<tbody>'+
-    '<tr>'+
-    '<td class="no-wrap"><span class="date">10/11/2015</span><span class="time">12:00</span></td>'+
-    '<td>7825990000000050<span class="name">Іванський П.П.</span></td>'+
-    '<td>Оплата пального</td>'+
-    '<td class="no-wrap">125449879322 <i class="ion-navicon-round"></i></td>'+
-    '<td>Волинська філія «Київський Майдан»</td>'+
-    '<td><img src="img/fuel-types/95mustang.png" alt="" class="img-responsive"></td>'+
-    '<td>50л</td>'+
-    '<td class="no-wrap">1 000 000 грн</td>'+
-    '</tr>'+
-    '</tbody>'+
-    '</table>'+
-    '</div>'+
-    '</div>';
-
-  var infowindow = new google.maps.InfoWindow({
-    content: contentTable
-    // maxWidth: 300
-  });
-
-  infowindow.open(map, marker);
-
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-
-  google.maps.event.addListener(infowindow, 'domready', function() {
-    var ov = $('.gm-style .gm-style-iw');
-    ov.siblings().css('display', 'none');
-    ov.children().css('min-width', '279px');
-  });
-}
+// var map, places, infoWindow, autocomplete;
+//
+// function initMap() {
+//   // Обьект с координатами
+//   var myLatLng = {
+//     azs1: {lat: 50.487567, lng: 30.522837},
+//     azs2: {lat: 46.853902, lng: 35.363836},
+//     azs3: {lat: 49.01, lng: 31.28}
+//   };
+//
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 6,
+//     center: {lat: 49.01, lng: 31.28}
+//   });
+//
+//   var input = /** @type {!HTMLInputElement} */ (document.getElementById('new-input'));
+//
+//   // Create the autocomplete object and associate it with the UI input control.
+//   // Restrict the search to the default country, and to place type "cities".
+//   autocomplete = new google.maps.places.Autocomplete(
+//     input,
+//     {
+//       types: ['(cities)']
+//     });
+//
+//   places = new google.maps.places.PlacesService(map);
+//
+//   autocomplete.addListener('place_changed', onPlaceChanged);
+//
+//   infowindow = new google.maps.InfoWindow({
+//     content: document.getElementById('info-window')
+//     // content: document.getElementById('info-table')
+//     // maxWidth: 300
+//   });
+//
+//   var img = 'img/map-ico.png';
+//
+//   var marker = new google.maps.Marker({
+//     icon: img
+//   });
+//
+//   marker.setMap(map);
+//
+//   marker.addListener('click', function() {
+//     infowindow.open(map, marker);
+//   });
+//
+//   google.maps.event.addListener(infowindow, 'domready', function() {
+//     var ov = $('.gm-style .gm-style-iw');
+//     ov.siblings().css('display', 'none');
+//     ov.children().css('min-width', '279px');
+//   });
+//
+//   function onPlaceChanged() {
+//     infowindow.close();
+//     marker.setVisible(false);
+//     var place = autocomplete.getPlace();
+//     if (place.geometry) {
+//       map.panTo(place.geometry.location);
+//       map.setZoom(12);
+//     } else {
+//       document.getElementById('new-input').placeholder = 'Введіть місцезнаходження';
+//     }
+//     marker.setPosition(place.geometry.location);
+//     marker.setVisible(true);
+//     infowindow.open(map, marker);
+//   }
+// }
