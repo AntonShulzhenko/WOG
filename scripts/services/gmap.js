@@ -43,6 +43,10 @@ function initMap() {
   var destination_autocomplete = new google.maps.places.Autocomplete(destination_input);
   destination_autocomplete.bindTo('bounds', map);
 
+  var infowindow = new google.maps.InfoWindow({
+    content: document.getElementById('info-window')
+  });
+
   origin_autocomplete.addListener('place_changed', function() {
     var place = origin_autocomplete.getPlace();
     var placeLat = place.geometry.location.lat();
@@ -53,10 +57,8 @@ function initMap() {
       return;
     }
     // origin_marker.setPosition(place.geometry.location);
-    var windowArray = [];
-    for(var i = 0; i < places.length; i++) {
-      windowArray.push(infowindow);
 
+    for(var i = 0; i < places.length; i++) {
       var dist = distance(placeLat, placeLng, places[i]);
 
       if(dist < 60) {
@@ -65,22 +67,9 @@ function initMap() {
           icon: img,
           position: new google.maps.LatLng(places[i].lat, places[i].lng)
         });
-
-        originMarker.addListener('click', function() {
-          infowindow.open(map, originMarker);
-        });
       }
     }
-    console.log(windowArray);
-    // If the place has a geometry, store its place ID and route if we have
-    // the other place ID
     origin_place_id = place.place_id;
-  });
-
-  var infowindow = new google.maps.InfoWindow({
-    content: document.getElementById('info-window')
-    // content: document.getElementById('info-table')
-    // maxWidth: 300
   });
 
   destination_autocomplete.addListener('place_changed', function() {
@@ -109,6 +98,14 @@ function initMap() {
     // the other place ID
     destination_place_id = place.place_id;
   });
+
+  function attachSecretMessage(marker, secretMessage) {
+    var newInfowindow = secretMessage;
+
+    marker.addListener('click', function() {
+      newInfowindow.open(marker.get('map'), marker);
+    });
+  }
 
   document.getElementById('submit-route').addEventListener('click', function() {
     route(origin_place_id, destination_place_id, directionsService, directionsDisplay);
